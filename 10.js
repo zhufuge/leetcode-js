@@ -42,14 +42,14 @@ const isMatch = function(s, p) {
   return j === m
 }
 
-console.log(isMatch('aa', 'a'), false)
-console.log(isMatch('aa', 'aa'), true)
-console.log(isMatch('aaa', 'aa'), false)
-console.log(isMatch('aa', 'a*'), true)
-console.log(isMatch('aa', '.*'), true)
-console.log(isMatch('ab', '.*'), true)
-console.log(isMatch('ad', 'c*a*b*d'), true)
-console.log(isMatch('aaa', 'a*a'), true)
+// console.log(isMatch('aa', 'a'), false)
+// console.log(isMatch('aa', 'aa'), true)
+// console.log(isMatch('aaa', 'aa'), false)
+// console.log(isMatch('aa', 'a*'), true)
+// console.log(isMatch('aa', '.*'), true)
+// console.log(isMatch('ab', '.*'), true)
+// console.log(isMatch('ad', 'c*a*b*d'), true)
+// console.log(isMatch('aaa', 'a*a'), true)
 
 const dpSolution = function(s, p) {
   if (s === null || p === null) return false
@@ -71,7 +71,7 @@ const dpSolution = function(s, p) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
       if (p[j] === '.') dp[i + 1][j + 1] = dp[i][j]
-      if (p[j] === s[i]) dp[i+1][j+1] = dp[i][j]
+      if (p[j] === s[i]) dp[i + 1][j + 1] = dp[i][j] 
       if (p[j] === '*') {
         if (p[j - 1] != s[i] && p[j - 1] != '.') {
           dp[i + 1][j + 1] = dp[i + 1][j - 1];
@@ -84,11 +84,11 @@ const dpSolution = function(s, p) {
   return dp[n][m]
 }
 
-console.log(dpSolution('aa', 'a'), false)
-console.log(dpSolution('aa', 'aa'), true)
-console.log(dpSolution('aaa', 'aa'), false)
-console.log(dpSolution('aa', 'a*'), true)
-console.log(dpSolution('aa', '.*'), true)
-console.log(dpSolution('ab', '.*'), true)
+// console.log(dpSolution('aa', 'a'), false)
+// console.log(dpSolution('aa', 'aa'), true)
+// console.log(dpSolution('aaa', 'aa'), false)
+// console.log(dpSolution('aa', 'a*'), true)
+// console.log(dpSolution('aa', '.*'), true)
+// console.log(dpSolution('ab', '.*'), true)
 console.log(dpSolution('ad', 'c*a*b*d'), true)
-console.log(dpSolution('aaa', 'a*a'), true)
+// console.log(dpSolution('aaa', 'a*a'), true)
