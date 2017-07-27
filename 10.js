@@ -55,10 +55,9 @@ const dpSolution = function(s, p) {
   if (s === null || p === null) return false
 
   const n = s.length, m = p.length
-  const dp = Array(n + 1)
+  const dp = []
   for (let i = 0; i < n + 1; i++) {
-    dp[i] = []
-    for (let j = 0; j < m + 1; j++) dp[i][j] = false
+    dp[i] = new Array(m + 1).fill(false)
   }
 
   dp[0][0] = true
@@ -71,7 +70,7 @@ const dpSolution = function(s, p) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
       if (p[j] === '.') dp[i + 1][j + 1] = dp[i][j]
-      if (p[j] === s[i]) dp[i + 1][j + 1] = dp[i][j] 
+      if (p[j] === s[i]) dp[i + 1][j + 1] = dp[i][j]
       if (p[j] === '*') {
         if (p[j - 1] != s[i] && p[j - 1] != '.') {
           dp[i + 1][j + 1] = dp[i + 1][j - 1];

@@ -36,20 +36,15 @@ const findMedianSortedArrays = function(nums1, nums2) {
   let curr, prev
   for (let i = 0, j = 0, k = 0; k <= mid; k++) {
     prev = curr
-    if (i >= m) {
-      curr = nums2[j++]
-    } else if (j >= n) {
-      curr = nums1[i++]
-    } else if (nums1[i] > nums2[j]) {
-      curr = nums2[j++]
-    } else if (nums1[i] < nums2[j]){
-      curr = nums1[i++]
-    } else {
+    if (i >= m) curr = nums2[j++]
+    else if (j >= n) curr = nums1[i++]
+    else if (nums1[i] > nums2[j]) curr = nums2[j++]
+    else if (nums1[i] < nums2[j]) curr = nums1[i++]
+    else {
       curr = (nums1[i + 1] > nums2[j + 1])
         ? nums2[j++]
         : nums1[i++]
     }
-    console.log(k, i, j, prev, curr);
   }
 
   return (m + n) % 2 ? curr : (prev + curr) / 2
