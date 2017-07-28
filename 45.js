@@ -20,23 +20,29 @@
  * @return {number}
  */
 const jump = function(nums) {
-  const n = nums.length
-  if (n <= 1) return 0
+  if (nums === void 0 || nums.length <= 1) return 0
 
-  const jumpFrom = (i, step) => {
-    if (i + nums[i] >= n - 1) return step
-    if (nums[i] === 0) return -1
-    const steps = []
-    for (let j = 1; j <= nums[i]; j++) {
-      const t = jumpFrom(i + j, 1)
-      if (t !== -1) steps.push(t)
+  const n = nums.length
+  let step = 1
+  for (let i = 0; i + nums[i] < n - 1; i++) {
+    if (nums[i] !== 1) {
+      let next = i + 1, max = 0
+      for (let j = 1; j <= nums[i]; j++) {
+        if (nums[i + j] + j > max) {
+          next = i + j
+          max = nums[i + j] + j
+        }
+      }
+      i = next - 1
     }
-    if (steps.length === 0) return -1
-    return step + steps.reduce((m, v) => Math.min(m, v))
+    step++
   }
 
-  return jumpFrom(0, 1)
+  return step
 }
-
-//console.log(jump([2, 3, 1, 1, 4]))
+console.log(jump([3,2,1]), 1)
+console.log(jump([2, 3, 1, 1, 4]))
 console.log(jump([1, 3, 2, 3, 0, 1, 2, 1, 1]))
+console.log(jump([5,6,4,4,6,9,4,4,7,4,4,8,2,6,8,1,5,9,6,5,2,7,9,7,9,6,9,4,1,6,8,8,4,4,2,0,3,8,5]))
+console.log(jump([1,1,1,1]))
+console.log(jump([10,9,8,7,6,5,4,3,2,1,1,0]), 2)
