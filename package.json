@@ -6,7 +6,11 @@
   "author": "zhufuge",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "g": "node generator/generate.js"
+  },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2"
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.83.0"
   }
 }
