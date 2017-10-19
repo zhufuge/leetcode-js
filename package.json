@@ -1,0 +1,12 @@
+{
+  "name": "alg-js",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zhufuge/alg-js",
+  "author": "zhufuge",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
