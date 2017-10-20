@@ -38,27 +38,27 @@ function generate(number) {
   }
 
   const title = problem.title
-  const filename = number + '-' + title + '.js'
+  problem.lowTitle = problem.title.split(' ').join('-').toLowerCase()
+  problem.filename = number + '-' + problem.lowTitle + '.js'
 
-  if (fs.existsSync(path.join(__dirname, '../', filename))) {
+  if (fs.existsSync(path.join(__dirname, '../', problem.filename))) {
     console.log('Generate fails!')
-    console.log('File: <' + filename + '> already exists.')
+    console.log('File: <' + problem.filename + '> already exists.')
     return
   }
 
   problem.number = number
-  problem.filename = filename
   requestProblem(problem)
 }
 
 function requestProblem(problem) {
   const url = 'https://leetcode.com/problems/' +
-        problem.title.split(' ').join('-').toLowerCase() +
-        '/description/'
+        problem.lowTitle + '/description/'
 
   console.log('start to connect ' + url)
 
-  const cachePath = path.join(__dirname, 'cache/', problem.title + '.html')
+  const cacheDir = path.join(__dirname, 'cache')
+  const cachePath = path.join(cacheDir, problem.title + '.html')
 
   if (fs.existsSync(cachePath)) {
     handleBody(fs.readFileSync(cachePath), problem)
@@ -72,6 +72,7 @@ function requestProblem(problem) {
 
     console.log('connect successed and start to parse')
 
+    if (!fs.existsSync(cacheDir)) fs.mkdir(cacheDir)
     fs.writeFileSync(cachePath, body, 'utf8')
     handleBody(body, problem)
   })
@@ -132,8 +133,6 @@ function lineToBlock(string, value) {
   }, { groups: [], sum: LINE_MAX_LENGTH })
 
   words = words.groups.join('\n')
-
-  console.log('+++' + words + '+++')
 
   return string + words + '\n'
 }
