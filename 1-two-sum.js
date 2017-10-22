@@ -28,3 +28,15 @@ const twoSum = function(nums, target) {
   }
   return [-1, -1]
 }
+
+
+// Solution:
+// 使用哈希表，以每位数的互补数为键名，该数的位置为值。
+// 如果一个数对应等于一个键名，说明找到了互补数。
+// （哈希的应用）
+// 时间复杂度 O(n)
+// 空间复杂度 O(n)
+
+
+
+// Submission Result: Accepted
