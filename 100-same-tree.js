@@ -29,17 +29,21 @@ function createTree(array) {
  */
 const isSameTree = function(p, q) {
   if (p === q) return true
-  if (p === undefined || p === null ||
-      q === undefined || q === null ||
-      p.val !== q.val) return false
+  if (p == null || q == null || p.val !== q.val) return false
 
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 }
 
-const p = createTree(
-  [1, [2, [4], [4]], [2, [3], [3]]]
-), q = createTree(
-  [1, [2, [3], [3]], [2, [4], [4]]]
-)
+const p = createTree([1, [2, [3], [4]], [2, [3], [4]]]),
+      q = createTree([1, [2, [3], [4]], [2, [3], [4]]])
 
-console.log(isSameTree(p, q));
+console.log(isSameTree(p, q))
+
+// Solution:
+// 递归遍历两棵树的相同位置的节点（包括空子节点，即 null）
+// 1. 如果两节点相同则返回 true，这种情况中只有一种可能，两节点同为 null,
+//    因为两个 js 对象的内容相同，指针不同，比较起来值是不同的。
+// 2. 如果两节点不同为 null, 只有一个为 null, 值必然不同。
+// 3. 两个值均不为 null, 且均不相同，值也不同。
+
+// Submission Result: Accepted
