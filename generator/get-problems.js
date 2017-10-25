@@ -12,7 +12,7 @@ function getProblems($) {
     problems[td.eq(1).text()] = {
       title: td.eq(2).attr('value'),
       locked: td.eq(2).find('i.fa-lock').hasClass('fa-lock'),
-      acceptance: parseInt(td.eq(4).attr('value')) + '%',
+      acceptance: parseInt(td.eq(4).attr('value')),
       difficulty: $(td.eq(5), 'span').text(),
     }
   })

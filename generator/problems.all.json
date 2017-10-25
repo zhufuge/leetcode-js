@@ -2,4051 +2,4051 @@
   "1": {
     "title": "Two Sum",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "2": {
     "title": "Add Two Numbers",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "3": {
     "title": "Longest Substring Without Repeating Characters",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Medium"
   },
   "4": {
     "title": "Median of Two Sorted Arrays",
     "locked": false,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Hard"
   },
   "5": {
     "title": "Longest Palindromic Substring",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "6": {
     "title": "ZigZag Conversion",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "7": {
     "title": "Reverse Integer",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Easy"
   },
   "8": {
     "title": "String to Integer (atoi)",
     "locked": false,
-    "acceptance": "13%",
+    "acceptance": 13,
     "difficulty": "Medium"
   },
   "9": {
     "title": "Palindrome Number",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "10": {
     "title": "Regular Expression Matching",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "11": {
     "title": "Container With Most Water",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "12": {
     "title": "Integer to Roman",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "13": {
     "title": "Roman to Integer",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "14": {
     "title": "Longest Common Prefix",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Easy"
   },
   "15": {
     "title": "3Sum",
     "locked": false,
-    "acceptance": "21%",
+    "acceptance": 21,
     "difficulty": "Medium"
   },
   "16": {
     "title": "3Sum Closest",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "17": {
     "title": "Letter Combinations of a Phone Number",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "18": {
     "title": "4Sum",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "19": {
     "title": "Remove Nth Node From End of List",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "20": {
     "title": "Valid Parentheses",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "21": {
     "title": "Merge Two Sorted Lists",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "22": {
     "title": "Generate Parentheses",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "23": {
     "title": "Merge k Sorted Lists",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "24": {
     "title": "Swap Nodes in Pairs",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "25": {
     "title": "Reverse Nodes in k-Group",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "26": {
     "title": "Remove Duplicates from Sorted Array",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "27": {
     "title": "Remove Element",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "28": {
     "title": "Implement strStr()",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Easy"
   },
   "29": {
     "title": "Divide Two Integers",
     "locked": false,
-    "acceptance": "15%",
+    "acceptance": 15,
     "difficulty": "Medium"
   },
   "30": {
     "title": "Substring with Concatenation of All Words",
     "locked": false,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Hard"
   },
   "31": {
     "title": "Next Permutation",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "32": {
     "title": "Longest Valid Parentheses",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Hard"
   },
   "33": {
     "title": "Search in Rotated Sorted Array",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "34": {
     "title": "Search for a Range",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "35": {
     "title": "Search Insert Position",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "36": {
     "title": "Valid Sudoku",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "37": {
     "title": "Sudoku Solver",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "38": {
     "title": "Count and Say",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "39": {
     "title": "Combination Sum",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "40": {
     "title": "Combination Sum II",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "41": {
     "title": "First Missing Positive",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Hard"
   },
   "42": {
     "title": "Trapping Rain Water",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "43": {
     "title": "Multiply Strings",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "44": {
     "title": "Wildcard Matching",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Hard"
   },
   "45": {
     "title": "Jump Game II",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Hard"
   },
   "46": {
     "title": "Permutations",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "47": {
     "title": "Permutations II",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "48": {
     "title": "Rotate Image",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "49": {
     "title": "Group Anagrams",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "50": {
     "title": "Pow(x, n)",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "51": {
     "title": "N-Queens",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "52": {
     "title": "N-Queens II",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Hard"
   },
   "53": {
     "title": "Maximum Subarray",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "54": {
     "title": "Spiral Matrix",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "55": {
     "title": "Jump Game",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "56": {
     "title": "Merge Intervals",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "57": {
     "title": "Insert Interval",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Hard"
   },
   "58": {
     "title": "Length of Last Word",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Easy"
   },
   "59": {
     "title": "Spiral Matrix II",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "60": {
     "title": "Permutation Sequence",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "61": {
     "title": "Rotate List",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Medium"
   },
   "62": {
     "title": "Unique Paths",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "63": {
     "title": "Unique Paths II",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "64": {
     "title": "Minimum Path Sum",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "65": {
     "title": "Valid Number",
     "locked": false,
-    "acceptance": "12%",
+    "acceptance": 12,
     "difficulty": "Hard"
   },
   "66": {
     "title": "Plus One",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Easy"
   },
   "67": {
     "title": "Add Binary",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "68": {
     "title": "Text Justification",
     "locked": false,
-    "acceptance": "19%",
+    "acceptance": 19,
     "difficulty": "Hard"
   },
   "69": {
     "title": "Sqrt(x)",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Easy"
   },
   "70": {
     "title": "Climbing Stairs",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "71": {
     "title": "Simplify Path",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "72": {
     "title": "Edit Distance",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "73": {
     "title": "Set Matrix Zeroes",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "74": {
     "title": "Search a 2D Matrix",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "75": {
     "title": "Sort Colors",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "76": {
     "title": "Minimum Window Substring",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Hard"
   },
   "77": {
     "title": "Combinations",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "78": {
     "title": "Subsets",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "79": {
     "title": "Word Search",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "80": {
     "title": "Remove Duplicates from Sorted Array II",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "81": {
     "title": "Search in Rotated Sorted Array II",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "82": {
     "title": "Remove Duplicates from Sorted List II",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "83": {
     "title": "Remove Duplicates from Sorted List",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "84": {
     "title": "Largest Rectangle in Histogram",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "85": {
     "title": "Maximal Rectangle",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Hard"
   },
   "86": {
     "title": "Partition List",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "87": {
     "title": "Scramble String",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Hard"
   },
   "88": {
     "title": "Merge Sorted Array",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "89": {
     "title": "Gray Code",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "90": {
     "title": "Subsets II",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "91": {
     "title": "Decode Ways",
     "locked": false,
-    "acceptance": "19%",
+    "acceptance": 19,
     "difficulty": "Medium"
   },
   "92": {
     "title": "Reverse Linked List II",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "93": {
     "title": "Restore IP Addresses",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "94": {
     "title": "Binary Tree Inorder Traversal",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "95": {
     "title": "Unique Binary Search Trees II",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "96": {
     "title": "Unique Binary Search Trees",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "97": {
     "title": "Interleaving String",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "98": {
     "title": "Validate Binary Search Tree",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Medium"
   },
   "99": {
     "title": "Recover Binary Search Tree",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "100": {
     "title": "Same Tree",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "101": {
     "title": "Symmetric Tree",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "102": {
     "title": "Binary Tree Level Order Traversal",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "103": {
     "title": "Binary Tree Zigzag Level Order Traversal",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "104": {
     "title": "Maximum Depth of Binary Tree",
     "locked": false,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Easy"
   },
   "105": {
     "title": "Construct Binary Tree from Preorder and Inorder Traversal",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "106": {
     "title": "Construct Binary Tree from Inorder and Postorder Traversal",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "107": {
     "title": "Binary Tree Level Order Traversal II",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "108": {
     "title": "Convert Sorted Array to Binary Search Tree",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Easy"
   },
   "109": {
     "title": "Convert Sorted List to Binary Search Tree",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "110": {
     "title": "Balanced Binary Tree",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Easy"
   },
   "111": {
     "title": "Minimum Depth of Binary Tree",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "112": {
     "title": "Path Sum",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Easy"
   },
   "113": {
     "title": "Path Sum II",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "114": {
     "title": "Flatten Binary Tree to Linked List",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "115": {
     "title": "Distinct Subsequences",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "116": {
     "title": "Populating Next Right Pointers in Each Node",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "117": {
     "title": "Populating Next Right Pointers in Each Node II",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "118": {
     "title": "Pascal's Triangle",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "119": {
     "title": "Pascal's Triangle II",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Easy"
   },
   "120": {
     "title": "Triangle",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "121": {
     "title": "Best Time to Buy and Sell Stock",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Easy"
   },
   "122": {
     "title": "Best Time to Buy and Sell Stock II",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "123": {
     "title": "Best Time to Buy and Sell Stock III",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Hard"
   },
   "124": {
     "title": "Binary Tree Maximum Path Sum",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Hard"
   },
   "125": {
     "title": "Valid Palindrome",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Easy"
   },
   "126": {
     "title": "Word Ladder II",
     "locked": false,
-    "acceptance": "14%",
+    "acceptance": 14,
     "difficulty": "Hard"
   },
   "127": {
     "title": "Word Ladder",
     "locked": false,
-    "acceptance": "19%",
+    "acceptance": 19,
     "difficulty": "Medium"
   },
   "128": {
     "title": "Longest Consecutive Sequence",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "129": {
     "title": "Sum Root to Leaf Numbers",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "130": {
     "title": "Surrounded Regions",
     "locked": false,
-    "acceptance": "18%",
+    "acceptance": 18,
     "difficulty": "Medium"
   },
   "131": {
     "title": "Palindrome Partitioning",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "132": {
     "title": "Palindrome Partitioning II",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "133": {
     "title": "Clone Graph",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "134": {
     "title": "Gas Station",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "135": {
     "title": "Candy",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "136": {
     "title": "Single Number",
     "locked": false,
-    "acceptance": "54%",
+    "acceptance": 54,
     "difficulty": "Easy"
   },
   "137": {
     "title": "Single Number II",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "138": {
     "title": "Copy List with Random Pointer",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "139": {
     "title": "Word Break",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "140": {
     "title": "Word Break II",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Hard"
   },
   "141": {
     "title": "Linked List Cycle",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "142": {
     "title": "Linked List Cycle II",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "143": {
     "title": "Reorder List",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "144": {
     "title": "Binary Tree Preorder Traversal",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "145": {
     "title": "Binary Tree Postorder Traversal",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Hard"
   },
   "146": {
     "title": "LRU Cache",
     "locked": false,
-    "acceptance": "18%",
+    "acceptance": 18,
     "difficulty": "Hard"
   },
   "147": {
     "title": "Insertion Sort List",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "148": {
     "title": "Sort List",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "149": {
     "title": "Max Points on a Line",
     "locked": false,
-    "acceptance": "15%",
+    "acceptance": 15,
     "difficulty": "Hard"
   },
   "150": {
     "title": "Evaluate Reverse Polish Notation",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "151": {
     "title": "Reverse Words in a String",
     "locked": false,
-    "acceptance": "15%",
+    "acceptance": 15,
     "difficulty": "Medium"
   },
   "152": {
     "title": "Maximum Product Subarray",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "153": {
     "title": "Find Minimum in Rotated Sorted Array",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "154": {
     "title": "Find Minimum in Rotated Sorted Array II",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "155": {
     "title": "Min Stack",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Easy"
   },
   "156": {
     "title": "Binary Tree Upside Down",
     "locked": true,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "157": {
     "title": "Read N Characters Given Read4",
     "locked": true,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Easy"
   },
   "158": {
     "title": "Read N Characters Given Read4 II - Call multiple times",
     "locked": true,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "159": {
     "title": "Longest Substring with At Most Two Distinct Characters",
     "locked": true,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Hard"
   },
   "160": {
     "title": "Intersection of Two Linked Lists",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Easy"
   },
   "161": {
     "title": "One Edit Distance",
     "locked": true,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "162": {
     "title": "Find Peak Element",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "163": {
     "title": "Missing Ranges",
     "locked": true,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Medium"
   },
   "164": {
     "title": "Maximum Gap",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Hard"
   },
   "165": {
     "title": "Compare Version Numbers",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Medium"
   },
   "166": {
     "title": "Fraction to Recurring Decimal",
     "locked": false,
-    "acceptance": "17%",
+    "acceptance": 17,
     "difficulty": "Medium"
   },
   "167": {
     "title": "Two Sum II - Input array is sorted",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "168": {
     "title": "Excel Sheet Column Title",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Easy"
   },
   "169": {
     "title": "Majority Element",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "170": {
     "title": "Two Sum III - Data structure design",
     "locked": true,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Easy"
   },
   "171": {
     "title": "Excel Sheet Column Number",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "172": {
     "title": "Factorial Trailing Zeroes",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Easy"
   },
   "173": {
     "title": "Binary Search Tree Iterator",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "174": {
     "title": "Dungeon Game",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Hard"
   },
   "175": {
     "title": "Combine Two Tables",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Easy"
   },
   "176": {
     "title": "Second Highest Salary",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Easy"
   },
   "177": {
     "title": "Nth Highest Salary",
     "locked": false,
-    "acceptance": "18%",
+    "acceptance": 18,
     "difficulty": "Medium"
   },
   "178": {
     "title": "Rank Scores",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "179": {
     "title": "Largest Number",
     "locked": false,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Medium"
   },
   "180": {
     "title": "Consecutive Numbers",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "181": {
     "title": "Employees Earning More Than Their Managers",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "182": {
     "title": "Duplicate Emails",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Easy"
   },
   "183": {
     "title": "Customers Who Never Order",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "184": {
     "title": "Department Highest Salary",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Medium"
   },
   "185": {
     "title": "Department Top Three Salaries",
     "locked": false,
-    "acceptance": "17%",
+    "acceptance": 17,
     "difficulty": "Hard"
   },
   "186": {
     "title": "Reverse Words in a String II",
     "locked": true,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "187": {
     "title": "Repeated DNA Sequences",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "188": {
     "title": "Best Time to Buy and Sell Stock IV",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "189": {
     "title": "Rotate Array",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Easy"
   },
   "190": {
     "title": "Reverse Bits",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Easy"
   },
   "191": {
     "title": "Number of 1 Bits",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "192": {
     "title": "Word Frequency",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "193": {
     "title": "Valid Phone Numbers",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Easy"
   },
   "194": {
     "title": "Transpose File",
     "locked": false,
-    "acceptance": "21%",
+    "acceptance": 21,
     "difficulty": "Medium"
   },
   "195": {
     "title": "Tenth Line",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "196": {
     "title": "Delete Duplicate Emails",
     "locked": false,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Easy"
   },
   "197": {
     "title": "Rising Temperature",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Easy"
   },
   "198": {
     "title": "House Robber",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "199": {
     "title": "Binary Tree Right Side View",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "200": {
     "title": "Number of Islands",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "201": {
     "title": "Bitwise AND of Numbers Range",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "202": {
     "title": "Happy Number",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "203": {
     "title": "Remove Linked List Elements",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "204": {
     "title": "Count Primes",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Easy"
   },
   "205": {
     "title": "Isomorphic Strings",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Easy"
   },
   "206": {
     "title": "Reverse Linked List",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Easy"
   },
   "207": {
     "title": "Course Schedule",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "208": {
     "title": "Implement Trie (Prefix Tree)",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "209": {
     "title": "Minimum Size Subarray Sum",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "210": {
     "title": "Course Schedule II",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "211": {
     "title": "Add and Search Word - Data structure design",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Medium"
   },
   "212": {
     "title": "Word Search II",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Hard"
   },
   "213": {
     "title": "House Robber II",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "214": {
     "title": "Shortest Palindrome",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "215": {
     "title": "Kth Largest Element in an Array",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "216": {
     "title": "Combination Sum III",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "217": {
     "title": "Contains Duplicate",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "218": {
     "title": "The Skyline Problem",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "219": {
     "title": "Contains Duplicate II",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "220": {
     "title": "Contains Duplicate III",
     "locked": false,
-    "acceptance": "19%",
+    "acceptance": 19,
     "difficulty": "Medium"
   },
   "221": {
     "title": "Maximal Square",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "222": {
     "title": "Count Complete Tree Nodes",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "223": {
     "title": "Rectangle Area",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "224": {
     "title": "Basic Calculator",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "225": {
     "title": "Implement Stack using Queues",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "226": {
     "title": "Invert Binary Tree",
     "locked": false,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Easy"
   },
   "227": {
     "title": "Basic Calculator II",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "228": {
     "title": "Summary Ranges",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "229": {
     "title": "Majority Element II",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "230": {
     "title": "Kth Smallest Element in a BST",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "231": {
     "title": "Power of Two",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "232": {
     "title": "Implement Queue using Stacks",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Easy"
   },
   "233": {
     "title": "Number of Digit One",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Hard"
   },
   "234": {
     "title": "Palindrome Linked List",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "235": {
     "title": "Lowest Common Ancestor of a Binary Search Tree",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "236": {
     "title": "Lowest Common Ancestor of a Binary Tree",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "237": {
     "title": "Delete Node in a Linked List",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "238": {
     "title": "Product of Array Except Self",
     "locked": false,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Medium"
   },
   "239": {
     "title": "Sliding Window Maximum",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "240": {
     "title": "Search a 2D Matrix II",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "241": {
     "title": "Different Ways to Add Parentheses",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "242": {
     "title": "Valid Anagram",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "243": {
     "title": "Shortest Word Distance",
     "locked": true,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Easy"
   },
   "244": {
     "title": "Shortest Word Distance II",
     "locked": true,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "245": {
     "title": "Shortest Word Distance III",
     "locked": true,
-    "acceptance": "50%",
+    "acceptance": 50,
     "difficulty": "Medium"
   },
   "246": {
     "title": "Strobogrammatic Number",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "247": {
     "title": "Strobogrammatic Number II",
     "locked": true,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "248": {
     "title": "Strobogrammatic Number III",
     "locked": true,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Hard"
   },
   "249": {
     "title": "Group Shifted Strings",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "250": {
     "title": "Count Univalue Subtrees",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "251": {
     "title": "Flatten 2D Vector",
     "locked": true,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "252": {
     "title": "Meeting Rooms",
     "locked": true,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Easy"
   },
   "253": {
     "title": "Meeting Rooms II",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "254": {
     "title": "Factor Combinations",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "255": {
     "title": "Verify Preorder Sequence in Binary Search Tree",
     "locked": true,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "256": {
     "title": "Paint House",
     "locked": true,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "257": {
     "title": "Binary Tree Paths",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "258": {
     "title": "Add Digits",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Easy"
   },
   "259": {
     "title": "3Sum Smaller",
     "locked": true,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "260": {
     "title": "Single Number III",
     "locked": false,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "261": {
     "title": "Graph Valid Tree",
     "locked": true,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "262": {
     "title": "Trips and Users",
     "locked": false,
-    "acceptance": "17%",
+    "acceptance": 17,
     "difficulty": "Hard"
   },
   "263": {
     "title": "Ugly Number",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "264": {
     "title": "Ugly Number II",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "265": {
     "title": "Paint House II",
     "locked": true,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Hard"
   },
   "266": {
     "title": "Palindrome Permutation",
     "locked": true,
-    "acceptance": "57%",
+    "acceptance": 57,
     "difficulty": "Easy"
   },
   "267": {
     "title": "Palindrome Permutation II",
     "locked": true,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "268": {
     "title": "Missing Number",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Easy"
   },
   "269": {
     "title": "Alien Dictionary",
     "locked": true,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "270": {
     "title": "Closest Binary Search Tree Value",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "271": {
     "title": "Encode and Decode Strings",
     "locked": true,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "272": {
     "title": "Closest Binary Search Tree Value II",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Hard"
   },
   "273": {
     "title": "Integer to English Words",
     "locked": false,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Hard"
   },
   "274": {
     "title": "H-Index",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "275": {
     "title": "H-Index II",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "276": {
     "title": "Paint Fence",
     "locked": true,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Easy"
   },
   "277": {
     "title": "Find the Celebrity",
     "locked": true,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "278": {
     "title": "First Bad Version",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Easy"
   },
   "279": {
     "title": "Perfect Squares",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "280": {
     "title": "Wiggle Sort",
     "locked": true,
-    "acceptance": "57%",
+    "acceptance": 57,
     "difficulty": "Medium"
   },
   "281": {
     "title": "Zigzag Iterator",
     "locked": true,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "282": {
     "title": "Expression Add Operators",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "283": {
     "title": "Move Zeroes",
     "locked": false,
-    "acceptance": "50%",
+    "acceptance": 50,
     "difficulty": "Easy"
   },
   "284": {
     "title": "Peeking Iterator",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "285": {
     "title": "Inorder Successor in BST",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "286": {
     "title": "Walls and Gates",
     "locked": true,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "287": {
     "title": "Find the Duplicate Number",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "288": {
     "title": "Unique Word Abbreviation",
     "locked": true,
-    "acceptance": "17%",
+    "acceptance": 17,
     "difficulty": "Medium"
   },
   "289": {
     "title": "Game of Life",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "290": {
     "title": "Word Pattern",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "291": {
     "title": "Word Pattern II",
     "locked": true,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Hard"
   },
   "292": {
     "title": "Nim Game",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Easy"
   },
   "293": {
     "title": "Flip Game",
     "locked": true,
-    "acceptance": "56%",
+    "acceptance": 56,
     "difficulty": "Easy"
   },
   "294": {
     "title": "Flip Game II",
     "locked": true,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "295": {
     "title": "Find Median from Data Stream",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "296": {
     "title": "Best Meeting Point",
     "locked": true,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Hard"
   },
   "297": {
     "title": "Serialize and Deserialize Binary Tree",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "298": {
     "title": "Binary Tree Longest Consecutive Sequence",
     "locked": true,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "299": {
     "title": "Bulls and Cows",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "300": {
     "title": "Longest Increasing Subsequence",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "301": {
     "title": "Remove Invalid Parentheses",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Hard"
   },
   "302": {
     "title": "Smallest Rectangle Enclosing Black Pixels",
     "locked": true,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Hard"
   },
   "303": {
     "title": "Range Sum Query - Immutable",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Easy"
   },
   "304": {
     "title": "Range Sum Query 2D - Immutable",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "305": {
     "title": "Number of Islands II",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Hard"
   },
   "306": {
     "title": "Additive Number",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "307": {
     "title": "Range Sum Query - Mutable",
     "locked": false,
-    "acceptance": "21%",
+    "acceptance": 21,
     "difficulty": "Medium"
   },
   "308": {
     "title": "Range Sum Query 2D - Mutable",
     "locked": true,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Hard"
   },
   "309": {
     "title": "Best Time to Buy and Sell Stock with Cooldown",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "310": {
     "title": "Minimum Height Trees",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "311": {
     "title": "Sparse Matrix Multiplication",
     "locked": true,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "312": {
     "title": "Burst Balloons",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Hard"
   },
   "313": {
     "title": "Super Ugly Number",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "314": {
     "title": "Binary Tree Vertical Order Traversal",
     "locked": true,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "315": {
     "title": "Count of Smaller Numbers After Self",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Hard"
   },
   "316": {
     "title": "Remove Duplicate Letters",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Hard"
   },
   "317": {
     "title": "Shortest Distance from All Buildings",
     "locked": true,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Hard"
   },
   "318": {
     "title": "Maximum Product of Word Lengths",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "319": {
     "title": "Bulb Switcher",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "320": {
     "title": "Generalized Abbreviation",
     "locked": true,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "321": {
     "title": "Create Maximum Number",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "322": {
     "title": "Coin Change",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "323": {
     "title": "Number of Connected Components in an Undirected Graph",
     "locked": true,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Medium"
   },
   "324": {
     "title": "Wiggle Sort II",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "325": {
     "title": "Maximum Size Subarray Sum Equals k",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "326": {
     "title": "Power of Three",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "327": {
     "title": "Count of Range Sum",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "328": {
     "title": "Odd Even Linked List",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "329": {
     "title": "Longest Increasing Path in a Matrix",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Hard"
   },
   "330": {
     "title": "Patching Array",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Hard"
   },
   "331": {
     "title": "Verify Preorder Serialization of a Binary Tree",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "332": {
     "title": "Reconstruct Itinerary",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "333": {
     "title": "Largest BST Subtree",
     "locked": true,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "334": {
     "title": "Increasing Triplet Subsequence",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "335": {
     "title": "Self Crossing",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Hard"
   },
   "336": {
     "title": "Palindrome Pairs",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Hard"
   },
   "337": {
     "title": "House Robber III",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "338": {
     "title": "Counting Bits",
     "locked": false,
-    "acceptance": "61%",
+    "acceptance": 61,
     "difficulty": "Medium"
   },
   "339": {
     "title": "Nested List Weight Sum",
     "locked": true,
-    "acceptance": "62%",
+    "acceptance": 62,
     "difficulty": "Easy"
   },
   "340": {
     "title": "Longest Substring with At Most K Distinct Characters",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Hard"
   },
   "341": {
     "title": "Flatten Nested List Iterator",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "342": {
     "title": "Power of Four",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Easy"
   },
   "343": {
     "title": "Integer Break",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "344": {
     "title": "Reverse String",
     "locked": false,
-    "acceptance": "59%",
+    "acceptance": 59,
     "difficulty": "Easy"
   },
   "345": {
     "title": "Reverse Vowels of a String",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Easy"
   },
   "346": {
     "title": "Moving Average from Data Stream",
     "locked": true,
-    "acceptance": "59%",
+    "acceptance": 59,
     "difficulty": "Easy"
   },
   "347": {
     "title": "Top K Frequent Elements",
     "locked": false,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Medium"
   },
   "348": {
     "title": "Design Tic-Tac-Toe",
     "locked": true,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "349": {
     "title": "Intersection of Two Arrays",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "350": {
     "title": "Intersection of Two Arrays II",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Easy"
   },
   "351": {
     "title": "Android Unlock Patterns",
     "locked": true,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "352": {
     "title": "Data Stream as Disjoint Intervals",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Hard"
   },
   "353": {
     "title": "Design Snake Game",
     "locked": true,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "354": {
     "title": "Russian Doll Envelopes",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Hard"
   },
   "355": {
     "title": "Design Twitter",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Medium"
   },
   "356": {
     "title": "Line Reflection",
     "locked": true,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "357": {
     "title": "Count Numbers with Unique Digits",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "358": {
     "title": "Rearrange String k Distance Apart",
     "locked": true,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "359": {
     "title": "Logger Rate Limiter",
     "locked": true,
-    "acceptance": "59%",
+    "acceptance": 59,
     "difficulty": "Easy"
   },
   "360": {
     "title": "Sort Transformed Array",
     "locked": true,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "361": {
     "title": "Bomb Enemy",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "362": {
     "title": "Design Hit Counter",
     "locked": true,
-    "acceptance": "54%",
+    "acceptance": 54,
     "difficulty": "Medium"
   },
   "363": {
     "title": "Max Sum of Rectangle No Larger Than K",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "364": {
     "title": "Nested List Weight Sum II",
     "locked": true,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "365": {
     "title": "Water and Jug Problem",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "366": {
     "title": "Find Leaves of Binary Tree",
     "locked": true,
-    "acceptance": "60%",
+    "acceptance": 60,
     "difficulty": "Medium"
   },
   "367": {
     "title": "Valid Perfect Square",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Easy"
   },
   "368": {
     "title": "Largest Divisible Subset",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "369": {
     "title": "Plus One Linked List",
     "locked": true,
-    "acceptance": "54%",
+    "acceptance": 54,
     "difficulty": "Medium"
   },
   "370": {
     "title": "Range Addition",
     "locked": true,
-    "acceptance": "56%",
+    "acceptance": 56,
     "difficulty": "Medium"
   },
   "371": {
     "title": "Sum of Two Integers",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Easy"
   },
   "372": {
     "title": "Super Pow",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "373": {
     "title": "Find K Pairs with Smallest Sums",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "374": {
     "title": "Guess Number Higher or Lower",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Easy"
   },
   "375": {
     "title": "Guess Number Higher or Lower II",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "376": {
     "title": "Wiggle Subsequence",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "377": {
     "title": "Combination Sum IV",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "378": {
     "title": "Kth Smallest Element in a Sorted Matrix",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "379": {
     "title": "Design Phone Directory",
     "locked": true,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "380": {
     "title": "Insert Delete GetRandom O(1)",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "381": {
     "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Hard"
   },
   "382": {
     "title": "Linked List Random Node",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "383": {
     "title": "Ransom Note",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "384": {
     "title": "Shuffle an Array",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "385": {
     "title": "Mini Parser",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "386": {
     "title": "Lexicographical Numbers",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "387": {
     "title": "First Unique Character in a String",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "388": {
     "title": "Longest Absolute File Path",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "389": {
     "title": "Find the Difference",
     "locked": false,
-    "acceptance": "50%",
+    "acceptance": 50,
     "difficulty": "Easy"
   },
   "390": {
     "title": "Elimination Game",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "391": {
     "title": "Perfect Rectangle",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Hard"
   },
   "392": {
     "title": "Is Subsequence",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "393": {
     "title": "UTF-8 Validation",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "394": {
     "title": "Decode String",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "395": {
     "title": "Longest Substring with At Least K Repeating Characters",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "396": {
     "title": "Rotate Function",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "397": {
     "title": "Integer Replacement",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "398": {
     "title": "Random Pick Index",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "399": {
     "title": "Evaluate Division",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "400": {
     "title": "Nth Digit",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Easy"
   },
   "401": {
     "title": "Binary Watch",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Easy"
   },
   "402": {
     "title": "Remove K Digits",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Medium"
   },
   "403": {
     "title": "Frog Jump",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Hard"
   },
   "404": {
     "title": "Sum of Left Leaves",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "405": {
     "title": "Convert a Number to Hexadecimal",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Easy"
   },
   "406": {
     "title": "Queue Reconstruction by Height",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "407": {
     "title": "Trapping Rain Water II",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "408": {
     "title": "Valid Word Abbreviation",
     "locked": true,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Easy"
   },
   "409": {
     "title": "Longest Palindrome",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Easy"
   },
   "410": {
     "title": "Split Array Largest Sum",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Hard"
   },
   "411": {
     "title": "Minimum Unique Word Abbreviation",
     "locked": true,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "412": {
     "title": "Fizz Buzz",
     "locked": false,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "413": {
     "title": "Arithmetic Slices",
     "locked": false,
-    "acceptance": "54%",
+    "acceptance": 54,
     "difficulty": "Medium"
   },
   "414": {
     "title": "Third Maximum Number",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Easy"
   },
   "415": {
     "title": "Add Strings",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Easy"
   },
   "416": {
     "title": "Partition Equal Subset Sum",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "417": {
     "title": "Pacific Atlantic Water Flow",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "418": {
     "title": "Sentence Screen Fitting",
     "locked": true,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "419": {
     "title": "Battleships in a Board",
     "locked": false,
-    "acceptance": "62%",
+    "acceptance": 62,
     "difficulty": "Medium"
   },
   "420": {
     "title": "Strong Password Checker",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Hard"
   },
   "421": {
     "title": "Maximum XOR of Two Numbers in an Array",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "422": {
     "title": "Valid Word Square",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Easy"
   },
   "423": {
     "title": "Reconstruct Original Digits from English",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "424": {
     "title": "Longest Repeating Character Replacement",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "425": {
     "title": "Word Squares",
     "locked": true,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Hard"
   },
   "432": {
     "title": "All O`one Data Structure",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Hard"
   },
   "433": {
     "title": "Minimum Genetic Mutation",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "434": {
     "title": "Number of Segments in a String",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Easy"
   },
   "435": {
     "title": "Non-overlapping Intervals",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "436": {
     "title": "Find Right Interval",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "437": {
     "title": "Path Sum III",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Easy"
   },
   "438": {
     "title": "Find All Anagrams in a String",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "439": {
     "title": "Ternary Expression Parser",
     "locked": true,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "440": {
     "title": "K-th Smallest in Lexicographical Order",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Hard"
   },
   "441": {
     "title": "Arranging Coins",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Easy"
   },
   "442": {
     "title": "Find All Duplicates in an Array",
     "locked": false,
-    "acceptance": "56%",
+    "acceptance": 56,
     "difficulty": "Medium"
   },
   "444": {
     "title": "Sequence Reconstruction",
     "locked": true,
-    "acceptance": "19%",
+    "acceptance": 19,
     "difficulty": "Medium"
   },
   "445": {
     "title": "Add Two Numbers II",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "446": {
     "title": "Arithmetic Slices II - Subsequence",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "447": {
     "title": "Number of Boomerangs",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Easy"
   },
   "448": {
     "title": "Find All Numbers Disappeared in an Array",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Easy"
   },
   "449": {
     "title": "Serialize and Deserialize BST",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "450": {
     "title": "Delete Node in a BST",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "451": {
     "title": "Sort Characters By Frequency",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "452": {
     "title": "Minimum Number of Arrows to Burst Balloons",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "453": {
     "title": "Minimum Moves to Equal Array Elements",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "454": {
     "title": "4Sum II",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "455": {
     "title": "Assign Cookies",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "456": {
     "title": "132 Pattern",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "457": {
     "title": "Circular Array Loop",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Medium"
   },
   "458": {
     "title": "Poor Pigs",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "459": {
     "title": "Repeated Substring Pattern",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Easy"
   },
   "460": {
     "title": "LFU Cache",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "461": {
     "title": "Hamming Distance",
     "locked": false,
-    "acceptance": "69%",
+    "acceptance": 69,
     "difficulty": "Easy"
   },
   "462": {
     "title": "Minimum Moves to Equal Array Elements II",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "463": {
     "title": "Island Perimeter",
     "locked": false,
-    "acceptance": "57%",
+    "acceptance": 57,
     "difficulty": "Easy"
   },
   "464": {
     "title": "Can I Win",
     "locked": false,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Medium"
   },
   "465": {
     "title": "Optimal Account Balancing",
     "locked": true,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "466": {
     "title": "Count The Repetitions",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "467": {
     "title": "Unique Substrings in Wraparound String",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "468": {
     "title": "Validate IP Address",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Medium"
   },
   "469": {
     "title": "Convex Polygon",
     "locked": true,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Medium"
   },
   "471": {
     "title": "Encode String with Shortest Length",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Hard"
   },
   "472": {
     "title": "Concatenated Words",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "473": {
     "title": "Matchsticks to Square",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "474": {
     "title": "Ones and Zeroes",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "475": {
     "title": "Heaters",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Easy"
   },
   "476": {
     "title": "Number Complement",
     "locked": false,
-    "acceptance": "60%",
+    "acceptance": 60,
     "difficulty": "Easy"
   },
   "477": {
     "title": "Total Hamming Distance",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "479": {
     "title": "Largest Palindrome Product",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Easy"
   },
   "480": {
     "title": "Sliding Window Median",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "481": {
     "title": "Magical String",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "482": {
     "title": "License Key Formatting",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "483": {
     "title": "Smallest Good Base",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "484": {
     "title": "Find Permutation",
     "locked": true,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "485": {
     "title": "Max Consecutive Ones",
     "locked": false,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Easy"
   },
   "486": {
     "title": "Predict the Winner",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "487": {
     "title": "Max Consecutive Ones II",
     "locked": true,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "488": {
     "title": "Zuma Game",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "490": {
     "title": "The Maze",
     "locked": true,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "491": {
     "title": "Increasing Subsequences",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "492": {
     "title": "Construct the Rectangle",
     "locked": false,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Easy"
   },
   "493": {
     "title": "Reverse Pairs",
     "locked": false,
-    "acceptance": "20%",
+    "acceptance": 20,
     "difficulty": "Hard"
   },
   "494": {
     "title": "Target Sum",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "495": {
     "title": "Teemo Attacking",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "496": {
     "title": "Next Greater Element I",
     "locked": false,
-    "acceptance": "56%",
+    "acceptance": 56,
     "difficulty": "Easy"
   },
   "498": {
     "title": "Diagonal Traverse",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "499": {
     "title": "The Maze III",
     "locked": true,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Hard"
   },
   "500": {
     "title": "Keyboard Row",
     "locked": false,
-    "acceptance": "59%",
+    "acceptance": 59,
     "difficulty": "Easy"
   },
   "501": {
     "title": "Find Mode in Binary Search Tree",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Easy"
   },
   "502": {
     "title": "IPO",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Hard"
   },
   "503": {
     "title": "Next Greater Element II",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "504": {
     "title": "Base 7",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Easy"
   },
   "505": {
     "title": "The Maze II",
     "locked": true,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "506": {
     "title": "Relative Ranks",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "507": {
     "title": "Perfect Number",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Easy"
   },
   "508": {
     "title": "Most Frequent Subtree Sum",
     "locked": false,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "513": {
     "title": "Find Bottom Left Tree Value",
     "locked": false,
-    "acceptance": "56%",
+    "acceptance": 56,
     "difficulty": "Medium"
   },
   "514": {
     "title": "Freedom Trail",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Hard"
   },
   "515": {
     "title": "Find Largest Value in Each Tree Row",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "516": {
     "title": "Longest Palindromic Subsequence",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "517": {
     "title": "Super Washing Machines",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Hard"
   },
   "518": {
     "title": "Coin Change 2",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "520": {
     "title": "Detect Capital",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Easy"
   },
   "521": {
     "title": "Longest Uncommon Subsequence I ",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Easy"
   },
   "522": {
     "title": "Longest Uncommon Subsequence II",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "523": {
     "title": "Continuous Subarray Sum",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Medium"
   },
   "524": {
     "title": "Longest Word in Dictionary through Deleting",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "525": {
     "title": "Contiguous Array",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "526": {
     "title": "Beautiful Arrangement",
     "locked": false,
-    "acceptance": "54%",
+    "acceptance": 54,
     "difficulty": "Medium"
   },
   "527": {
     "title": "Word Abbreviation",
     "locked": true,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Hard"
   },
   "529": {
     "title": "Minesweeper",
     "locked": false,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Medium"
   },
   "530": {
     "title": "Minimum Absolute Difference in BST",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "531": {
     "title": "Lonely Pixel I",
     "locked": true,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "532": {
     "title": "K-diff Pairs in an Array",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Easy"
   },
   "533": {
     "title": "Lonely Pixel II",
     "locked": true,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "534": {
     "title": "Design TinyURL",
     "locked": false,
-    "acceptance": "0%",
+    "acceptance": 0,
     "difficulty": "Medium"
   },
   "535": {
     "title": "Encode and Decode TinyURL",
     "locked": false,
-    "acceptance": "74%",
+    "acceptance": 74,
     "difficulty": "Medium"
   },
   "536": {
     "title": "Construct Binary Tree from String",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "537": {
     "title": "Complex Number Multiplication",
     "locked": false,
-    "acceptance": "63%",
+    "acceptance": 63,
     "difficulty": "Medium"
   },
   "538": {
     "title": "Convert BST to Greater Tree",
     "locked": false,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Easy"
   },
   "539": {
     "title": "Minimum Time Difference",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "540": {
     "title": "Single Element in a Sorted Array",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "541": {
     "title": "Reverse String II",
     "locked": false,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Easy"
   },
   "542": {
     "title": "01 Matrix",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "543": {
     "title": "Diameter of Binary Tree",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Easy"
   },
   "544": {
     "title": "Output Contest Matches",
     "locked": true,
-    "acceptance": "71%",
+    "acceptance": 71,
     "difficulty": "Medium"
   },
   "545": {
     "title": "Boundary of Binary Tree",
     "locked": true,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "546": {
     "title": "Remove Boxes",
     "locked": false,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "547": {
     "title": "Friend Circles",
     "locked": false,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Medium"
   },
   "548": {
     "title": "Split Array with Equal Sum",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "549": {
     "title": "Binary Tree Longest Consecutive Sequence II",
     "locked": true,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "551": {
     "title": "Student Attendance Record I",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Easy"
   },
   "552": {
     "title": "Student Attendance Record II",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "553": {
     "title": "Optimal Division",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "554": {
     "title": "Brick Wall",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "555": {
     "title": "Split Concatenated Strings",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "556": {
     "title": "Next Greater Element III",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Medium"
   },
   "557": {
     "title": "Reverse Words in a String III",
     "locked": false,
-    "acceptance": "59%",
+    "acceptance": 59,
     "difficulty": "Easy"
   },
   "560": {
     "title": "Subarray Sum Equals K",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "561": {
     "title": "Array Partition I",
     "locked": false,
-    "acceptance": "66%",
+    "acceptance": 66,
     "difficulty": "Easy"
   },
   "562": {
     "title": "Longest Line of Consecutive One in Matrix",
     "locked": true,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "563": {
     "title": "Binary Tree Tilt",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "564": {
     "title": "Find the Closest Palindrome",
     "locked": false,
-    "acceptance": "17%",
+    "acceptance": 17,
     "difficulty": "Hard"
   },
   "566": {
     "title": "Reshape the Matrix",
     "locked": false,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "567": {
     "title": "Permutation in String",
     "locked": false,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "568": {
     "title": "Maximum Vacation Days",
     "locked": true,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Hard"
   },
   "569": {
     "title": "Median Employee Salary",
     "locked": true,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "570": {
     "title": "Managers with at Least 5 Direct Reports",
     "locked": true,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "571": {
     "title": "Find Median Given Frequency of Numbers",
     "locked": true,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "572": {
     "title": "Subtree of Another Tree",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "573": {
     "title": "Squirrel Simulation",
     "locked": true,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "574": {
     "title": "Winning Candidate",
     "locked": true,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Medium"
   },
   "575": {
     "title": "Distribute Candies",
     "locked": false,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "576": {
     "title": "Out of Boundary Paths",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "577": {
     "title": "Employee Bonus",
     "locked": true,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "578": {
     "title": "Get Highest Answer Rate Question",
     "locked": true,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Medium"
   },
   "579": {
     "title": "Find Cumulative Salary of an Employee",
     "locked": true,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "580": {
     "title": "Count Student Number in Departments",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "581": {
     "title": "Shortest Unsorted Continuous Subarray",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Easy"
   },
   "582": {
     "title": "Kill Process",
     "locked": true,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Medium"
   },
   "583": {
     "title": "Delete Operation for Two Strings",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "584": {
     "title": "Find Customer Referee",
     "locked": true,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "585": {
     "title": "Investments in 2016",
     "locked": true,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "586": {
     "title": "Customer Placing the Largest Number of Orders",
     "locked": true,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Easy"
   },
   "587": {
     "title": "Erect the Fence",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Hard"
   },
   "588": {
     "title": "Design In-Memory File System",
     "locked": true,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Hard"
   },
   "591": {
     "title": "Tag Validator",
     "locked": false,
-    "acceptance": "29%",
+    "acceptance": 29,
     "difficulty": "Hard"
   },
   "592": {
     "title": "Fraction Addition and Subtraction",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "593": {
     "title": "Valid Square",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Medium"
   },
   "594": {
     "title": "Longest Harmonious Subsequence",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Easy"
   },
   "595": {
     "title": "Big Countries",
     "locked": false,
-    "acceptance": "71%",
+    "acceptance": 71,
     "difficulty": "Easy"
   },
   "596": {
     "title": "Classes More Than 5 Students",
     "locked": false,
-    "acceptance": "25%",
+    "acceptance": 25,
     "difficulty": "Easy"
   },
   "597": {
     "title": "Friend Requests I: Overall Acceptance Rate",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Easy"
   },
   "598": {
     "title": "Range Addition II",
     "locked": false,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Easy"
   },
   "599": {
     "title": "Minimum Index Sum of Two Lists",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Easy"
   },
   "600": {
     "title": "Non-negative Integers without Consecutive Ones",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "601": {
     "title": "Human Traffic of Stadium",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Hard"
   },
   "602": {
     "title": "Friend Requests II: Who Has the Most Friends",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "603": {
     "title": "Consecutive Available Seats",
     "locked": true,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Easy"
   },
   "604": {
     "title": "Design Compressed String Iterator",
     "locked": true,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "605": {
     "title": "Can Place Flowers",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Easy"
   },
   "606": {
     "title": "Construct String from Binary Tree",
     "locked": false,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Easy"
   },
   "607": {
     "title": "Sales Person",
     "locked": true,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Easy"
   },
   "608": {
     "title": "Tree Node",
     "locked": true,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "609": {
     "title": "Find Duplicate File in System",
     "locked": false,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "610": {
     "title": "Triangle Judgement",
     "locked": true,
-    "acceptance": "57%",
+    "acceptance": 57,
     "difficulty": "Easy"
   },
   "611": {
     "title": "Valid Triangle Number",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "612": {
     "title": "Shortest Distance in a Plane",
     "locked": true,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Medium"
   },
   "613": {
     "title": "Shortest Distance in a Line",
     "locked": true,
-    "acceptance": "68%",
+    "acceptance": 68,
     "difficulty": "Easy"
   },
   "614": {
     "title": "Second Degree Follower",
     "locked": true,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Medium"
   },
   "615": {
     "title": "Average Salary: Departments VS Company",
     "locked": true,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Hard"
   },
   "616": {
     "title": "Add Bold Tag in String",
     "locked": true,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "617": {
     "title": "Merge Two Binary Trees",
     "locked": false,
-    "acceptance": "67%",
+    "acceptance": 67,
     "difficulty": "Easy"
   },
   "618": {
     "title": "Students Report By Geography",
     "locked": true,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Hard"
   },
   "619": {
     "title": "Biggest Single Number",
     "locked": true,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Easy"
   },
   "620": {
     "title": "Not Boring Movies",
     "locked": false,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "621": {
     "title": "Task Scheduler",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "623": {
     "title": "Add One Row to Tree",
     "locked": false,
-    "acceptance": "46%",
+    "acceptance": 46,
     "difficulty": "Medium"
   },
   "624": {
     "title": "Maximum Distance in Arrays",
     "locked": true,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Easy"
   },
   "625": {
     "title": "Minimum Factorization",
     "locked": true,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "626": {
     "title": "Exchange Seats",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Medium"
   },
   "627": {
     "title": "Swap Salary",
     "locked": false,
-    "acceptance": "66%",
+    "acceptance": 66,
     "difficulty": "Easy"
   },
   "628": {
     "title": "Maximum Product of Three Numbers",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Easy"
   },
   "629": {
     "title": "K Inverse Pairs Array",
     "locked": false,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Hard"
   },
   "630": {
     "title": "Course Schedule III",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "631": {
     "title": "Design Excel Sum Formula",
     "locked": true,
-    "acceptance": "26%",
+    "acceptance": 26,
     "difficulty": "Hard"
   },
   "632": {
     "title": "Smallest Range",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Hard"
   },
   "633": {
     "title": "Sum of Square Numbers",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "634": {
     "title": "Find the Derangement of An Array",
     "locked": true,
-    "acceptance": "33%",
+    "acceptance": 33,
     "difficulty": "Medium"
   },
   "635": {
     "title": "Design Log Storage System",
     "locked": true,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Medium"
   },
   "636": {
     "title": "Exclusive Time of Functions",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "637": {
     "title": "Average of Levels in Binary Tree",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Easy"
   },
   "638": {
     "title": "Shopping Offers",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "639": {
     "title": "Decode Ways II",
     "locked": false,
-    "acceptance": "23%",
+    "acceptance": 23,
     "difficulty": "Hard"
   },
   "640": {
     "title": "Solve the Equation",
     "locked": false,
-    "acceptance": "39%",
+    "acceptance": 39,
     "difficulty": "Medium"
   },
   "642": {
     "title": "Design Search Autocomplete System",
     "locked": true,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   },
   "643": {
     "title": "Maximum Average Subarray I",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Easy"
   },
   "644": {
     "title": "Maximum Average Subarray II",
     "locked": true,
-    "acceptance": "22%",
+    "acceptance": 22,
     "difficulty": "Hard"
   },
   "645": {
     "title": "Set Mismatch",
     "locked": false,
-    "acceptance": "40%",
+    "acceptance": 40,
     "difficulty": "Easy"
   },
   "646": {
     "title": "Maximum Length of Pair Chain",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "647": {
     "title": "Palindromic Substrings",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Medium"
   },
   "648": {
     "title": "Replace Words",
     "locked": false,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Medium"
   },
   "649": {
     "title": "Dota2 Senate",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "650": {
     "title": "2 Keys Keyboard",
     "locked": false,
-    "acceptance": "44%",
+    "acceptance": 44,
     "difficulty": "Medium"
   },
   "651": {
     "title": "4 Keys Keyboard",
     "locked": true,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Medium"
   },
   "652": {
     "title": "Find Duplicate Subtrees",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "653": {
     "title": "Two Sum IV - Input is a BST",
     "locked": false,
-    "acceptance": "50%",
+    "acceptance": 50,
     "difficulty": "Easy"
   },
   "654": {
     "title": "Maximum Binary Tree",
     "locked": false,
-    "acceptance": "70%",
+    "acceptance": 70,
     "difficulty": "Medium"
   },
   "655": {
     "title": "Print Binary Tree",
     "locked": false,
-    "acceptance": "50%",
+    "acceptance": 50,
     "difficulty": "Medium"
   },
   "656": {
     "title": "Coin Path",
     "locked": true,
-    "acceptance": "24%",
+    "acceptance": 24,
     "difficulty": "Hard"
   },
   "657": {
     "title": "Judge Route Circle",
     "locked": false,
-    "acceptance": "68%",
+    "acceptance": 68,
     "difficulty": "Easy"
   },
   "658": {
     "title": "Find K Closest Elements",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "659": {
     "title": "Split Array into Consecutive Subsequences",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "660": {
     "title": "Remove 9",
     "locked": true,
-    "acceptance": "47%",
+    "acceptance": 47,
     "difficulty": "Hard"
   },
   "661": {
     "title": "Image Smoother",
     "locked": false,
-    "acceptance": "45%",
+    "acceptance": 45,
     "difficulty": "Easy"
   },
   "662": {
     "title": "Maximum Width of Binary Tree",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Medium"
   },
   "663": {
     "title": "Equal Tree Partition",
     "locked": true,
-    "acceptance": "36%",
+    "acceptance": 36,
     "difficulty": "Medium"
   },
   "664": {
     "title": "Strange Printer",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "665": {
     "title": "Non-decreasing Array",
     "locked": false,
-    "acceptance": "21%",
+    "acceptance": 21,
     "difficulty": "Easy"
   },
   "666": {
     "title": "Path Sum IV",
     "locked": true,
-    "acceptance": "49%",
+    "acceptance": 49,
     "difficulty": "Medium"
   },
   "667": {
     "title": "Beautiful Arrangement II",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Medium"
   },
   "668": {
     "title": "Kth Smallest Number in Multiplication Table",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "669": {
     "title": "Trim a Binary Search Tree",
     "locked": false,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "670": {
     "title": "Maximum Swap",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "671": {
     "title": "Second Minimum Node In a Binary Tree",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Easy"
   },
   "672": {
     "title": "Bulb Switcher II",
     "locked": false,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Medium"
   },
   "673": {
     "title": "Number of Longest Increasing Subsequence",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Medium"
   },
   "674": {
     "title": "Longest Continuous Increasing Subsequence",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Easy"
   },
   "675": {
     "title": "Cut Off Trees for Golf Event",
     "locked": false,
-    "acceptance": "27%",
+    "acceptance": 27,
     "difficulty": "Hard"
   },
   "676": {
     "title": "Implement Magic Dictionary",
     "locked": false,
-    "acceptance": "50%",
+    "acceptance": 50,
     "difficulty": "Medium"
   },
   "677": {
     "title": "Map Sum Pairs",
     "locked": false,
-    "acceptance": "52%",
+    "acceptance": 52,
     "difficulty": "Medium"
   },
   "678": {
     "title": "Valid Parenthesis String",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Medium"
   },
   "679": {
     "title": "24 Game",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Hard"
   },
   "680": {
     "title": "Valid Palindrome II",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Easy"
   },
   "681": {
     "title": "Next Closest Time",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Medium"
   },
   "682": {
     "title": "Baseball Game",
     "locked": false,
-    "acceptance": "58%",
+    "acceptance": 58,
     "difficulty": "Easy"
   },
   "683": {
     "title": "K Empty Slots",
     "locked": false,
-    "acceptance": "37%",
+    "acceptance": 37,
     "difficulty": "Hard"
   },
   "684": {
     "title": "Redundant Connection",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Medium"
   },
   "685": {
     "title": "Redundant Connection II",
     "locked": false,
-    "acceptance": "28%",
+    "acceptance": 28,
     "difficulty": "Hard"
   },
   "686": {
     "title": "Repeated String Match",
     "locked": false,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Easy"
   },
   "687": {
     "title": "Longest Univalue Path",
     "locked": false,
-    "acceptance": "32%",
+    "acceptance": 32,
     "difficulty": "Easy"
   },
   "688": {
     "title": "Knight Probability in Chessboard",
     "locked": false,
-    "acceptance": "38%",
+    "acceptance": 38,
     "difficulty": "Medium"
   },
   "689": {
     "title": "Maximum Sum of 3 Non-Overlapping Subarrays",
     "locked": false,
-    "acceptance": "42%",
+    "acceptance": 42,
     "difficulty": "Hard"
   },
   "690": {
     "title": "Employee Importance",
     "locked": false,
-    "acceptance": "55%",
+    "acceptance": 55,
     "difficulty": "Easy"
   },
   "691": {
     "title": "Stickers to Spell Word",
     "locked": false,
-    "acceptance": "31%",
+    "acceptance": 31,
     "difficulty": "Hard"
   },
   "692": {
     "title": "Top K Frequent Words",
     "locked": false,
-    "acceptance": "41%",
+    "acceptance": 41,
     "difficulty": "Medium"
   },
   "693": {
     "title": "Binary Number with Alternating Bits",
     "locked": false,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Easy"
   },
   "694": {
     "title": "Number of Distinct Islands",
     "locked": true,
-    "acceptance": "43%",
+    "acceptance": 43,
     "difficulty": "Medium"
   },
   "695": {
     "title": "Max Area of Island",
     "locked": false,
-    "acceptance": "53%",
+    "acceptance": 53,
     "difficulty": "Easy"
   },
   "696": {
     "title": "Count Binary Substrings",
     "locked": false,
-    "acceptance": "51%",
+    "acceptance": 51,
     "difficulty": "Easy"
   },
   "697": {
     "title": "Degree of an Array",
     "locked": false,
-    "acceptance": "48%",
+    "acceptance": 48,
     "difficulty": "Easy"
   },
   "698": {
     "title": "Partition to K Equal Sum Subsets",
     "locked": false,
-    "acceptance": "34%",
+    "acceptance": 34,
     "difficulty": "Medium"
   },
   "699": {
     "title": "Falling Squares",
     "locked": false,
-    "acceptance": "35%",
+    "acceptance": 35,
     "difficulty": "Hard"
   },
   "711": {
     "title": "Number of Distinct Islands II",
     "locked": true,
-    "acceptance": "30%",
+    "acceptance": 30,
     "difficulty": "Hard"
   }
 }

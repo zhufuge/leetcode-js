@@ -91,7 +91,7 @@ function handleBody(body, problem) {
         .replace(/\n\n\n/g, '\n\n')
   const header = '// ' + problem.number + '. ' + problem.title + '\n' +
         '// ' + problem.difficulty + ' ' + problem.acceptance +
-        ' locked:' + problem.locked + '\n\n'
+        '% locked:' + problem.locked + '\n\n'
 
   fs.writeFileSync(
     path.join(__dirname, '../', problem.filename),
