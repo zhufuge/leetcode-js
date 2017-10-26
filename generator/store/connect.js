@@ -6,13 +6,20 @@ const connection = mysql.createConnection({
   database: 'alg',
 })
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack)
+connection.connect(function(error) {
+  if (error) {
+    console.error('error connecting: ' + error.stack)
     return
   }
 
   console.log('connected as id ' + connection.threadId)
-
-  require('./init')(connection)
+  require('./main')(connection)
+    .then(() => {
+      console.log('connection end.')
+      connection.end()
+    })
+    .catch((error) => {
+      console.log(error)
+      connection.end()
+    })
 })
