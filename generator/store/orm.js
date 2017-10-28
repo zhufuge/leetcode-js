@@ -52,7 +52,7 @@ class Table {
 
   async load(values) {
     for (let value of values) {
-      console.log(await this.insert(value))
+      await this.insert(value)
     }
   }
 

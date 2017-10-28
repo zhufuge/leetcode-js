@@ -13,7 +13,7 @@ connection.connect(function(error) {
   }
 
   console.log('connected as id ' + connection.threadId)
-  require('./main')(connection)
+  require('./init')(connection)
     .then(() => {
       console.log('connection end.')
       connection.end()

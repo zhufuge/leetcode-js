@@ -1,7 +1,10 @@
-const fs = require('fs')
+const fs = require('fs'),
+      path = require('path')
 const cheerio = require('cheerio')
 
-const $ = cheerio.load(fs.readFileSync('problems.all.html', 'utf8'))
+const $ = cheerio.load(
+  fs.readFileSync(path.join(__dirname, 'cache', 'problems.all.html'), 'utf8')
+)
 
 function getProblems($) {
   const problems = {}
@@ -22,4 +25,8 @@ function getProblems($) {
 
 const problems = getProblems($)
 
-fs.writeFileSync('problems.all.json', JSON.stringify(problems), 'utf8')
+fs.writeFileSync(
+  path.join(__dirname, 'cache', 'problems.all.json'),
+  JSON.stringify(problems),
+  'utf8'
+)

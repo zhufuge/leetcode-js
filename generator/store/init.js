@@ -13,6 +13,7 @@ module.exports = async function(connection) {
   await table.create()
   const isEmpty = await table.isEmpty()
   if (isEmpty) {
+    console.log('Database is empty. Start to load data...')
     const data = await readFile(
       path.join(__dirname, '..', 'problems.all.json'),
       'utf8'
@@ -25,6 +26,6 @@ module.exports = async function(connection) {
       return value
     }))
 
-    console.log('load successed.')
+    console.log('Load successed.')
   }
 }
