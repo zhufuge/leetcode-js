@@ -7,9 +7,11 @@ const problems = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'cache', 'problems.all.json'), 'utf8')
 )
 
+const getNumber = (t) => t.match(/(\d*)-.*/)[1]
+
 files.forEach((f) => {
   const basename = path.basename(f, '.js')
-  const number = basename.match(/(\d*)-.*/)[1]
+  const number = getNumber(basename)
   const problem = problems[number]
   if (problem) {
     const filepath = path.join(__dirname, '../', f)

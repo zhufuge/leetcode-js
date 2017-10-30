@@ -1,3 +1,5 @@
+const mysql = require('mysql')
+
 const CREATE_TABLE = 'CREATE TABLE IF NOT EXISTS problems(' +
       'id INT PRIMARY KEY,' +
       'title VARCHAR(128),' +
@@ -8,7 +10,10 @@ const CREATE_TABLE = 'CREATE TABLE IF NOT EXISTS problems(' +
       'solution BOOLEAN' +
       ') DEFAULT CHARACTER SET utf8'
 
-const INIT_TABLE = 'INSERT INTO problems SET ?'
+const default_callback = (resolve, reject) => function(error, results) {
+  if (error) reject(error)
+  resolve(results)
+}
 
 class Table {
   constructor(name, connection) {
@@ -20,9 +25,7 @@ class Table {
     return new Promise((resolve, reject) => {
       this.exec(CREATE_TABLE, function(error, results) {
         if (error) {
-          console.log(
-            'problems table isn not exists, and create this table failed.'
-          )
+          console.log('problems table isn not exists, and create this table failed.')
           reject(error)
         }
         resolve(results)
@@ -43,10 +46,7 @@ class Table {
 
   drop() {
     return new Promise((resolve, reject) => {
-      this.exec('DROP TABLE PROBLEMS', function(error, results) {
-        if (error) reject(error)
-        resolve(results)
-      })
+      this.exec('DROP TABLE problems', default_callback(resolve, reject))
     })
   }
 
@@ -58,10 +58,31 @@ class Table {
 
   insert(value) {
     return new Promise((resolve, reject) => {
-      this.exec(INIT_TABLE, value, function(error, results) {
-        if (error) reject(error)
-        resolve(results)
-      })
+      this.exec(
+        'INSERT INTO problems SET ?',
+        value,
+        default_callback(resolve, reject)
+      )
+    })
+  }
+
+  update(values) {
+    return new Promise((resolve, reject) => {
+      this.exec(
+        'UPDATE problems SET ? WHERE ?',
+        values,
+        default_callback(resolve, reject)
+      )
+    })
+  }
+
+  selectBy(id) {
+    return new Promise((resolve, reject) => {
+      this.exec(
+        'SELECT * from problems where id = ?',
+        id,
+        default_callback(resolve, reject)
+      )
     })
   }
 }

@@ -1,10 +1,12 @@
-const request = require('request')
-const cheerio = require('cheerio')
-
 const fs = require('fs'),
       process = require('process'),
       path = require('path'),
       promisify = require('util').promisify
+
+const request = require('request')
+const cheerio = require('cheerio')
+
+const { selectBy } = require('./store')
 
 const readFile = promisify(fs.readFile),
       writeFile = promisify(fs.writeFile),
@@ -19,23 +21,24 @@ async function generate(number) {
 
   const description = await requestProblem(problem)
   const header = '// ' + number + '. ' + problem.title + '\n' +
-        '// ' + problem.difficulty + ' ' + problem.acceptance +
-        '% locked:' + problem.locked + '\n'
+        '// ' + problem.difficulty + '   ' + problem.acceptance + '%\n'
 
   await writeFile(filePath, header + description, 'utf8')
   console.log('Generate File: <' + filename + '>.')
 }
 
 async function getProblem(number) {
-  const problems = JSON.parse(
-    await readFile(path.join(__dirname, 'cache', 'problems.all.json'))
-  )
-
-  const problem = problems[number]
+  const problem = (await selectBy(parseInt(number)))[0]
+  console.log(problem)
   if (!problem) exit('Do not have this problem.')
   if (problem.locked) exit('This problem is LOCKED!')
 
-  problem.lowTitle = problem.title.split(' ').join('-').toLowerCase()
+  problem.lowTitle = problem
+    .title
+    .split(' ')
+    .filter(w => w !== '-')
+    .join('-')
+    .toLowerCase()
   return problem
 }
 
@@ -63,23 +66,21 @@ async function requestProblem(problem) {
   console.log('start to connect ' + url)
   const body = await requestAsync(url)
 
-  console.log(body)
   await writeFile(cachePath, body, 'utf8')
   return getDescription(body)
 }
 
 function getDescription(body) {
   function unfill(value) {
+    if (value === '') return value
     return value
       .split(' ')
       .reduce((lines, word, i) => {
-        if (word !== '') {
-          const tail = lines.length - 1
-          if (lines[tail].length + word.length > 80) {
-            lines[tail + 1] = '// ' + word
-          } else {
-            lines[tail] += (i ? ' ' : '// ') + word
-          }
+        const tail = lines.length - 1
+        if (lines[tail].length + word.length > 80) {
+          lines[tail + 1] = '// ' + word
+        } else {
+          lines[tail] += (i ? ' ' : '// ') + word
         }
         return lines
       }, [''])
@@ -88,11 +89,12 @@ function getDescription(body) {
 
   const $ = cheerio.load(body)
   const description = $('.question-description')
-  description.children('p').each(function() {$(this).text($(this).text() + '\n')})
+  description.children('p').each(function(){$(this).text($(this).text() + '\n')})
 
   return description
     .text()
     .split('\n')
+    .map(line => line.trimRight())
     .map(unfill)
     .join('\n')
     .replace(/\n{3,}/g, '\n\n') +
