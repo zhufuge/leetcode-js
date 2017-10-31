@@ -29,7 +29,7 @@ async function generate(number) {
 
 async function getProblem(number) {
   const problem = (await selectBy(parseInt(number)))[0]
-  console.log(problem)
+
   if (!problem) exit('Do not have this problem.')
   if (problem.locked) exit('This problem is LOCKED!')
 
