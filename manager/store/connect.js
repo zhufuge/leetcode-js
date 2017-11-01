@@ -31,7 +31,7 @@ module.exports = async function(operations) {
     connection.end()
   })
 
-  const result = await operations(orm(connection).table('problem'))
+  const result = await operations(orm(connection).table('problems'))
   console.log('connection end.')
   connection.end()
 

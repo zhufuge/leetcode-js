@@ -19,7 +19,14 @@ function selectBy(id) {
   })
 }
 
+function select(attrs, where) {
+  return connect(function(table) {
+    return table.select(attrs, where)
+  })
+}
+
 module.exports = {
   updateAll,
   selectBy,
+  select,
 }
