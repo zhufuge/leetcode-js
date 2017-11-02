@@ -1,13 +1,13 @@
 const connect = require('./connect')
 
 function updateAll(data) {
-  connect(function(table) {
+  return connect(async function(table) {
     if (data) {
-      data.forEach(async function(values) {
-        await table.update(values)
-        console.log(values)
+      let results = data.map(async function(values) {
+        return await table.update(values)
       })
 
+      for (let result of results) await result
       console.log('Update successed.')
     }
   })
