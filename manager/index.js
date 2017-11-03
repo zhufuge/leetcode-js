@@ -36,7 +36,7 @@ async function getProblem(number) {
   problem.lowTitle = problem
     .title
     .split(' ')
-    .filter(w => w !== '-')
+    .filter(w => w !== '-' && w !== '')
     .join('-')
     .toLowerCase()
   return problem

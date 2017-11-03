@@ -49,7 +49,7 @@ function excerpt(problems) {
 function enhance(problems) {
   const lowTitle = (title) => title
         .split(' ')
-        .filter(w => w !== '-')
+        .filter(w => w !== '-' && w !== '')
         .join('-')
         .toLowerCase()
 
