@@ -25,8 +25,15 @@ function select(attrs, where) {
   })
 }
 
+function insert(value) {
+  return connect(function(table) {
+    return table.insert(value)
+  })
+}
+
 module.exports = {
   updateAll,
   selectBy,
   select,
+  insert,
 }
