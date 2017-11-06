@@ -29,11 +29,11 @@ async function getLatest(problems) {
   for (let i = 0, n = problems.length; i < n; i++) {
     const row = problems[i]
     rows[i] = JSON.parse(JSON.stringify(row))
-    rows[i].birthtime =
-      (await stat(path.join(__dirname, '..', row.filename))).birthtimeMs
+    rows[i].mtimeMs =
+      (await stat(path.join(__dirname, '..', row.filename))).mtimeMs
   }
 
-  rows.sort((a, b) => b.birthtime - a.birthtime)
+  rows.sort((a, b) => b.mtimeMs - a.mtimeMs)
   return excerpt(rows.slice(0, 7))
 }
 
