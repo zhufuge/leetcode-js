@@ -1,5 +1,5 @@
 // 3. Longest Substring Without Repeating Characters
-// Medium 24% locked:false
+// Medium  24%
 
 // Given a string, find the length of the longest substring without repeating
 // characters.
@@ -20,40 +20,28 @@
  * @return {number}
  */
 const lengthOfLongestSubstring = function(s) {
-  console.log(s)
-  let longest = '', thatLen = ''
-  for (let i of s) {
-    const index = thatLen.indexOf(i)
-    if (index >= 0) {
-      if (thatLen.length > longest.length) longest = thatLen
-      thatLen = thatLen.substr(index + 1)
-    }
-
-    thatLen += i
+  const n = s.length, hash = {}
+  let result = 0
+  for (let i = 0, j = 0; i < n; i++) {
+    if (hash[s[i]]) j = Math.max(hash[s[i]], j)
+    result = Math.max(result, i - j + 1)
+    hash[s[i]] = i + 1
   }
-  longest = longest.length > thatLen.length ? longest : thatLen
-  return longest.length
+  return result
 }
 
-// console.log(lengthOfLongestSubstring('abcabcbb'))
-// console.log(lengthOfLongestSubstring('bbbbb'))
-// console.log(lengthOfLongestSubstring('pwwkew'))
-// console.log(lengthOfLongestSubstring('c'))
-// console.log(lengthOfLongestSubstring('dvdf'))
+;[
+  'abcabcbb',                   // 3
+  'bbbbb',                      // 1
+  'pwwkew',                     // 3
+  'c',                          // 1
+  'dvdf',                       // 3
+].forEach(s => {
+  console.log(lengthOfLongestSubstring(s))
+})
 
-function bestAnswer(s) {
-  const n = s.length, map = {}
-  let ans = 0
-  for (let j = 0, i = 0; j < n; j++) {
-    if (map[s[j]]) i = Math.max(map[s[j]], i)
-    ans = Math.max(ans, j - i + 1)
-    map[s[j]] = j + 1
-  }
-  return ans;
-}
+// Solution:
+// 用哈希保存出现过的字符，且记录字符的位置+1 。
+// 每次遇到哈希中出现过的字符，就计算当前字符到位置 - 哈希中该字符的值。
 
-console.log(bestAnswer('abcabcbb'))
-console.log(bestAnswer('bbbbb'))
-console.log(bestAnswer('pwwkew'))
-console.log(bestAnswer('c'))
-console.log(bestAnswer('dvdf'))
+// Submission Result: Accepted

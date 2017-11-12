@@ -1,5 +1,5 @@
 // 1. Two Sum
-// Easy 35% locked:false
+// Easy  35%
 
 // Given an array of integers, return indices of the two numbers such that they
 // add up to a specific target.
@@ -21,14 +21,19 @@
  */
 const twoSum = function(nums, target) {
   const hash = {}
-  const len = nums.length
-  for (let i = 0; i < len; i++) {
-    if (hash[nums[i]] !== undefined) return [hash[nums[i]], i]
+  for (let i = 0, n = nums.length; i < n; i++) {
+    if (hash[nums[i]] != null) return [hash[nums[i]], i]
     hash[target - nums[i]] = i
   }
   return [-1, -1]
 }
 
+
+;[
+  [[2, 7, 11, 15], 9]           // [0, 1]
+].forEach(args => {
+  console.log(twoSum(...args))
+})
 
 // Solution:
 // 使用哈希表，以每位数的互补数为键名，该数的位置为值。
@@ -36,7 +41,5 @@ const twoSum = function(nums, target) {
 // （哈希的应用）
 // 时间复杂度 O(n)
 // 空间复杂度 O(n)
-
-
 
 // Submission Result: Accepted

@@ -1,5 +1,5 @@
 // 2. Add Two Numbers
-// Medium 27% locked:false
+// Medium  27%
 
 // You are given two non-empty linked lists representing two non-negative
 // integers. The digits are stored in reverse order and each of their nodes
@@ -17,23 +17,23 @@ function ListNode(val) {
 }
 
 ListNode.prototype.toString = function() {
-  let curr = this
+  let node = this
   let string = ''
-  while (curr) {
-    string += string === '' ? curr.val : '->' + curr.val
-    curr = curr.next
+  while (node) {
+    string += string === '' ? node.val : '->' + node.val
+    node = node.next
   }
   return string
 }
 
-function createList(arr) {
-  const list = new ListNode(0)
-  let curr = list
-  for (let a of arr) {
-    curr.next = new ListNode(a)
-    curr = curr.next
+function toList(array) {
+  const head = new ListNode()
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
   }
-  return list.next
+  return head.next
 }
 
 /**
@@ -42,27 +42,33 @@ function createList(arr) {
  * @return {ListNode}
  */
 const addTwoNumbers = function(l1, l2) {
-  const getCarry = n => Math.floor(n / 10)
-  const result = new ListNode(0)
-  let p = l1, q = l2, curr = result, carry = 0
-  while (p || q) {
+  const result = new ListNode()
+  let p = l1, q = l2, node = result, carry = 0
+  while (p || q || carry) {
     const sum = (p ? p.val : 0) + (q ? q.val : 0) + carry
-    curr.next = new ListNode(sum % 10)
-    carry = getCarry(sum)
-    curr = curr.next
+    node.next = new ListNode(sum % 10)
+    carry = Math.trunc(sum / 10)
+    node = node.next
     if (p) p = p.next
     if (q) q = q.next
-  }
-
-  if (carry) {
-    curr.next = new ListNode(carry)
   }
   return result.next
 }
 
-const l1 = createList([9, 9]),
-      l2 = createList([1])
 
-console.log(l1.toString())
-console.log(l2.toString())
-console.log(addTwoNumbers(l1, l2).toString())
+;[
+  [[9, 9], [1]],                // [1, 0, 0]
+  [[2, 4, 3], [5, 6, 4]],       // [7, 0, 8]
+].forEach(args => {
+  const l1 = toList(args[0]),
+        l2 = toList(args[1])
+  console.log(l1.toString())
+  console.log(l2.toString())
+  console.log(addTwoNumbers(l1, l2).toString())
+})
+
+
+// Solution:
+// 保存一个进位位，每次相加都带上进位位。
+
+// Submission Result: Accepted
