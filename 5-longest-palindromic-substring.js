@@ -19,60 +19,35 @@
  * @return {string}
  */
 const longestPalindrome = function(s) {
-  const n = s.length
-  if (n === 0) return ''
-
-  let result = ''
-  for (let i = 0; i < n; i++) {
-    let p = s[i]
-    for (let j = 1; s[i + j] === s[i - j] && j <= i && i + j <= n; j++) {
-      p = s[i - j] + p + s[i - j]
-    }
-
-    if (s[i] === s[i + 1]) {
-      let q = s[i] + s[i]
-      for (let j = 1; s[i + j + 1] === s[i - j] && j <= i && i + j <= n; j++) {
-        q = s[i - j] + q + s[i - j]
-      }
-      p = (q.length > p.length) ? q : p
-    }
-    result = (p.length > result.length) ? p : result
-  }
-
-  return result
-}
-
-// console.log(longestPalindrome('babad'))
-// console.log(longestPalindrome('cbbd'))
-// console.log(longestPalindrome('ccc'))
-
-const manacher = function(s) {
   s = '#' + s.split('').join('#') + '#'
-  const n = s.length, p = []
-  let mx = 0, id = 0
-  for (let i = 1; i <= n; i++) {
-    if(mx > i) {
-      p[i] = p[2 * id - i] < (mx - i)
-        ? p[2 * id - i]
-        : (mx - i)
-    } else {
-      p[i] = 1
-    }
 
-    while (s[i - p[i]] === s[i + p[i]]) p[i]++
-
-    if(i + p[i] > mx) {
-      mx = i + p[i]
-      id = i
+  const n = s.length
+  let start = 0, end = 0
+  for (let i = 0; i < n; i++) {
+    let j = 0
+    while (i - j >= 0 && i + j < n && s[i - j] === s[i + j]) j++
+    if (2 * (--j) > end - start) {
+      start = i - j
+      end = i + j
     }
   }
 
-  const [side, mid] = p.reduce(
-    (max, v, i) => (v > max[0]) ? [v, i] : max,
-    [0, 0]
-  )
-
-  return s.substring(mid - side, mid + side).split('#').join('')
+  return s.slice(start, end).split('#').join('')
 }
 
-console.log(manacher('babad'));
+;[
+  'babad',                      // 'bab'
+  'cbbd',                       // 'cbbd'
+  'ccc',                        // 'ccc'
+].forEach(s => {
+  console.log(longestPalindrome(s))
+})
+
+// Solution:
+// 两个字符之间插入一个标记（如 #），整个字符串两边也分别添加。
+// 这样字符串中就不会出现两个连续且相同的字符，处理起来更方便。
+// 这个思想很新颖。
+
+// 每遍历到一个字符，就计算其左右的最大对称长度。保留当前最长的左右字符下标。
+
+// Submission Result: Accepted
