@@ -1,5 +1,5 @@
 // 6. ZigZag Conversion
-// Medium 26% locked:false
+// Medium  26%
 
 // The string "PAYPALISHIRING" is written in a zigzag pattern on a given number
 // of rows like this: (you may want to display this pattern in a fixed font for
@@ -24,20 +24,32 @@
  * @return {string}
  */
 const convert = function(s, numRows) {
-  const n = s.length
-  const rows = Array(numRows).fill('')
+  if (numRows <= 1) return s
 
-  let pos = 0, dir = true
-  for (let i = 0; i < n; i++) {
-    if (pos === 0) dir = true
-    if (pos === numRows - 1) dir = false
+  const rows = Array(numRows).fill('')
+  let pos = 0, direct = true
+  for (let i = 0, n = s.length; i < n; i++) {
+    if (pos === 0) direct = true
+    if (pos === numRows - 1) direct = false
 
     rows[pos] += s[i]
-    if (numRows !== 1) pos += dir ? 1 : -1 
+    pos += direct ? 1 : -1
   }
 
   return rows.join('')
 }
 
-console.log(convert('PAYPALISHIRING', 3), 'PAHNAPLSIIGYIR');
-console.log(convert('AB', 1));
+;[
+  ['PAYPALISHIRING', 3],        // 'PAHNAPLSIIGYIR'
+  ['AB', 1],                    // 'AB'
+  ['ABCDEFGHIJKLMN', 4],        // 'AGMBFHLNCEIKDJ'
+].forEach(args => {
+  console.log(convert(...args))
+})
+
+// Solution:
+// 每行用一个数组保存。
+// 每行利用“电梯”的升降的方法来添加字符。
+// 用一个变量来保存的升降的方向。
+
+// Submission Result: Accepted
