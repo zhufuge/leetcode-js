@@ -1,5 +1,5 @@
 // 7. Reverse Integer
-// Easy 24% locked:false
+// Easy  24%
 
 // Reverse digits of an integer.
 
@@ -33,16 +33,28 @@ const reverse = function(x) {
   const isOverflow = x => x > 0x7fffffff || -x > 0x7fffffff
   if (isOverflow(x)) return 0
 
-  let y = Math.abs(x)
-  let result = 0
+  let y = Math.abs(x), result = 0
   while (y !== 0) {
-    result *= 10
-    result += y % 10
+    result = result * 10 + y % 10
     y = Math.floor(y / 10)
   }
-  result *= (x < 0 ? -1 : 1)
+  result *= x < 0 ? -1 : 1
   return isOverflow(result) ? 0 : result
 }
 
-console.log(reverse(-2147483648))
-console.log(reverse(1534236469))
+;[
+  123,                          // 321
+  -123,                         // -321
+  -2147483648,                  // 0
+  1534236469,                   // 0
+].forEach(x => {
+  console.log(reverse(x))
+})
+
+// Solution:
+// 因为假设数字是 32 位有符号整数，而答案可能会超出该范围，所以输入和输出都要检
+// 查一遍是否溢出。
+// 构造导致数，每次取得原数的最后一位作为新数的最后一位就好了。
+// 像两个栈传递元素一样，只是用的是取模运算和乘除法运算来避免额外空间。
+
+// Submission Result: Accepted
