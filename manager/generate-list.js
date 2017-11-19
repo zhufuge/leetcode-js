@@ -6,6 +6,7 @@ const writeFile = promisify(fs.writeFile),
       stat = promisify(fs.stat)
 
 const { select } = require('./store')
+const { toLowTitle } = require('./helper')
 
 function toListString(problems) {
   return problems
@@ -46,25 +47,17 @@ function excerpt(problems) {
     .join('\n')
 }
 
-function enhance(problems) {
-  const lowTitle = (title) => title
-        .split(' ')
-        .filter(w => w !== '-' && w !== '')
-        .join('-')
-        .toLowerCase()
-
-  for (let problem of problems) {
-    problem.filename = problem.id + '-' + lowTitle(problem.title) + '.js'
-  }
-}
-
 async function main() {
   const problems = await select(
     ['id', 'title'],
     { accepted: true, solution: true }
   )
 
-  enhance(problems)
+  let size = 0
+  for (let problem of problems) {
+    problem.filename = problem.id + '-' + toLowTitle(problem.title) + '.js'
+    size++
+  }
 
   const head = '#+TITLE: LeetCode-JS\n' +
         '#+AUTHOR: zhufuge\n' +
@@ -74,7 +67,7 @@ async function main() {
   const moreTag = '\n\n#+BEGIN_HTML\n<!--more-->\n#+END_HTML\n\n'
   const listHead = '#+BEGIN_HTML\n' +
         '<h2 style="text-align:center;border:none;margin:36px auto 6px;">' +
-        '完成列表' + '</h2>\n' + '#+END_HTML\n\n' +
+        '完成列表(' + size + ')' + '</h2>\n' + '#+END_HTML\n\n' +
         '|   # | Title |\n' + '|-----+-------|\n'
   const list = toListString(problems)
 

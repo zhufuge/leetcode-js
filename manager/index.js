@@ -7,6 +7,7 @@ const request = require('request')
 const cheerio = require('cheerio')
 
 const { selectBy } = require('./store')
+const { toLowTitle } = require('./helper')
 
 const readFile = promisify(fs.readFile),
       writeFile = promisify(fs.writeFile),
@@ -33,12 +34,7 @@ async function getProblem(number) {
   if (!problem) exit('Do not have this problem.')
   if (problem.locked) exit('This problem is LOCKED!')
 
-  problem.lowTitle = problem
-    .title
-    .split(' ')
-    .filter(w => w !== '-' && w !== '')
-    .join('-')
-    .toLowerCase()
+  problem.lowTitle = toLowTitle(problem.title)
   return problem
 }
 

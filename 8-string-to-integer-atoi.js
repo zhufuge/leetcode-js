@@ -1,5 +1,5 @@
 // 8. String to Integer (atoi)
-// Medium 13% locked:false
+// Medium  13%
 
 // Implement atoi to convert a string to an integer.
 
@@ -40,21 +40,17 @@
 const myAtoi = function(str) {
   const n = str.length
 
-  let i = 0, sign = 1, result = 0
+  let i = 0, result = 0
   while (str[i] === ' ') i++
 
-  if (str[i] === '-') {
-    sign = -1
-    i++
-  } else if (str[i] === '+') {
-    i++
-  }
+  let sign = str[i] === '-' ? -1 : 1
+  if (str[i] === '-' || str[i] === '+') i++
 
   while (i < n) {
-    const m = str.charCodeAt(i++) - 48
-    if (m > 9 || m < 0) break
-
+    const m = str[i] - 0
+    if (Number.isNaN(m) || str[i] === ' ') break
     result = result * 10 + m
+    i++
   }
 
   result *= sign
@@ -64,4 +60,43 @@ const myAtoi = function(str) {
   return result
 }
 
-console.log(myAtoi("  -0012a42"))
+;[
+  '',                           // 0
+  '       ',                    // 0
+  '-',                          // 0
+  '+',                          // 0
+
+  '123',                        // 123
+  '-123',                       // -123
+  '+123',                       // 123
+  '-0001230',                   // -1230
+
+  '11.2',                       // 11
+  '-123.234',                   // -123
+
+  '  -123',                     // -123
+  '  -12 3',                    // -12
+
+  '-12a42',                     //-12
+].forEach(str => {
+  console.log(myAtoi(str))
+})
+
+// Solution:
+// 根据提示，首先需要考虑所有可能的输入情况。
+// - 空字符串，'+'和'-'，空格
+// - 前导空格
+// - 前导0
+// - 正负整数字符串
+// - 正负浮点数字符串
+// - 非数字字符串
+// - 中间非数字字符
+
+// 步骤
+// 1. 处理前导空格，如果有的话
+// 2. 处理符号，如果有符号的话
+// 3. 处理有效数字字符，直到遇到非数字字符
+// 4. 添加符号，并判断是否溢出
+// 5. 返回数字
+
+// Submission Result: Accepted
