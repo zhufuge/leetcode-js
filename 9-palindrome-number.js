@@ -1,10 +1,9 @@
 // 9. Palindrome Number
-// Easy 35% locked:false
+// Easy   35%
 
 // Determine whether an integer is a palindrome. Do this without extra space.
 
 // click to show spoilers. Some hints:
-
 // Could negative integers be palindromes? (ie, -1)
 
 // If you are thinking of converting the integer to string, note the restriction
@@ -21,28 +20,32 @@
  * @return {boolean}
  */
 const isPalindrome = function(x) {
-  if (x < 0) return false
-  let n = 0
-  for (let t = x; t > 0; n++) t = Math.trunc(t / 10)
-
-  while (n > 0) {
-    if (Math.trunc(x / (Math.pow(10, n - 1))) !== (x % 10)) return false
-    x = Math.trunc(x % (Math.pow(10, n - 1)) / 10)
-    n -= 2
-  }
-
-  return true
-}
-
-console.log(isPalindrome(-12321))
-console.log(isPalindrome(9))
-
-const best = function(x) {
   if (x < 0 || (x !== 0 && x % 10 === 0)) return false
-  let rev = 0
-  while (x > rev){
-    rev = rev * 10 + x % 10
+  let half = 0
+  while (x > half) {
+    half = half * 10 + x % 10
     x = Math.trunc(x / 10)
   }
-  return x === rev || x === Math.trunc(rev / 10)
+
+  return x === half || x === Math.trunc(half / 10)
 }
+
+;[
+  -12321,                       // false
+  9,                            // true
+].forEach(x => {
+  console.log(isPalindrome(x))
+})
+
+// Solution:
+// 若 x 小于0，则不可能是回文数
+// 若 x 不为0且末位有0，也不可能为回文数，因为一个数不含前缀0。
+
+// 构造一个新的数，其为原数字长度的一半或者一半多一。
+// 其值为原数字的后一半的倒序。
+
+// 如 x=1213121， 则新数为 half=1213，这时经过运算，原数字变为 x=121。
+// 若 x 的位数为偶数，则比较 x 是否等于 half。
+// 若为奇数，则比较 x 是否等于 half / 10。
+
+// Submission Result: Accepted
