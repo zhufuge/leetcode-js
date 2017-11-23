@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "g": "node manager/index.js",
-    "l": "node manager/find.js & node manager/generate-list.js"
+    "list": "node manager/find.js & node manager/generate-list.js",
+    "set": "node manager/add-problems.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
