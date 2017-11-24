@@ -8,12 +8,12 @@ const writeFile = promisify(fs.writeFile),
 const { select } = require('./store')
 const { toLowTitle } = require('./helper')
 
+const REPOSITORY = 'https://github.com/zhufuge/leetcode-js/blob/master/'
+
 function toListString(problems) {
   return problems
-    .map(
-      (row) => '| ' + row.id +
-        ' | [[https://github.com/zhufuge/alg-js/blob/master/' + row.filename +
-        '][' + row.title + ']] |')
+    .map((row) => '| ' + row.id + ' | [[' + REPOSITORY + row.filename +
+         '][' + row.title + ']] |')
     .join('\n')
 }
 
@@ -41,9 +41,8 @@ async function getLatest(problems) {
 function excerpt(problems) {
   return '*最近更新*\n' +
     problems
-    .map(
-      (row) => '- [[https://github.com/zhufuge/alg-js/blob/master/' +
-        row.filename + '][' + row.id + '. ' + row.title + ']]')
+    .map((row) => '- [[' + REPOSITORY + row.filename + '][' +
+         row.id + '. ' + row.title + ']]')
     .join('\n')
 }
 
