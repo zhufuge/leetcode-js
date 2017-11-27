@@ -15,24 +15,33 @@
  * @return {number}
  */
 const threeSumClosest = function(nums, target) {
-  const n = nums.length
-  if (n < 3) throw Error('the length below 3!')
-
   nums.sort((a, b) => a - b)
 
+  const n = nums.length
   let result = nums[0] + nums[1] + nums[2]
   for (let i = 0; i < n - 2; i++) {
     let lo = i + 1, hi = n - 1
     while (lo < hi) {
       const sum = nums[lo] + nums[hi] + nums[i]
-      if (sum === target) return target
       if (sum < target) lo++
-      else hi--
+      else if (sum > target) hi--
+      else return target
+
       if (Math.abs(target - sum) < Math.abs(target - result)) result = sum
     }
   }
   return result
 }
 
-console.log(threeSumClosest([-1, 2, 1, -4], 1))
-console.log(threeSumClosest([1,2,5,10,11], 12));
+;[
+  [[-1, 2, 1, -4], 1],          // 2
+  [[1, 2, 5, 10, 11], 12],      // 13
+].forEach(args => {
+  console.log(threeSumClosest(...args))
+})
+
+// Solution:
+// 类似 15-3sum 的算法。
+// 详情看 15-3sum.js 文件。
+
+// Submission Result: Accepted
