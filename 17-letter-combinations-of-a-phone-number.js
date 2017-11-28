@@ -1,5 +1,5 @@
 // 17. Letter Combinations of a Phone Number
-// Medium 35% locked:false
+// Medium   35%
 
 // Given a digit string, return all possible letter combinations that the number
 // could represent.
@@ -20,17 +20,44 @@
 const letterCombinations = function(digits) {
   if (digits.length === 0) return []
 
-  const convert = [' ', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
-  let result = ['']
-  digits.split('').forEach(d => {
-    const t = []
-    convert[d].split('').forEach(
-      v => result.forEach(
-        r => t.push(r + v)))
-    result = t
-  })
-
+  const LETTERS = [
+    ' ',                        // 0
+    '',                         // 1
+    'abc',                      // 2
+    'def',                      // 3
+    'ghi',                      // 4
+    'jkl',                      // 5
+    'mno',                      // 6
+    'pqrs',                     // 7
+    'tuv',                      // 8
+    'wxyz'                      // 9
+  ]
+  const result = ['']
+  for (let digit of digits) {
+    for (let i = 0, m = result.length; i < m; i++) {
+      const prev = result.shift()
+      for (let letter of LETTERS[digit]) {
+        result.push(prev + letter)
+      }
+    }
+  }
   return result
 }
 
-console.log(letterCombinations(''))
+;[
+  '',                           // []
+  '23',
+].forEach(digits => {
+  console.log(letterCombinations(digits))
+})
+
+// Solution:
+// 像是一棵树一样在增长。
+// 每输入一个数，树就的每个分子都增长一层。
+// 利用先进先出队列模拟树的层级生长。
+// 每个输入的数字代表一层。
+// 每进入一层，都记录当前分支的长度，即当前队列的长度。
+// 对该层的每个元素从头弹出队列，并与该层的数字代表的所有字母组合，
+// 然后添加到队尾。
+
+// Submission Result: Accepted
