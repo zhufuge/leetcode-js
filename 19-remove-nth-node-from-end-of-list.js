@@ -1,5 +1,5 @@
 // 19. Remove Nth Node From End of List
-// Medium 33% locked:false
+// Medium   33%
 
 // Given a linked list, remove the nth node from the end of list and return its
 // head.
@@ -18,27 +18,26 @@
 /**
  * Definition for singly-linked list.
  */
-
 function ListNode(val) {
   this.val = val
   this.next = null
 }
 
-function createList(array) {
-  const list = new ListNode()
-  let temp = list
-  for (let v of array) {
-    temp.next = new ListNode(v)
-    temp = temp.next
+function toList(array) {
+  const head = new ListNode()
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
   }
-  return list.next
+  return head.next
 }
 
 ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
+  let s = '', node = this
+  while (node) {
+    s += (s === '' ? '' : '->') + node.val
+    node = node.next
   }
   return s
 }
@@ -49,23 +48,6 @@ ListNode.prototype.toString = function() {
  * @return {ListNode}
  */
 const removeNthFromEnd = function(head, n) {
-  const remove = (t, i) => {
-    if (t.next === null) i = 0
-    else i = remove(t.next, i)
-    if (i === n) {
-      t.next = t.next.next
-    }
-    return i + 1
-  }
-
-  const h = new ListNode()
-  h.next = head
-  remove(h, -1)
-  return h.next
-}
-
-
-const onePass = function(head, n) {
   const start = new ListNode()
   let slow = start, fast = start
   slow.next = head
@@ -74,7 +56,7 @@ const onePass = function(head, n) {
     fast = fast.next
   }
 
-  while (fast !== null) {
+  while (fast) {
     fast = fast.next
     slow = slow.next
   }
@@ -83,6 +65,18 @@ const onePass = function(head, n) {
   return start.next
 }
 
-const a = createList([1, 2])
-console.log(a.toString())
-console.log(onePass(a, 2).toString())
+;[
+  [toList([1, 2]), 2],
+  [toList([1,2,3,4,5]), 2],
+].forEach(args => {
+  console.log(removeNthFromEnd(...args).toString())
+})
+
+// Solution:
+// 使用前后差双前进法：
+// 遍历过程中保存两个节点，两节点之间总是相差n个节点。
+// 后一个节点从链表头（即第一个节点）开始，前一个节点从第n + 1个节点开始。
+// 当前节点前进到了链表的末尾时，后节点就到了倒数第n - 1个节点处，
+// 此时，后节点将其前一个节点删除就完成任务了。
+
+// Submission Result: Accepted
