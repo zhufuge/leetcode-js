@@ -1,5 +1,5 @@
 // 22. Generate Parentheses
-// Medium 45% locked:false
+// Medium   45%
 
 // Given n pairs of parentheses, write a function to generate all combinations
 // of well-formed parentheses.
@@ -19,36 +19,33 @@
  * @return {string[]}
  */
 const generateParenthesis = function(n) {
-  const pare = [[], ['()']]
-
-  for (let i = 2; i <= n; i++) {
-    pare[i] = pare[i - 1].map(v => `(${v})`)
-    for (let j = i - 1; j > 0; j--)
-      for (let p of pare[j])
-        for (let q of pare[i - j])
-          if (!pare[i].includes(p + q))
-            pare[i].push(p + q)
+  const result = []
+  function iter(s, open, close) {
+    if (close === 0) result.push(s)
+    if (open < close) iter(s + ')', open, close - 1)
+    if (open > 0) iter(s + '(', open - 1, close)
   }
-
-  return pare[n]
+  iter('', n, n)
+  return result
 }
 
-console.log(generateParenthesis(4))
+;[
+  0,
+  1,
+  2,
+  3,
+].forEach(n => {
+  console.log(generateParenthesis(n))
+})
 
-const easier = function(n) {
-  const list = []
-  const backtrack = (str, open, close) => {
-    if(str.length === n * 2){
-      list.push(str)
-      return
-    }
+// Solution:
+// 从构造结果来看，在每个结果字符串中的前k个字符中，
+// 其左括号的数量都大于或等于其右括号的数量。
+// 因此构造过程中，只有左括号的数量超过右括号的数量时，才能添加右括号。
 
-    if(open < n) backtrack(str + '(', open + 1, close)
-    if(close < open) backtrack(str + ')', open, close + 1)
-  }
+// 使用一个分叉的迭代函数。
+// 参数为叠加的字符串和剩余的左右括号数量。
+// 只有剩余的右括号大于剩余的左括号时，添加右括号。
+// 否则只添加左括号。
 
-  backtrack('', 0, 0, n)
-  return list
-}
-
-console.log(easier(4))
+// Submission Result: Accepted
