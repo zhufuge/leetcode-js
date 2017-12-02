@@ -1,5 +1,5 @@
 // 24. Swap Nodes in Pairs
-// Medium 38% locked:false
+// Medium   38%
 
 // Given a linked list, swap every two adjacent nodes and return its head.
 
@@ -19,24 +19,23 @@ function ListNode(val) {
   this.next = null
 }
 
-function createList(array) {
+function toList(array) {
   const head = new ListNode()
-  let t = head
-  for (let v of array) {
-    t.next = new ListNode(v)
-    t = t.next
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
   }
 
   return head.next
 }
 
 ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
+  let s = '', node = this
+  while (node !== null) {
+    s += (s === '' ? s : '->') + node.val
+    node = node.next
   }
-
   return s
 }
 
@@ -45,23 +44,25 @@ ListNode.prototype.toString = function() {
  * @return {ListNode}
  */
 const swapPairs = function(head) {
-  if (head === null || head.next === null) return head
-
-  const start = new ListNode()
-  start.next = head
-  let t = start
-  while (t.next !== null && t.next.next !== null) {
-    const first = t.next, second = first.next
-    t.next = second
-    first.next = second.next
-    second.next = first
-    t = t.next.next
-  }
-
-  return start.next
+  if (!head || !head.next) return head
+  const second = head.next
+  head.next = swapPairs(second.next)
+  second.next = head
+  return second
 }
 
-const a = createList([1, 2])
+;[
+  [1, 2],                       // [2, 1]
+  [1],                          // [1]
+  [1, 2, 3, 4],                 // [2, 1, 4, 3]
+].forEach(array => {
+  console.log(swapPairs(toList(array)).toString())
+})
 
-console.log(a.toString())
-console.log(swapPairs(a).toString())
+// Solution:
+// 使用递归迭代，每两个节点交换一次。
+// 保存第二个节点。
+// 将第一个节点的下一个节点置为第二个节点之后的链表交换后返回的值。
+// 再将第二个节点的下一个节点置为第一个节点，并将第二个节点作为头节点返回。
+
+// Submission Result: Accepted
