@@ -1,5 +1,5 @@
 // 25. Reverse Nodes in k-Group
-// Hard 30% locked:false
+// Hard   30%
 
 // Given a linked list, reverse the nodes of a linked list k at a time and
 // return its modified list.
@@ -14,9 +14,7 @@
 
 // For example,
 // Given this linked list: 1->2->3->4->5
-
 // For k = 2, you should return: 2->1->4->3->5
-
 // For k = 3, you should return: 3->2->1->4->5
 
 /**
@@ -28,22 +26,22 @@ function ListNode(val) {
   this.next = null
 }
 
-function createList(array) {
+function toList(array) {
   const head = new ListNode()
-  let t = head
+  let node = head
   for (let v of array) {
-    t.next = new ListNode(v)
-    t = t.next
+    node.next = new ListNode(v)
+    node = node.next
   }
 
   return head.next
 }
 
 ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
+  let s = '', node = this
+  while (node !== null) {
+    s += (s === '' ? s : '->') + node.val
+    node = node.next
   }
   return s
 }
@@ -54,53 +52,43 @@ ListNode.prototype.toString = function() {
  * @return {ListNode}
  */
 const reverseKGroup = function(head, k) {
-  const start = new ListNode(0)
-  start.next = head
+  let tail = head, count = 0
+  while (tail && ++count < k) tail = tail.next
 
-  let p = start
-  while (p !== null && p.next !== null) {
-    for (let i = 0, t = p; i < k; i++) {
-      t = t.next
-      if (t === null) return start.next
-    }
-
-    const tmp = p.next
-    let stackTop = tmp.next
-    for (let i = 0; i < k - 1 && stackTop !== null; i++) {
-      const top = stackTop
-      stackTop = stackTop.next
-      top.next = p.next
-      p.next = top
-    }
-    tmp.next = stackTop
-    p = tmp
-  }
-
-  return start.next
-}
-
-
-const recursive = function(head, k) {
-  let curr = head
-  let count = 0
-  while (curr !== null && count !== k) {
-    curr = curr.next
-    count++
-  }
   if (count === k) {
-    curr = reverseKGroup(curr, k)
+    tail.next = reverseKGroup(tail.next, k)
 
-    while (count-- > 0) {
-      const tmp = head.next
-      head.next = curr
-      curr = head
-      head = tmp
+    while (tail !== head) {
+      const tmp = head
+      head = head.next
+      tmp.next = tail.next
+      tail.next = tmp
     }
-    head = curr
   }
+
   return head
 }
 
-const a = createList([1, 2, 3, 4])
-console.log(a.toString())
-console.log(recursive(a, 3).toString())
+;[
+  [[1, 2, 3, 4, 5], 2],
+  [[1, 2, 3, 4, 5], 3],
+  [[1, 2, 3, 4], 2],
+  [[1, 2, 3, 4], 3],
+].forEach(args => {
+  console.log(reverseKGroup(toList(args[0]), args[1]).toString())
+})
+
+// Solution:
+// 使用递归结合 *头插法* 求解。
+// 1. 看当前链表长度时候大于或等于k。
+// 2. 若小于k，直接返回该链表。
+// 3. 若大于或等于，则将第k个节点后的链表进行递归，返回的链表返回原来的位置。
+// 4. 每个组（即当前链表中的第一个节点到第k个节点）中使用头插法。
+// 5. 返回头节点。
+
+// 头插入过程中，
+// 每次用一个临时变量保存头节点，而头节点变量指向下一个节点。
+// 以保存的最初的尾节点为头，将临时变量指向的节点插入到头之后。
+// 直到头节点和尾节点指向同一个节点。
+
+// Submission Result: Accepted

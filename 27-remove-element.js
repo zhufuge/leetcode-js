@@ -1,5 +1,6 @@
 // 27. Remove Element
-// Easy 39% locked:false
+// Easy   39%
+
 
 // Given an array and a value, remove all instances of that value in place and
 // return the new length.
@@ -22,14 +23,28 @@
  * @return {number}
  */
 const removeElement = function(nums, val) {
-  let i = 0
-  while (nums[i] !== void 0) {
+  let i = 0, j = nums.length - 1
+  while (i <= j) {
     if (nums[i] === val) {
-      nums.splice(i, 1)
+      nums[i] = nums[j]
+      j--
     } else {
       i++
     }
   }
-
-  return i
+  return j + 1
 }
+
+;[
+  [[3, 2, 2, 3], 3],                 // [2, 2, 2, 3] 2
+  [[1,2,3,4,5,3,5,2,3,6], 3],        // [1,2,6,4,5,2,5] 7
+  [[1], 1],                          // [1] 0
+].forEach(args => {
+  console.log(removeElement(...args))
+})
+
+// Solution:
+// 找到需要删除的数，就用最后的数来代替它（放到它的位置上）。
+// i用于遍历，j用于最后的可用交换数。
+
+// Submission Result: Accepted

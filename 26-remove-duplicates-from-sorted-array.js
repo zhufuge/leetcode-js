@@ -1,5 +1,5 @@
 // 26. Remove Duplicates from Sorted Array
-// Easy 35% locked:false
+// Easy   35%
 
 // Given a sorted array, remove the duplicates in place such that each element
 // appear only once and return the new length.
@@ -19,18 +19,29 @@
  * @return {number}
  */
 const removeDuplicates = function(nums) {
+  const n = nums.length
+  if (n === 0) return 0
+
   let i = 0
-  while (nums[i] !== void 0) {
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i, 1)
-    } else {
+  for (let j = 1; j < n; j++) {
+    if (nums[j] !== nums[i]) {
       i++
+      nums[i] = nums[j]
     }
   }
 
-  return i
+  return i + 1
 }
 
-const a = [1, 2, 2, 3, 3, 3, 4]
-console.log(a);
-console.log(removeDuplicates(a), a)
+;[
+  [1, 2, 2, 3, 3, 3, 4],        // 4
+].forEach(nums => {
+  console.log(removeDuplicates(nums))
+})
+
+// Solution:
+// 保存两个下标
+// j用于遍历整个数组
+// i用于交换后，前k个不同数的下标。
+
+// Submission Result: Accepted
