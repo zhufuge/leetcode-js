@@ -1,5 +1,5 @@
 // 31. Next Permutation
-// Medium 28% locked:false
+// Medium   28%
 
 // Implement next permutation, which rearranges numbers into the
 // lexicographically next greater permutation of numbers.
@@ -21,27 +21,36 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const nextPermutation = function(nums) {
-  const n = nums.length
-  let top = n - 1
-  while (top > 0 && nums[top - 1] >= nums[top]) top--
+  let i = nums.length - 1
+  while (i > 0 && nums[i - 1] >= nums[i]) i--
 
-  if (top !== 0) {
-    const tmp = top - 1
-    let big = tmp
-    while (big + 1 < n && nums[tmp] < nums[big + 1]) big++
-    ;[nums[tmp], nums[big]] = [nums[big], nums[tmp]]
+  if (i > 0) {
+    let p = i - 1, q = i
+    while (nums[p] < nums[q + 1]) q++
+    ;[nums[p], nums[q]] = [nums[q], nums[p]]
   }
 
-  let bottom = n - 1
-  while (top < bottom) {
-    [nums[top], nums[bottom]] = [nums[bottom], nums[top]]
-    top++
-    bottom--
+  for (let j = nums.length - 1; i < j; i++, j--) {
+    [nums[i], nums[j]] = [nums[j], nums[i]]
   }
 }
 
-//const a = [3, 6, 5, 4]
-const a = [5, 1, 1]
-console.log(a)
-nextPermutation(a)
-console.log(a)
+;[
+  [2, 3, 1],                    // [3, 1, 2]
+  [1, 2, 3],                    // [1, 3, 2]
+  [3, 2, 1],                    // [1, 2, 3]
+  [1, 1, 5],                    // [1, 5, 1]
+  [5, 1, 1],                    // [1, 1, 5]
+  [3, 6, 5, 4],                 // [4, 3, 5, 6]
+].forEach(nums => {
+  nextPermutation(nums)
+  console.log(nums)
+
+})
+
+// Solution:
+// 从数组末尾开始找第一个小于其后一个数的数的位置。
+// 之后这个位置的数与其后大于该数中的最小的一个数交换。
+// 最后翻转该位置后的所有数。
+
+// Submission Result: Accepted
