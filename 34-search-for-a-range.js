@@ -1,5 +1,5 @@
 // 34. Search for a Range
-// Medium 31% locked:false
+// Medium   31%
 
 // Given an array of integers sorted in ascending order, find the starting and
 // ending position of a given target value.
@@ -18,46 +18,48 @@
  * @return {number[]}
  */
 const searchRange = function(nums, target) {
-  const n = nums.length
-  let i = 0, j = n - 1, mid
-  while (i <= j) {
-    mid = Math.trunc((i + j) / 2)
-    if (target < nums[mid]) j = mid - 1
-    else if (target > nums[mid]) i = mid + 1
-    else {
-      let p = mid, q = mid
-      while (p > 0 && nums[p - 1] === target) p--
-      while (q < n - 1 && nums[q + 1] === target) q++
-      return [p, q]
-    }
-  }
-  return [-1, -1]
-}
-
-console.log(searchRange([5, 7, 7, 8, 8, 10], 8))
-
-
-const twoBinary = function(nums, target) {
-  const n = nums.length, ret = [-1, -1]
+  const n = nums.length, result = [-1, -1]
   let i = 0, j = n - 1
-  // Search for the left one
   while (i < j) {
-    const mid = Math.trunc((i + j) / 2)
+    const mid = (i + j) >> 1
     if (nums[mid] < target) i = mid + 1
     else j = mid
   }
-  if (nums[i] !== target) return ret
-  else ret[0] = i
+  if (nums[i] !== target) return result
 
-  // Search for the right one
-  j = n - 1  // We don't have to set i to 0 the second time.
+  result[0] = i
+  j = n - 1
   while (i < j) {
-    const mid = Math.trunc((i + j) / 2 + 1)	// Make mid biased to the right
+    const mid = ((i + j) >> 1) + 1
     if (nums[mid] > target) j = mid - 1
-    else i = mid				// So that this won't make the search range stuck.
+    else i = mid
   }
-  ret[1] = j
-  return ret
+  result[1] = j
+  return result
 }
 
-console.log(twoBinary([5, 7, 7, 8, 8, 10], 9))
+;[
+  [[5, 7, 7, 8, 8, 10], 8],     // [3, 4]
+  [[5, 7, 7, 8, 8, 10], 9],     // [-1, -1]
+].forEach(args => {
+  console.log(searchRange(...args))
+})
+
+// Solution:
+// 使用两次二分查找法，分别找出左位置和右位置。
+
+// 找最左位置：
+// 每次检查中位数。
+// 若小于则从其右边一位开始再找；
+// 若大于或等于，则从该位及其左边的开始再找；
+// 直到左右边界相等。
+// 因为要找最左的目标数，找到等于时还不能结束，
+// 左边可能还存在目标数，所以等于时还要继续找。
+// 第一次找到目标数后，其右边界就必然一直都会是目标数
+// 左边界会一直排除非目标数，当左右边界重合时，其位置就是最左的
+
+// 找最右位置：
+// 其左边界从前面找到的最左位置开始，因为前面的都没有必要再看了。
+// 其余与找最左位置类似。
+
+// Submission Result: Accepted
