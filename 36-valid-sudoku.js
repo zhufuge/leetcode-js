@@ -1,5 +1,5 @@
 // 36. Valid Sudoku
-// Medium 36% locked:false
+// Medium   36%
 
 // Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
 
@@ -38,16 +38,24 @@ const isValidSudoku = function(board) {
   return true
 }
 
-const b = [
-  ".87654321",
-  "2........",
-  "3........",
-  "4........",
-  "5........",
-  "6........",
-  "7........",
-  "8........",
-  "9........"
-]
+;[
+  [
+    ".87654321",
+    "2........",
+    "3........",
+    "4........",
+    "5........",
+    "6........",
+    "7........",
+    "8........",
+    "9........"
+  ],                            // true
+].forEach(board => {
+  console.log(isValidSudoku(board))
+})
 
-console.log(isValidSudoku(b))
+// Solution:
+// 分别检查行，列，宫是否合法。
+// 检查一个组是否有重复，使用哈希表来判断。
+
+// Submission Result: Accepted
