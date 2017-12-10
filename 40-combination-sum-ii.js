@@ -1,5 +1,5 @@
 // 40. Combination Sum II
-// Medium 34% locked:false
+// Medium   34%
 
 // Given a collection of candidate numbers (C) and a target number (T), find all
 // unique combinations in C where the candidate numbers sums to T.
@@ -27,22 +27,33 @@
  * @return {number[][]}
  */
 const combinationSum2 = function(candidates, target) {
-  candidates.sort((a, b) => a - b)
-
-  const n = candidates.length
+  candidates.sort((a, b) => b - a)
   const result = []
-
-  const iter = (i, t, sum) => {
-    while (i < n && candidates[i] <= t) {
-      if (candidates[i] === t) result.push([...sum, t])
-      iter(i + 1, t - candidates[i], [...sum, candidates[i]])
-      while (i + 1 < n && candidates[i] === candidates[i + 1]) i++
-      i++
+  function iter(i, target, array) {
+    for (; i >= 0; i--) {
+      const c = candidates[i]
+      if (c > target) break
+      if (c === target) result.push([...array, c])
+      array.push(c)
+      iter(i - 1, target - c, array)
+      array.pop()
+      while (i >= 0 && c === candidates[i - 1]) i--
     }
   }
 
-  iter(0, target, [])
+  iter(candidates.length - 1, target, [])
   return result
 }
 
-console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5], 8))
+;[
+  [[10, 1, 2, 7, 6, 1, 5], 8],
+].forEach(args => {
+  console.log(combinationSum2(...args))
+})
+
+// Solution:
+// 有重复数字，但每个出现在数组中的数字只能使用一次。
+// 使用类似深度遍历的方法。
+// 不过每次回溯到原来的地方时，都跳过重复数字（数组已排序）。
+
+// Submission Result: Accepted

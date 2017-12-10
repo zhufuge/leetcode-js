@@ -1,5 +1,5 @@
 // 38. Count and Say
-// Easy 35% locked:false
+// Easy   35%
 
 // The count-and-say sequence is the sequence of integers with the first five
 // terms as following:
@@ -34,22 +34,32 @@
  * @return {string}
  */
 const countAndSay = function(n) {
-  let res = '1'
-  for (let i = 1; i < n; i++) {
-    let t = '', count = 0
-    for (let j = 0, m = res.length; j < m; j++) {
-      if (res[j] === res[j + 1]) count++
-      else {
-        t += (count + 1) + res[j]
-        count = 0
+  if (n < 1) return ''
+  let result = '1'
+  while (--n) {
+    let t = '', first = -1
+    for (let i = 0, m = result.length; i < m; i++) {
+      if (result[i] !== result[i + 1]) {
+        t += (i - first) + result[i]
+        first = i
       }
     }
-    res = t
+    result = t
   }
-  return res
+  return result
 }
 
-for (let i = 0; i < 8; i++) {
-  console.log(countAndSay(i))
-}
+;[
+  1,                            // '1'
+  2,                            // '11'
+  3,                            // '21'
+  4,                            // '1211'
+  5,                            // '111221'
+].forEach(n => {
+  console.log(countAndSay(n))
+})
 
+// Solution:
+// 每次数一遍字符串。
+
+// Submission Result: Accepted
