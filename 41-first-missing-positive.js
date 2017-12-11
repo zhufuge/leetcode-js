@@ -1,5 +1,5 @@
 // 41. First Missing Positive
-// Hard 25% locked:false
+// Hard   25%
 
 // Given an unsorted integer array, find the first missing positive integer.
 
@@ -31,4 +31,17 @@ const firstMissingPositive = function(nums) {
   return n + 1
 }
 
-console.log(firstMissingPositive([2, 5, 4, -1, 2, 1, 6, 3]))
+;[
+  [1,2,0],                      // 3
+  [3,4,-1,1],                   // 2
+  [2, 5, 4, -1, 2, 1, 6, 3],    // 7
+].forEach(nums => {
+  console.log(firstMissingPositive(nums))
+})
+
+// Solution:
+// 不断交换元素的位置。
+// 若某个数应在的位置没有被相同的数先占领，则将该数放置在该在的位置。
+// 否则先跳过该数所在的位置，看下一个位置的数。
+
+// Submission Result: Accepted
