@@ -1,5 +1,5 @@
 // 46. Permutations
-// Medium 44% locked:false
+// Medium   44%
 
 // Given a collection of distinct numbers, return all possible permutations.
 
@@ -20,19 +20,31 @@
  * @return {number[][]}
  */
 const permute = function(nums) {
-  const n = nums.length
-
-  const res = []
-  const iter = (p, q) => {
-    const m = p.length
-    if (m === 0) res.push(q)
-    for (let i = 0; i < m; i++) {
-      iter(p.filter((v, ii) => ii !== i), [...q, p[i]])
+  const result = [], n = nums.length
+  function iter(used) {
+    if (used.length === n) result.push([...used])
+    else {
+      for (let num of nums) {
+        if (!used.includes(num)) {
+          used.push(num)
+          iter(used)
+          used.pop(num)
+        }
+      }
     }
   }
-
-  iter(nums, [])
-  return res
+  iter([])
+  return result
 }
 
-console.log(permute([1, 2, 3]))
+;[
+  [1,2,3],
+].forEach(nums => {
+  console.log(permute(nums))
+})
+
+// Solution:
+// 使用回溯算法遍历整个数组构成的树，
+// 在叶子处，将路径加入答案中。
+
+// Submission Result: Accepted

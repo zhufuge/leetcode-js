@@ -1,5 +1,5 @@
 // 45. Jump Game II
-// Hard 26% locked:false
+// Hard   26%
 
 // Given an array of non-negative integers, you are initially positioned at the
 // first index of the array.
@@ -12,7 +12,7 @@
 // For example:
 // Given array A = [2,3,1,1,4]
 
-// The minimum number of jumps to reach the last index is 2. (Jump 1 step from
+// The minimum number of jumps to reach the last index is 2. (Jump 1 result from
 // index 0 to 1, then 3 steps to the last index.)
 
 // Note:
@@ -23,29 +23,31 @@
  * @return {number}
  */
 const jump = function(nums) {
-  if (nums === void 0 || nums.length <= 1) return 0
-
-  const n = nums.length
-  let step = 1
-  for (let i = 0; i + nums[i] < n - 1; i++) {
-    if (nums[i] !== 1) {
-      let next = i + 1, max = 0
-      for (let j = 1; j <= nums[i]; j++) {
-        if (nums[i + j] + j > max) {
-          next = i + j
-          max = nums[i + j] + j
-        }
-      }
-      i = next - 1
+  let result = 0, via = 0, max = 0
+  for (let i = 0; i < nums.length - 1; i++) {
+    max = Math.max(max, i + nums[i])
+    if (via === i) {
+      result++
+      via = max
     }
-    step++
   }
 
-  return step
+  return result
 }
-console.log(jump([3,2,1]), 1)
-console.log(jump([2, 3, 1, 1, 4]))
-console.log(jump([1, 3, 2, 3, 0, 1, 2, 1, 1]))
-console.log(jump([5,6,4,4,6,9,4,4,7,4,4,8,2,6,8,1,5,9,6,5,2,7,9,7,9,6,9,4,1,6,8,8,4,4,2,0,3,8,5]))
-console.log(jump([1,1,1,1]))
-console.log(jump([10,9,8,7,6,5,4,3,2,1,1,0]), 2)
+
+;[
+  [3,2,1],                      // 1
+  [2,3,1,1,4],                  // 2
+  [1,3,2,3,0,1,2,1,1],          // 4
+  [1,1,1,1],                    // 3
+  [10,9,8,7,6,5,4,3,2,1,1,0],   // 2
+].forEach(nums => {
+  console.log(jump(nums))
+})
+
+// Solution:
+// 使用贪心算法。
+// 每次都选择一个最远的进行试跳，若过程中还遇到更远的，先保存。
+// 因为被试跳的位置总是先会被遍历，因此，在跳到更远的位置前，都会进行更新。
+
+// Submission Result: Accepted
