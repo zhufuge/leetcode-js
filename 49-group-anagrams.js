@@ -1,5 +1,5 @@
 // 49. Group Anagrams
-// Medium 35% locked:false
+// Medium   35%
 
 // Given an array of strings, group anagrams together.
 
@@ -21,43 +21,34 @@
 const groupAnagrams = function(strs) {
   if (strs === null || strs.length === 0) return []
 
-  const map = {}
-  for (let s of strs) {
-    const ca = s.split('')
-    ca.sort((a, b) => a > b)
-    const keyStr = ca.join('')
-    if (map[keyStr] === void 0) map[keyStr] = []
-    map[keyStr].push(s)
-  }
-
-  const res = []
-  for (let k in map) {
-    res.push(map[k])
-  }
-  return res
-}
-
-console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat', 'boo','bob']))
-
-const ifNoDep = function(strs) {
-  const n = strs.length, res = []
-  if (n <= 0) return []
-
   const hash = {}
-  for (let str of strs) for (let c of str) hash[c] = true
+  for (let s of strs) {
+    const key = Array(26).fill(0)
+    for (let c of s) key[c.charCodeAt() - 97]++
 
-  res.push(strs)
-  for (let c in hash) {
-    for (let i = res.length; i > 0; i--) {
-      const p = [], q = [], group = res.shift()
-      for (let i = 0, m = group.length; i < m; i++) {
-        if (group[i].includes(c)) p.push(group[i])
-        else q.push(group[i])
-      }
-      if (p.length !== 0) res.push(p)
-      if (q.length !== 0) res.push(q)
-    }
+    if (hash[key] === void 0) hash[key] = []
+    hash[key].push(s)
   }
 
-  return res
+  const result = []
+  for (let key in hash) result.push(hash[key])
+  return result
 }
+
+
+;[
+  ['eat', 'tea', 'tan', 'ate', 'nat', 'bat', 'boo','bob'],
+].forEach(strs => {
+  console.log(groupAnagrams(strs))
+})
+
+// Solution:
+// 使用哈希表来保存每个组应该含有的字符串。
+// 分组时，查看每个字符串中的含有的字符及其次数，以此分辨字符串应在哪个组。
+
+// 查看字符串中含有的字符及其次数的方法
+// 1. 排序字符后，组成的字符串
+// 2. 使用固定长度数组（26，表示26个字母），每个位置的值表示一个字符出现的次数。
+
+
+// Submission Result: Accepted
