@@ -1,5 +1,5 @@
 // 52. N-Queens II
-// Hard 45% locked:false
+// Hard    45%
 
 // Follow up for N-Queens problem.
 
@@ -11,21 +11,39 @@
  * @return {number}
  */
 const totalNQueens = function(n) {
-  let res = 0
-  const solve = (p, a, b) => {
-    const m = p.length
-    if (m === n) res++
-    else {
-      for (let i = 0; i < n; i++) {
-        if (!p.includes(i) && !a.includes(m - i) && !b.includes(m + i)) {
-          solve([...p, i], [...a, m - i], [...b, m + i])
-        }
-      }
+  let result = 0
+  function iter(rows) {
+    if (rows.length === n) {
+      result++
+      return
+    }
+    for (let i = 0; i < n; i++) {
+      rows.push(i)
+      if (check(rows)) iter(rows)
+      rows.pop(i)
     }
   }
-
-  solve([], [], [])
-  return res
+  function check(rows) {
+    for (let i = rows.length - 1, j = i - 1; j >= 0; j--) {
+      if (rows[i] === rows[j]) return false
+      if (rows[i] - i === rows[j] - j) return false
+      if (rows[i] + i === rows[j] + j) return false
+    }
+    return true
+  }
+  iter([])
+  return result
 }
 
-console.log(totalNQueens(8))
+;[
+  4,
+  5,
+  8,
+].forEach(n => {
+  console.log(totalNQueens(n))
+})
+
+// Solution:
+// 同 51-n-queens.js
+
+// Submission Result: Accepted
