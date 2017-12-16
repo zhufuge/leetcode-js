@@ -1,5 +1,5 @@
 // 55. Jump Game
-// Medium 29% locked:false
+// Medium   29%
 
 // Given an array of non-negative integers, you are initially positioned at the
 // first index of the array.
@@ -18,23 +18,27 @@
  * @return {boolean}
  */
 const canJump = function(nums) {
-  if (nums === void 0 || nums.length === 0) return false
-  const n = nums.length
-
-  for (let i = 0; i + nums[i] < n - 1; i++) {
-    if (nums[i] === 0) return false
-    let next = 1, max = 0
-    for (let j = nums[i]; j > 0; j--) {
-      if (j + nums[i + j] > max) {
-        max = j + nums[i + j]
-        next = j
-      }
-    }
-    i += next - 1
+  let lastPos = nums.length - 1
+  for (let i = lastPos; i >= 0; i--) {
+    if (i + nums[i] >= lastPos) lastPos = i
   }
-
-  return true
+  return lastPos === 0
 }
 
-console.log(canJump([2, 3, 1, 1, 4]), true)
-console.log(canJump([3, 2, 1, 0, 4]), false)
+;[
+  [2, 3, 1, 1, 4],              // true
+  [3, 2, 1, 0, 4],              // false
+].forEach(nums => {
+  console.log(canJump(nums))
+})
+
+// Solution:
+// 从后面开始向前遍历，
+// 判断当前位置是否能跳到终点，若能则将终点调整为该位置。
+// 否则判断前一个位置。
+
+// 最后，若终点移到了开始位置，则说明从开始位置能跳到终点。
+
+// 逆向思维。
+
+// Submission Result: Accepted

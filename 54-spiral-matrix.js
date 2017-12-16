@@ -1,5 +1,5 @@
 // 54. Spiral Matrix
-// Medium 26% locked:false
+// Medium   26%
 
 // Given a matrix of m x n elements (m rows, n columns), return all elements of
 // the matrix in spiral order.
@@ -15,7 +15,7 @@
  * @return {number[]}
  */
 const spiralOrder = function(matrix) {
-  if (matrix === void 0 || matrix.length === 0) return []
+  if (matrix == null || matrix.length === 0) return []
   const rows = matrix.length, cols = matrix[0].length
 
   const res = []
@@ -33,13 +33,27 @@ const spiralOrder = function(matrix) {
   return res
 }
 
-const m = [
-  [1, 2, 3, 0],
-  [4, 5, 6, 1],
-  [0, 1, 0, 2],
-  [7, 8, 9, 3]
-]
+;[
+  [
+    [1, 2, 3, 0],
+    [4, 5, 6, 1],
+    [0, 1, 0, 2],
+    [7, 8, 9, 3]
+  ],
+  [
+    [2,3]
+  ],
+  [
+    [2],
+    [3],
+    [4]
+  ]
+].forEach(matrix => {
+  console.log(spiralOrder(matrix))
+})
 
-console.log(spiralOrder(m))
-console.log(spiralOrder([[2, 3]]))
-console.log(spiralOrder([[2], [3], [4]]))
+// Solution:
+// 按照题意，从外圈层层向里读。
+// 设置矩阵的四个边界，没读完最外层的行或列，都改变一个边界。
+
+// Submission Result: Accepted
