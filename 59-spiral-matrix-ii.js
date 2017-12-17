@@ -1,5 +1,5 @@
 // 59. Spiral Matrix II
-// Medium 40% locked:false
+// Medium   40%
 
 // Given an integer n, generate a square matrix filled with elements from 1 to
 // n2 in spiral order.
@@ -21,10 +21,8 @@
 const generateMatrix = function(n) {
   if (n <= 0) return []
 
-  const m = []
-  for (let i = 0; i < n; i++) {
-    m[i] = new Array(n).fill(0)
-  }
+  const m = Array(n)
+  for (let i = 0; i < n; i++) m[i] = Array(n)
 
   let a = 0, b = n - 1, c = 0, d = n -1, i = 1
   while (i <= n * n) {
@@ -41,4 +39,15 @@ const generateMatrix = function(n) {
   return m
 }
 
-console.log(generateMatrix(2))
+;[
+  2,
+  3,
+].forEach(n => {
+  console.log(generateMatrix(n))
+})
+
+// Solution:
+// 先构造一个n*n的矩阵
+// 从外层顺时针不断向内层填数，一行行或一列列地填。
+
+// Submission Result: Accepted
