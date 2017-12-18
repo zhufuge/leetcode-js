@@ -1,5 +1,5 @@
 // 62. Unique Paths
-// Medium 41% locked:false
+// Medium   41%
 
 // A robot is located at the top-left corner of a m x n grid (marked 'Start' in
 // the diagram below).
@@ -29,19 +29,31 @@
  * @return {number}
  */
 const uniquePaths = function(m, n) {
-  const dp = []
+  const dp = Array(m)
   for (let i = 0; i < m; i++) {
-    dp[i] = new Array(n).fill(i === 0 ? 1 : 0)
+    dp[i] = Array(n)
     dp[i][0] = 1
-  }
-
-  for (let i = 1; i < m; i++) {
     for (let j = 1; j < n; j++) {
-      dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+      if (i === 0) dp[i][j] = 1
+      else dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
     }
   }
-
   return dp[m - 1][n - 1]
 }
 
-console.log(uniquePaths(100, 100))
+;[
+  [3, 7],
+  [3, 6],
+  [100, 100],
+].forEach(([m, n]) => {
+  console.log(uniquePaths(m, n))
+})
+
+// Solution:
+// 使用动态规划。
+// 用一个表来表示一个mxn的方格，
+// 表的每个项表示从开始位置到当前位置的全部不同路径。
+// 每个项都是上一个位置与左一个位置相加所得。
+// 最后结果为终点值，即最后一个项的值。
+
+// Submission Result: Accepted

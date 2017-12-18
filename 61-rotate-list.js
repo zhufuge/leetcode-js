@@ -1,5 +1,5 @@
 // 61. Rotate List
-// Medium 24% locked:false
+// Medium   24%
 
 // Given a list, rotate the list to the right by k places, where k is
 // non-negative.
@@ -18,20 +18,20 @@ function ListNode(val) {
 }
 
 ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
+  let s = '', node = this
+  while (node) {
+    s += (s === '' ? s : '->') + node.val
+    node = node.next
   }
   return s
 }
 
-function createList(array) {
+function toList(array) {
   const head = new ListNode()
-  let tail = head
-  for (let v of array) {
-    tail.next = new ListNode(v)
-    tail = tail.next
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
   }
   return head.next
 }
@@ -70,5 +70,48 @@ const rotateRight = function(head, k) {
   return newHead
 }
 
-const list = createList([1, 2])
-console.log(rotateRight(list, 101).toString())
+const latest = function(head, k) {
+  function iter(node, i) {
+    if (node.next == null) {
+      k %= i
+      if (k === 0) return head
+      node.next = head
+      return node
+    }
+
+    let newHead = iter(node.next, i + 1)
+    if (--k === 0) {
+      newHead = node.next
+      node.next = null
+    }
+    return newHead
+  }
+
+  return head ? iter(head, 1) : head
+}
+
+;[
+  [[1,2,3,4,5], 2],
+  [[1,2], 101],
+  [[1], 0],
+  [[1], 1]
+].forEach(([array, k]) => {
+  console.log(rotateRight(toList(array), k).toString())
+  console.log(latest(toList(array), k).toString())
+})
+
+// Solution:
+// 使用迭代递归函数，来形成一个栈。
+// 先遍历整个链表，直到最后一个节点，并记录链表的长度。
+// 使用链表长度更新k, 因为当k大于链表长度时，需要使用取模运算，即k=k%n(n为长度)。
+
+// 若第一次更新k时，就等于0，则直接返回头节点；若不为0，则将链头连到链尾后，形成环。
+// 之后就一层层返回，每返回一层，k都需要减一。
+
+// 当k等于0时，说明该节点的下一个节点为右边到左边的第k个节点，将下一个节点作为新的头部，
+// 并将该节点的next指针设为null，并返回新的头部
+// 若k不为0，则直接返回上一层返回的头部。
+
+// 最后得到的新的头部，即是所求的链表的头部。
+
+// Submission Result: Accepted
