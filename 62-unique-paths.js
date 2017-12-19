@@ -29,16 +29,14 @@
  * @return {number}
  */
 const uniquePaths = function(m, n) {
-  const dp = Array(m)
+  const dp = Array(n).fill(0)
+  dp[0] = 1
   for (let i = 0; i < m; i++) {
-    dp[i] = Array(n)
-    dp[i][0] = 1
     for (let j = 1; j < n; j++) {
-      if (i === 0) dp[i][j] = 1
-      else dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+      dp[j] += dp[j - 1]
     }
   }
-  return dp[m - 1][n - 1]
+  return dp[n - 1]
 }
 
 ;[
@@ -55,5 +53,11 @@ const uniquePaths = function(m, n) {
 // 表的每个项表示从开始位置到当前位置的全部不同路径。
 // 每个项都是上一个位置与左一个位置相加所得。
 // 最后结果为终点值，即最后一个项的值。
+
+// 对动态规划表进行优化。
+// 因为每次都是上一项加左一项。
+// 因此只需要用一个数组即可，
+// 每一项在改变之前都代表着上一项的值，只需在原来基础上加左一项即可。
+// 因为每一行的每一项只改变一次，且仅使用两次。
 
 // Submission Result: Accepted

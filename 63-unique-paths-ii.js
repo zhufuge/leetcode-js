@@ -1,5 +1,5 @@
 // 63. Unique Paths II
-// Medium 31% locked:false
+// Medium   31%
 
 // Follow up for "Unique Paths":
 
@@ -27,29 +27,36 @@
  * @return {number}
  */
 const uniquePathsWithObstacles = function(obstacleGrid) {
-  if (obstacleGrid === null || obstacleGrid.length === 0) return 0
-  const m = obstacleGrid.length, n = obstacleGrid[0].length
-  if (n === 0 || obstacleGrid[m - 1][n - 1] === 1) return 0
-
-  for (let i = 0; i < n && obstacleGrid[0][i] !== 1; i++) obstacleGrid[0][i] = -1
-  for (let i = 0; i < m && obstacleGrid[i][0] !== 1; i++) obstacleGrid[i][0] = -1
-
-  console.log(obstacleGrid)
-  for (let i = 1; i < m; i++) {
-    for (let j = 1; j < n; j++) {
-      if (obstacleGrid[i][j] !== 1) {
-        const a = obstacleGrid[i - 1][j],
-              b = obstacleGrid[i][j - 1]
-        obstacleGrid[i][j] = (a === 1 ? 0 : a) + (b === 1 ? 0 : b)
-      }
+  const n = obstacleGrid[0].length
+  const dp = Array(n).fill(0)
+  dp[0] = 1
+  for (let row of obstacleGrid) {
+    for (let i = 0; i < n; i++) {
+      if (row[i] === 1) dp[i] = 0
+      else if (i > 0) dp[i] += dp[i - 1]
     }
   }
 
-  return Math.abs(obstacleGrid[m - 1][n - 1])
+  return dp[n - 1]
 }
 
-const grid = [
-  [1],
-  [0]
-]
-console.log(uniquePathsWithObstacles(grid))
+;[
+  [
+    [1],
+    [0]
+  ],
+  [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0]
+  ],
+].forEach(obstacleGrid => {
+  console.log(uniquePathsWithObstacles(obstacleGrid))
+})
+
+// Solution:
+// 在 62-unique-paths.js 的基础上加上了一些阻碍。
+// 只需要将阻碍的位置设为0即可，其他无需改变。
+// 同样是使用一个数组的动态规划。
+
+// Submission Result: Accepted

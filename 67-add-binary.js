@@ -1,5 +1,5 @@
 // 67. Add Binary
-// Easy 32% locked:false
+// Easy   32%
 
 // Given two binary strings, return their sum (also a binary string).
 
@@ -14,22 +14,25 @@
  * @return {string}
  */
 const addBinary = function(a, b) {
-  if (a === void 0 || b === void 0) return ''
-  const n = a.length, m = b.length
-  if (n === 0) return b
-  if (m === 0) return a
-
-  let res = ''
-  for (let i = n - 1, j = m - 1, carry = 0;
-       i >= 0 || j >= 0 || carry > 0; i--, j--) {
-    const p = a[i] === '1' ? 1 : 0,
-          q = b[j] === '1' ? 1 : 0,
-          s = p + q + carry
-    carry = Math.trunc(s / 2)
-    res = s % 2 + res
+  let res = '', i = a.length - 1, j = b.length - 1, carry = 0
+  while (i >= 0 || j >= 0 || carry > 0) {
+    carry += (i >= 0 ? a[i--] - '0' : 0)
+    carry += (j >= 0 ? b[j--] - '0' : 0)
+    res = carry % 2 + res
+    carry >>= 1
   }
-
   return res
 }
 
-console.log(addBinary('0', '0'))
+;[
+  ['0', '0'],                   // '0'
+  ['11', '1'],                  // '100'
+].forEach(([a, b]) => {
+  console.log(addBinary(a, b))
+})
+
+// Solution:
+// 记录一个进位位。
+// 从两个字符串的末尾开始相加，并加上进位位。
+
+// Submission Result: Accepted
