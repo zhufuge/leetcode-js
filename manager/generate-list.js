@@ -23,6 +23,11 @@ async function write(content) {
     content,
     'utf8'
   )
+  await writeFile(
+    path.join(__dirname, '..', 'README.org'),
+    content,
+    'utf8'
+  )
 }
 
 async function getLatest(problems) {
