@@ -36,7 +36,7 @@ async function getLatest(problems) {
     const row = problems[i]
     rows[i] = JSON.parse(JSON.stringify(row))
     rows[i].mtimeMs =
-      (await stat(path.join(__dirname, '..', row.filename))).mtimeMs
+      (await stat(path.join(__dirname, '..', 'problems', row.filename))).mtimeMs
   }
 
   rows.sort((a, b) => b.mtimeMs - a.mtimeMs)

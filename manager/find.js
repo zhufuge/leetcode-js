@@ -3,16 +3,17 @@ const fs = require('fs'),
 
 const { updateAll } = require('./store')
 
-const dirPath = path.join(__dirname, '../')
+const DIR_PATH = path.join(__dirname, '..', 'problems')
+
 const getNumber = (t) => t.match(/(\d*)-.*/)[1]
 
 function main() {
-  const files = fs.readdirSync(dirPath)
+  const files = fs.readdirSync(DIR_PATH)
         .filter((filename) => path.extname(filename) === '.js')
 
   const accepted = [], solution = []
   files.forEach((filename) => {
-    const filePath = path.join(dirPath, filename)
+    const filePath = path.join(DIR_PATH, filename)
     const content = fs.readFileSync(filePath, 'utf8')
     if (content.includes('// Submission Result: Accepted')) {
       accepted.push(parseInt(getNumber(filename)))

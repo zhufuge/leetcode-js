@@ -14,12 +14,13 @@ const readFile = promisify(fs.readFile),
       mkdir = promisify(fs.mkdir)
 
 async function generate(number) {
-  const problem = await getProblem(number),
+  const problem = await getProblemFromDB(number),
         filename = number + '-' + problem.lowTitle + '.js',
-        filePath = path.join(__dirname, '../', filename)
+        filePath = path.join(__dirname, '..', 'problems', filename)
 
   if (fs.existsSync(filePath)) exit('File <' + filename + '> already exists.')
 
+  // requestProblem 访问不到内容
   const description = await requestProblem(problem)
   const header = '// ' + number + '. ' + problem.title + '\n' +
         '// ' + problem.difficulty + '   ' + problem.acceptance + '%\n'
@@ -28,7 +29,7 @@ async function generate(number) {
   console.log('Generate File: <' + filename + '>.')
 }
 
-async function getProblem(number) {
+async function getProblemFromDB(number) {
   const problem = (await selectBy(parseInt(number)))[0]
 
   if (!problem) exit('Do not have this problem.')
@@ -38,6 +39,7 @@ async function getProblem(number) {
   return problem
 }
 
+// FIXME: request 访问不到内容，可能需要深入爬虫了。
 async function requestProblem(problem) {
   function requestAsync(url, options) {
     return new Promise((resolve, reject) => {
