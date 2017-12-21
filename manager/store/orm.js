@@ -92,7 +92,7 @@ class Table {
     }
 
     const sql = 'SELECT ' + (attrs.length ? '??' : '*') +
-          ' FROM ' + this.name + ' WHERE ?'
+          ' FROM ' + this.name + (where ? ' WHERE ?' : '')
     const values = attrs.length ? [attrs, join(where)] : [join(where)]
     return new Promise((resolve, reject) => {
       this.exec(sql, values, default_callback(resolve, reject))

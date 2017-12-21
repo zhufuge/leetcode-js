@@ -9,10 +9,12 @@
   "scripts": {
     "g": "node manager/index.js",
     "gen": "node manager/find.js & node manager/generate-list.js",
-    "set": "node manager/add-problems.js"
+    "set": "node manager/add-problems.js",
+    "t": "node manager/test.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "colors": "^1.1.2",
     "lodash": "^4.17.4",
     "mysql": "^2.15.0",
     "request": "^2.83.0"

@@ -8,27 +8,21 @@ const writeFile = promisify(fs.writeFile),
 const { select } = require('./store')
 const { toLowTitle } = require('./helper')
 
-const REPOSITORY = 'https://github.com/zhufuge/leetcode-js/blob/master/'
+const REPOSITORY = 'https://github.com/zhufuge/leetcode-js/blob/master/problems/'
 
+const toRowString = (row) =>
+      '| ' + row.id + ' | [[' + REPOSITORY + row.filename +
+      '][' + row.title + ']] |'
 function toListString(problems) {
   return problems
-    .map((row) => '| ' + row.id + ' | [[' + REPOSITORY + row.filename +
-         '][' + row.title + ']] |')
+    .map(toRowString)
     .join('\n')
 }
 
-async function write(content) {
-  await writeFile(
-    path.join('d:/blog/hexo/source/_posts', 'leetcode-js.org'),
-    content,
-    'utf8'
-  )
-  await writeFile(
-    path.join(__dirname, '..', 'README.org'),
-    content,
-    'utf8'
-  )
+async function writeTo(filePath, content) {
+  await writeFile(filePath, content, 'utf8')
 }
+
 
 async function getLatest(problems) {
   const rows = []
@@ -59,7 +53,8 @@ async function main() {
 
   let size = 0
   for (let problem of problems) {
-    problem.filename = problem.id + '-' + toLowTitle(problem.title) + '.js'
+    const number = (problem.id + '').padStart(3, '0')
+    problem.filename = number + '-' + toLowTitle(problem.title) + '.js'
     size++
   }
 
@@ -75,7 +70,10 @@ async function main() {
         '|   # | Title |\n' + '|-----+-------|\n'
   const list = toListString(problems)
 
-  await write(head + latest + moreTag + listHead + list)
+  const content = head + latest + moreTag + listHead + list
+  await writeTo(path.join('d:/blog/hexo/source/_posts', 'leetcode-js.org'), content)
+  await writeTo(path.join(__dirname, '..', 'README.org'), content)
+
   console.log('Generate leetcode-js.org successed.')
 }
 

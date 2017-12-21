@@ -6,37 +6,26 @@ const fs = require('fs'),
 const request = require('request')
 const cheerio = require('cheerio')
 
-const { selectBy } = require('./store')
-const { toLowTitle } = require('./helper')
+const { getProblemFromDB, exit } = require('./helper')
 
 const readFile = promisify(fs.readFile),
       writeFile = promisify(fs.writeFile),
       mkdir = promisify(fs.mkdir)
 
 async function generate(number) {
-  const problem = await getProblemFromDB(number),
-        filename = number + '-' + problem.lowTitle + '.js',
-        filePath = path.join(__dirname, '..', 'problems', filename)
+  const problem = await getProblemFromDB(number)
 
-  if (fs.existsSync(filePath)) exit('File <' + filename + '> already exists.')
+  if (fs.existsSync(problem.filePath)) {
+    exit('File <' + problem.filename + '> already exists.')
+  }
 
   // requestProblem 访问不到内容
   const description = await requestProblem(problem)
   const header = '// ' + number + '. ' + problem.title + '\n' +
         '// ' + problem.difficulty + '   ' + problem.acceptance + '%\n'
 
-  await writeFile(filePath, header + description, 'utf8')
-  console.log('Generate File: <' + filename + '>.')
-}
-
-async function getProblemFromDB(number) {
-  const problem = (await selectBy(parseInt(number)))[0]
-
-  if (!problem) exit('Do not have this problem.')
-  if (problem.locked) exit('This problem is LOCKED!')
-
-  problem.lowTitle = toLowTitle(problem.title)
-  return problem
+  await writeFile(problem.filePath, header + description, 'utf8')
+  console.log('Generate File: <' + problem.filename + '>.')
 }
 
 // FIXME: request 访问不到内容，可能需要深入爬虫了。
@@ -97,11 +86,6 @@ function getDescription(body) {
     .join('\n')
     .replace(/\n{3,}/g, '\n\n') +
     '\n'
-}
-
-function exit(...args) {
-  console.log('Generate fails!')
-  throw new Error(...args)
 }
 
 // TODO request editor content

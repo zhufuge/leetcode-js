@@ -24,7 +24,7 @@ const init = require('./init')
 
 module.exports = async function(operations) {
   await connectAsync()
-  console.log('connected as id ' + connection.threadId)
+//  console.log('connected as id ' + connection.threadId)
 
   await init(connection).catch((error) => {
     console.log(error)
@@ -32,7 +32,7 @@ module.exports = async function(operations) {
   })
 
   const result = await operations(orm(connection).table('problems'))
-  console.log('connection end.')
+//  console.log('connection end.')
   connection.end()
 
   return result
