@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/073-set-matrix-zeroes.js][73. Set Matrix Zeroes]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/071-simplify-path.js][71. Simplify Path]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/347-top-k-frequent-elements.js][347. Top K Frequent Elements]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/070-climbing-stairs.js][70. Climbing Stairs]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/069-sqrtx.js][69. Sqrt(x)]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/009-palindrome-number.js][9. Palindrome Number]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/089-gray-code.js][89. Gray Code]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/008-string-to-integer-atoi.js][8. String to Integer (atoi)]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/746-min-cost-climbing-stairs.js][746. Min Cost Climbing Stairs]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(222)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(224)</h2>
 #+END_HTML
 
 |   # | Title |
@@ -86,6 +86,8 @@
 | 68 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/068-text-justification.js][Text Justification]] |
 | 69 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/069-sqrtx.js][Sqrt(x)]] |
 | 70 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/070-climbing-stairs.js][Climbing Stairs]] |
+| 71 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/071-simplify-path.js][Simplify Path]] |
+| 73 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/073-set-matrix-zeroes.js][Set Matrix Zeroes]] |
 | 89 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/089-gray-code.js][Gray Code]] |
 | 100 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/100-same-tree.js][Same Tree]] |
 | 136 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/136-single-number.js][Single Number]] |
