@@ -1,5 +1,5 @@
 // 75. Sort Colors
-// Medium 38% locked:false
+// Medium   38%
 
 // Given an array with n objects colored red, white or blue, sort them so that
 // objects of the same color are adjacent, with the colors in the order red,
@@ -25,39 +25,33 @@
  */
 const sortColors = function(nums) {
   const n = nums.length
-  if (nums.length === 0) return
-
-  const color = {0: 0, 1: 0, 2: 0}
-  for (let v of nums) color[v]++
-
-  for (let i = 0; i < n; i++) {
-    if (i < color[0]) nums[i] = 0
-    else if (i < color[0] + color[1]) nums[i] = 1
-    else nums[i] = 2
-  }
-}
-
-const color = [2,0,1,2,1,2,0]
-console.log(color)
-sortColors(color)
-console.log(color)
-
-const onePass = function(nums) {
-  const n = nums.length
-  if (nums.length === 0) return
-
-  const swap = (i, j) => [nums[i], nums[j]] = [nums[j], nums[i]]
-  let r = 0, w = 0
-  for (let i = 0; i < n; i++) {
+  const swap = (a, b) => [nums[a], nums[b]] = [nums[b], nums[a]]
+  for (let i = 0, redNum = 0, WhiteNum = 0; i < n; i++) {
     if (nums[i] === 0) {
-      if (nums[r] === 1) w--
-      swap(r++, i)
+      if (nums[redNum] === 1) WhiteNum--
+      swap(redNum++, i)
     }
-    if (nums[i] === 1) swap((r + w++), i)
+    if (nums[i] === 1) swap(redNum + WhiteNum++, i)
   }
 }
 
-const color2 = [2,0,1,2,1,2,0]
-console.log(color2)
-onePass(color2)
-console.log(color2)
+;[
+  [2,0,1,2,1,2,0],
+].forEach(nums => {
+  console.log(nums)
+  sortColors(nums)
+  console.log(nums)
+})
+
+// Solution:
+// 使用两个变量，分别记录当前已排序的数组中的 0 的个数和 1 的个数。
+// 遍历整个数组。
+// 若当前位置的数字为 0 ，则检查已排序的数组中的 0 后是否为 1 ，
+// 若为 1 ，则将 1 的个数减去一个，
+// 因为，下一步是将 0 与已排序的数组的所有 0 后的数字交换，
+// 这样，已排序中的数组中的 0 的个数会加一，而 1 的个数会减一，
+// 如果不是 1 ，也交换，但不必将 1 的个数减一，而 2 的个数并不需要记录；
+// 若当前位置的数字为 1（可能原来是0，与已排序的数组中的 1 交换了），
+// 则将该数与已排序的数组中的所有 1 后的数字交换，并将 1 的个数加一。
+
+// Submission Result: Accepted
