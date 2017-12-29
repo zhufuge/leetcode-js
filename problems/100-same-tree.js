@@ -1,7 +1,7 @@
 // 100. Same Tree
-// Easy 46% locked:false
+// Easy   46%
 
-// Given two binary trees, write a function to check if they are equal or not.
+// Given two abinary trees, write a function to check if they are equal or not.
 
 // Two binary trees are considered equal if they are structurally identical and
 // the nodes have the same value.
@@ -14,11 +14,11 @@ function TreeNode(val) {
   this.left = this.right = null
 }
 
-function createTree(array) {
-  if (array === null || array === void 0) return null
-  const root = new TreeNode(array[0])
-  root.left = createTree(array[1])
-  root.right = createTree(array[2])
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
   return root
 }
 
@@ -30,14 +30,14 @@ function createTree(array) {
 const isSameTree = function(p, q) {
   if (p === q) return true
   if (p == null || q == null || p.val !== q.val) return false
-
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 }
 
-const p = createTree([1, [2, [3], [4]], [2, [3], [4]]]),
-      q = createTree([1, [2, [3], [4]], [2, [3], [4]]])
-
-console.log(isSameTree(p, q))
+;[
+  [[1, 2, 2, 3, 4, 3, 4], [1, 2, 2, 3, 4, 3, 4]],
+].forEach(args => {
+  console.log(isSameTree(toBTree(args[0]), toBTree(args[1])))
+})
 
 // Solution:
 // 递归遍历两棵树的相同位置的节点（包括空子节点，即 null）
