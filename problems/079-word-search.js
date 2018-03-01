@@ -26,32 +26,31 @@
  * @return {boolean}
  */
 const exist = function(board, word) {
-  if (board.length === 0 || board[0].length === 0) return false
-  if (word.length === 0) return true
   const m = board.length, n = board[0].length, w = word.length
+  if (w === 0) return true
 
-  const matchOne = (i, j, used, c) => {
+  function match(i, j, c) {
+    let isExist = false
     if (0 <= i && i < m && 0 <= j && j < n) {
-      if (!used[i][j] && board[i][j] === word[c]) {
-        used[i][j] = true
-        if (match(i, j, used, c + 1)) return true
-        used[i][j] = false
+      if (board[i][j] === word[c]) {
+        const tmp = word[c]
+        board[i][j] = true
+        if (next(i, j, c + 1)) isExist = true
+        board[i][j] = tmp
       }
     }
-    return false
-  }
-  const match = (i, j, used, c) => {
-    return c === w ||
-      matchOne(i - 1, j, used, c) ||
-      matchOne(i, j + 1, used, c) ||
-      matchOne(i + 1, j, used, c) ||
-      matchOne(i, j - 1, used, c)
+    return isExist
   }
 
-  const used = new Array(m).fill(0).map(row => new Array(n).fill(false))
+  const next = (i, j, c) => c >= w ||
+        match(i - 1, j, c) ||
+        match(i, j + 1, c) ||
+        match(i + 1, j, c) ||
+        match(i, j - 1, c)
+
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
-      if (matchOne(i, j, used, 0)) return true
+      if (match(i, j, 0)) return true
     }
   }
 
@@ -65,6 +64,17 @@ const board = [
   ['A','D','E','E']
 ]
 
-console.log(exist(board, 'ABCCED'))
-console.log(exist(board, 'SEE'))
-console.log(exist(board, 'ABCB'));
+;[
+  [board, 'ABCCED'],            // true
+  [board, 'SEE'],               // true
+  [board, 'ABCB'],              // false
+].forEach(args => {
+  console.log(exist(...args))
+})
+
+
+// Solution:
+// 使用 DFS 遍历矩阵。
+// 每匹配一个字符，就在原矩阵中做标记，并在回溯时还原。
+
+// Submission Result: Accepted

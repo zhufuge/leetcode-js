@@ -61,24 +61,21 @@ class Table {
   insert(value) {
     const sql = 'INSERT INTO ' + this.name + ' SET ?'
     return new Promise((resolve, reject) => {
-      this.exec(sql, value, default_callback(resolve, reject)
-      )
+      this.exec(sql, value, default_callback(resolve, reject))
     })
   }
 
   update(values) {
     const sql = 'UPDATE ' + this.name + ' SET ? WHERE ?'
     return new Promise((resolve, reject) => {
-      this.exec(sql, values, default_callback(resolve, reject)
-      )
+      this.exec(sql, values, default_callback(resolve, reject))
     })
   }
 
   selectBy(id) {
     const sql = 'SELECT * from ' + this.name + ' where id = ?'
     return new Promise((resolve, reject) => {
-      this.exec(sql, id, default_callback(resolve, reject)
-      )
+      this.exec(sql, id, default_callback(resolve, reject))
     })
   }
 

@@ -1,5 +1,5 @@
 // 78. Subsets
-// Medium 41% locked:false
+// Medium   41%
 
 // Given a set of distinct integers, nums, return all possible subsets.
 
@@ -26,9 +26,8 @@
  */
 const subsets = function(nums) {
   const n = nums.length
-  if (n === 0) return [[]]
-
   const res = []
+
   const combine = (m, p, i) => {
     if (p.length === m) res.push(p.map(v => nums[v]))
     else {
@@ -46,4 +45,17 @@ const subsets = function(nums) {
   return res
 }
 
-console.log(subsets([2, 3, 4, 5]))
+;[
+  [],
+  [2, 3, 4, 5],
+  [1, 2, 3],
+].forEach(nums => {
+  console.log(subsets(nums))
+})
+
+// Solution:
+// 求一个数组的所有子集（包括空集和本身）。
+// 使用 77-combinations 中的组合函数。
+// 分别找出长度为 0 到数组长度的所有组合。
+
+// Submission Result: Accepted

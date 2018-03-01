@@ -1,5 +1,5 @@
 // 86. Partition List
-// Medium 32% locked:false
+// Medium   32%
 
 // Given a linked list and a value x, partition it such that all nodes less than
 // x come before nodes greater than or equal to x.
@@ -19,23 +19,23 @@ function ListNode(val) {
   this.next = null
 }
 
-ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
-  }
-  return s
-}
-
-const createList = function(array) {
+const toList = function(array) {
   const head = new ListNode()
-  let t = head
-  for (let v of array) {
-    t.next = new ListNode(v)
-    t = t.next
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
   }
   return head.next
+}
+
+ListNode.prototype.toString = function() {
+  let s = '', node = this
+  while (node) {
+    s += (s === '' ? s : '->') + node.val
+    node = node.next
+  }
+  return s
 }
 
 /**
@@ -44,28 +44,34 @@ const createList = function(array) {
  * @return {ListNode}
  */
 const partition = function(head, x) {
-  const start = new ListNode()
-  start.next = head
-  let p = start, q = p
-  while (q !== null && q.next !== null) {
-    if (q.next.val < x) {
-      if (p !== q) {
-        const t = q.next
-        q.next = t.next
-        t.next = p.next
-        p.next = t
-        p = t
-      } else {
-        p = q = q.next
-      }
+  const node1 = new ListNode(), node2 = new ListNode()
+  let p1 = node1, p2 = node2
+  while (head) {
+    if (head.val < x) {
+      p1 = p1.next = head
     } else {
-      q = q.next
+      p2 = p2.next = head
     }
+    head = head.next
   }
-
-  return start.next
+  p2.next = null
+  p1.next = node2.next
+  return node1.next
 }
 
-const list = createList([1])
-console.log(list.toString())
-console.log(partition(list, 3).toString())
+;[
+  [[1], 3],
+  [[1, 4, 3, 2, 5, 2], 3],
+  [[5, 1, 3, 2, 4, 1], 3],
+].forEach(args => {
+  const list = toList(args[0])
+  console.log((list || '').toString())
+  console.log((partition(list, args[1]) || '').toString())
+})
+
+// Solution:
+// 使用两个链表将两部分分别串起来。
+// 再将第二个（大于或等于x）的链表连到第一个（小于x）的链表的末尾。
+// 最后需要将第二个链表的末尾指向 null ，因为末尾节点还可能指向里另一个节点。
+
+// Submission Result: Accepted

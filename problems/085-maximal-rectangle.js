@@ -18,5 +18,5 @@
  * @return {number}
  */
 const maximalRectangle = function(matrix) {
-  
+
 }
