@@ -1,5 +1,5 @@
 // 88. Merge Sorted Array
-// Easy 32% locked:false
+// Easy   32%
 
 // Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as
 // one sorted array.
@@ -16,23 +16,35 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 const merge = function(nums1, m, nums2, n) {
-  if (n === 0) return
-  if (m === 0) {
-    nums2.forEach((v, i) => nums1[i] = v)
-    return
-  }
-
-  for (let i = 0, j = 0; i < m || j < n;) {
-    if (i >= m) nums1[m + j] = nums2[j++]
-    else if (j < n && nums1[i + j] >= nums2[j]) {
-      for (let k = m + j; k > i + j; k--) nums1[k] = nums1[k - 1]
-      nums1[i + j] = nums2[j++]
-    } else i++
-    console.log(i, j, nums1, nums2);
+  let p = m - 1, q = n - 1, k = n + m - 1
+  while (q >= 0) {
+    if (p < 0 || nums1[p] <= nums2[q]) {
+      nums1[k--] = nums2[q--]
+    } else {
+      nums1[k--] = nums1[p--]
+    }
   }
 }
 
-const a = [1, 2, 2, 0, 0, 0],
-      b = [4, 5, 6]
-merge(a, 3, b, b.length)
-console.log(a)
+;[
+  [
+    [1, 2, 2, 0, 0, 0], 3,
+    [4, 5, 6], 3,
+  ],
+  [
+    [3, 4, 9, 11, 0, 0, 0, 0, 0], 4,
+    [1, 5, 8, 10, 16], 5,
+  ],
+].forEach(args => {
+  merge(...args)
+  console.log(args[0])
+})
+
+// Solution:
+// 方法一：
+// 使用插入法，从头开始，找到合适的位置进行插入，后移其后数字。
+
+// 方法二：
+// 从后向前填，从两个数组末尾选择较大的数，并填入第一个数组的末尾。
+
+// Submission Result: Accepted

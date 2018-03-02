@@ -44,7 +44,7 @@ const numDecodings = function(s) {
     }
     res += i === n ? curr : 0
   }
-  
+
   return res
 }
 

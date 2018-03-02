@@ -10,7 +10,7 @@
 
 // Note:
 // Given m, n satisfy the following condition:
-// 1 ? m ? n ? length of list.
+// 1 <= m <= n <= length of list.
 
 /**
  * Definition for singly-linked list.
@@ -20,25 +20,24 @@ function ListNode(val) {
   this.next = null
 }
 
-ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
-  }
-  return s
-}
-
-const createList = function(array) {
+const toList = function(array) {
   const head = new ListNode()
-  let t = head
-  for (let v of array) {
-    t.next = new ListNode(v)
-    t = t.next
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
   }
   return head.next
 }
 
+ListNode.prototype.toString = function() {
+  let s = '', node = this
+  while (node) {
+    s += (s === '' ? s : '->') + node.val
+    node = node.next
+  }
+  return s
+}
 
 /**
  * @param {ListNode} head
@@ -47,14 +46,16 @@ const createList = function(array) {
  * @return {ListNode}
  */
 const reverseBetween = function(head, m, n) {
-  if (head === null || head === void 0 || m >= n) return head
+  if (head == null || m >= n) return head
+
   const start = new ListNode()
   start.next = head
-  n = n - m
-  let a = start
-  while (m-- > 1) a = a.next
+
+  let a = start, count = n - m
+  while (--m > 0) a = a.next
+
   let b = a.next
-  while (n-- > 0) {
+  while (--count >= 0) {
     const t = b.next
     b.next = t.next
     t.next = a.next
@@ -64,6 +65,16 @@ const reverseBetween = function(head, m, n) {
   return start.next
 }
 
-const list = createList([1, 2, 3, 4, 5])
-console.log(list.toString())
-console.log(reverseBetween(list, 2, 4).toString())
+;[
+  [[1, 2, 3, 4, 5], 2, 4],      // 1->4->3->2->5
+].forEach(args => {
+  const list = toList(args[0])
+  console.log((list || '').toString())
+  console.log((reverseBetween(list, args[1], args[2]) || '').toString())
+})
+
+// Solution:
+// 使用头插法将中间的节点倒置。
+// 主要指针的细节。
+
+// Submission Result: Accepted

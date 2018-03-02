@@ -28,18 +28,18 @@ const subsets = function(nums) {
   const n = nums.length
   const res = []
 
-  const combine = (m, p, i) => {
-    if (p.length === m) res.push(p.map(v => nums[v]))
+  const combine = (array, m, i) => {
+    if (array.length === m) res.push(array.map(v => nums[v]))
     else {
       for (; i < n; i++) {
-        p.push(i)
-        combine(m, p, i + 1)
-        p.pop()
+        array.push(i)
+        combine(array, m, i + 1)
+        array.pop()
       }
     }
   }
   for (let i = 0; i <= n; i++) {
-    combine(i, [], 0)
+    combine([], i, 0)
   }
 
   return res
