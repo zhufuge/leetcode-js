@@ -1,5 +1,5 @@
 // 101. Symmetric Tree
-// Easy 39% locked:false
+// Easy   39%
 
 // Given a binary tree, check whether it is a mirror of itself (ie, symmetric
 // around its center).
@@ -30,16 +30,12 @@ function TreeNode(val) {
   this.left = this.right = null
 }
 
-function fullBAToTree(array) {
-  const iter = (i) => {
-    if (array[i - 1] === null || array[i - 1] === void 0) return null
-    const root = new TreeNode(array[i - 1])
-    root.left = iter(i * 2)
-    root.right = iter(i * 2 + 1)
-    return root
-  }
-
-  return iter(1)
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
+  return root
 }
 
 /**
@@ -47,12 +43,29 @@ function fullBAToTree(array) {
  * @return {boolean}
  */
 const isSymmetric = function(root) {
-  if (root === null) return true
-  const iter = (left, right) => (left === null && right === null) ||
-        ((left !== null && right !== null && left.val === right.val)
-         ? iter(left.left, right.right) && iter(left.right, right.left)
-         : false)
+  if (root == null) return true
+  function iter(left, right) {
+    if (left === right) return true
+    if (left && right && left.val === right.val) {
+      return iter(left.left, right.right) && iter(left.right, right.left)
+    }
+    return false
+  }
   return iter(root.left, root.right)
 }
 
-console.log(isSymmetric(fullBAToTree([1, 2, 2, 3, 4, 4, 3])))
+;[
+  [1, 2, 2, 3, 4, 4, 3],        // true
+  [1,2,2,null,3,null,3],        // false
+].forEach(array => {
+  console.log(isSymmetric(toBTree(array)))
+})
+
+// Solution:
+// 比较左右子节点对象是否相同，相同（同为 null）则返回 true
+// 比较左右子节点的值是否相同，相同则递归返回（&&运算）
+//  1. 左节点的左子树和右节点的右子树是否相同
+//  2. 左节点的右子树和右节点的左子树是否相同
+// 否则返回 false
+
+// Submission Result: Accepted

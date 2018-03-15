@@ -1,5 +1,5 @@
 // 94. Binary Tree Inorder Traversal
-// Medium 47% locked:false
+// Medium   47%
 
 // Given a binary tree, return the inorder traversal of its nodes' values.
 
@@ -25,11 +25,11 @@ function TreeNode(val) {
   this.left = this.right = null
 }
 
-function createTree(array) {
-  if (array === null || array === void 0) return null
-  const root = new TreeNode(array[0])
-  root.left = createTree(array[1])
-  root.right = createTree(array[2])
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
   return root
 }
 
@@ -40,12 +40,25 @@ function createTree(array) {
  */
 const inorderTraversal = function(root) {
   const res = []
-  const iter = (tree) => {
-    if (tree === null) return
-    iter(tree.left)
-    res.push(tree.val)
-    iter(tree.right)
+  function iter(node) {
+    if (node != null) {
+      iter(node.left)
+      res.push(node.val)
+      iter(node.right)
+    }
   }
   iter(root)
   return res
 }
+
+;[
+  [1, null, 2, null, null, 3],
+].forEach(array => {
+  console.log(inorderTraversal(toBTree(array)))
+})
+
+// Solution:
+// 中序遍历。
+// 在递归函数的过程中，先递归左子树，再记录节点，最后再递归右子树。
+
+// Submission Result: Accepted
