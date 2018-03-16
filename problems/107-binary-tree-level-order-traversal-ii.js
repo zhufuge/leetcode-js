@@ -1,5 +1,5 @@
 // 107. Binary Tree Level Order Traversal II
-// Easy 40% locked:false
+// Easy   40%
 
 // Given a binary tree, return the bottom-up level order traversal of its nodes'
 // values. (ie, from left to right, level by level from leaf to root).
@@ -21,28 +21,51 @@
 //   [3]
 // ]
 
+
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
  */
+function TreeNode(val) {
+  this.val = val
+  this.left = this.right = null
+}
+
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
+  return root
+}
+
+
 /**
  * @param {TreeNode} root
  * @return {number[][]}
  */
 const levelOrderBottom = function(root) {
   const res = []
-  const iter = (root, level) => {
-    if (root === null) return
-    const n = res.length
-    if (level < n) {
-      res[n - level - 1].push(root.val)
-    } else res.unshift([root.val])
-    iter(root.left, level + 1)
-    iter(root.right, level + 1)
+  function iter(root, level) {
+    if (root != null) {
+      if (level >= res.length) res.unshift([])
+      res[res.length - level - 1].push(root.val)
+      iter(root.left, level + 1)
+      iter(root.right, level + 1)
+    }
   }
   iter(root, 0)
   return res
 }
+
+;[
+  [3,9,20,null,null,15,7],
+].forEach(array => {
+  console.log(levelOrderBottom(toBTree(array)))
+})
+
+// Solution:
+// 带一个层级参数，进行递归遍历。
+// 根据层级参数和数组的长度来构造数组，
+// 当层数大于或等于数组长度时，在数组头部插入一个代表新的层的数组。
+
+// Submission Result: Accepted
