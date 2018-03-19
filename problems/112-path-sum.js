@@ -1,5 +1,5 @@
 // 112. Path Sum
-// Easy 34% locked:false
+// Easy   34%
 
 // Given a binary tree and a sum, determine if the tree has a root-to-leaf path
 // such that adding up all the values along the path equals the given sum.
@@ -19,20 +19,41 @@
 
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
  */
+function TreeNode(val) {
+  this.val = val
+  this.left = this.right = null
+}
+
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
+  return root
+}
+
+
 /**
  * @param {TreeNode} root
  * @param {number} sum
  * @return {boolean}
  */
 const hasPathSum = function(root, sum) {
-  if (root === null) return false
-  if (root.val === sum &&
-      root.left === null && root.right === null) return true
+  if (root == null) return false
+  if (root.val === sum && root.left == null && root.right == null) return true
   sum -= root.val
   return hasPathSum(root.left, sum) || hasPathSum(root.right, sum)
 }
+
+;[
+  [[5,4,8,11,null,13,4,7,2,null,null,null,null,null,1], 22],
+].forEach(([array, sum]) => {
+  console.log(hasPathSum(toBTree(array), sum))
+})
+
+// Solution:
+// 每当是叶子节点的时候，判断路径和时候为给定值。
+// 使用减法减小给定值，来代替路径和，可减少一个参数的传递。
+
+// Submission Result: Accepted

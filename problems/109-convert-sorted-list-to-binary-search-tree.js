@@ -1,54 +1,68 @@
 // 109. Convert Sorted List to Binary Search Tree
-// Medium 34% locked:false
+// Medium   34%
 
 // Given a singly linked list where elements are sorted in ascending order,
 // convert it to a height balanced BST.
 
+// For this problem, a height-balanced binary tree is defined as a binary tree
+// in which the depth of the two subtrees of every node never differ by more
+// than 1.
+
+// Example:
+
+// Given the sorted linked list: [-10,-3,0,5,9],
+
+// One possible answer is: [0,-3,9,-10,null,5], which represents the following
+// height balanced BST:
+
+//      0
+//     / \
+//   -3   9
+//   /   /
+// -10  5
+
+
 /**
  * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
  */
+function ListNode(val) {
+  this.val = val
+  this.next = null
+}
+
+function toList(array) {
+  const head = new ListNode()
+  let node = head
+  for (let a of array) {
+    node.next = new ListNode(a)
+    node = node.next
+  }
+
+  return head.next
+}
+
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
  */
+function TreeNode(val) {
+  this.val = val
+  this.left = this.right = null
+}
+
 /**
  * @param {ListNode} head
  * @return {TreeNode}
  */
 const sortedListToBST = function(head) {
-  const nums = []
-  while (head !== null) {
-    nums.push(head.val)
-    head = head.next
-  }
-  const sortedArrayToBST = function(nums) {
-    const n = nums.length
-    if (n === 0) return null
-    const mid = (n - 1) >> 1
-    const root = new TreeNode(nums[mid])
-    root.left = sortedArrayToBST(nums.slice(0, mid))
-    root.right = sortedArrayToBST(nums.slice(mid + 1, n))
-    return root
-  }
-  return sortedArrayToBST(nums)
-}
-
-const Space1 = function(head) {
-  if (head === null) return null
-  const iter = (head, tail) => {
+  function iter(head, tail) {
     if (head === tail) return null
+
     let slow = head, fast = head
     while (fast !== tail && fast.next !== tail) {
       fast = fast.next.next
       slow = slow.next
     }
+
     const root = new TreeNode(slow.val)
     root.left = iter(head, slow)
     root.right = iter(slow.next, tail)
@@ -56,3 +70,25 @@ const Space1 = function(head) {
   }
   return iter(head, null)
 }
+
+;[
+  // [],
+  // [0],
+  // [0, 1],
+  // [0, 1, 2],
+  // [0, 1, 2, 3],
+  // [-10, -3, 0, 5, 9],
+  // [0, 1, 2, 3, 4, 5],
+  // [0, 1, 2, 3, 4, 5, 6],
+  [0, 1, 2, 3, 4, 5, 6, 7],
+].forEach(array => {
+  console.log(sortedListToBST(toList(array)))
+})
+
+// Solution:
+// 使用两个指针快慢遍历，找到中间节点，以中间节点为根。
+// 递归左链和右链，分别生成左右子树。
+
+// 关键在于快慢遍历。过程中需要特别注意指针的细节。
+
+// Submission Result: Accepted
