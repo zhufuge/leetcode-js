@@ -1,5 +1,5 @@
 // 116. Populating Next Right Pointers in Each Node
-// Medium 36% locked:false
+// Medium   36%
 
 // Given a binary tree
 
@@ -38,40 +38,55 @@
 
 /**
  * Definition for binary tree with next pointer.
- * function TreeLinkNode(val) {
- *     this.val = val;
- *     this.left = this.right = this.next = null;
- * }
  */
+function TreeLinkNode(val) {
+  this.val = val
+  this.left = this.right = this.next = null
+}
+
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeLinkNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
+  return root
+}
 
 /**
  * @param {TreeLinkNode} root
  * @return {void} Do not return anything, modify tree in-place instead.
  */
 const connect = function(root) {
-  const tails = []
-  const iter = (tree, level) => {
-    if (tree !== null) {
-      if (tails[level]) tails[level].next = tree
-      tails[level] = tree
-      iter(tree.left, level + 1)
-      iter(tree.right, level + 1)
-    }
-  }
-  iter(root, 0)
-}
-
-const Space1 = function(root) {
-  if (root === null) return
-  let pre = root,
-      cur = null
+  if (root == null) return
+  let pre = root
+  let cur = null
   while (pre.left) {
     cur = pre
     while (cur) {
       cur.left.next = cur.right
-      if (cur.next) cur.right.next = cur.next.left
+      if (cur.next) {
+        cur.right.next = cur.next.left
+      }
       cur = cur.next
     }
     pre = pre.left
   }
 }
+
+;[
+  [1,2,3,4,5,6,7],
+].forEach(array => {
+  const tree = toBTree(array)
+  connect(tree)
+  console.log(tree)
+})
+
+// Solution:
+// 每一层中，都从最左边的节点开始，假设该层已经连接完毕，并开始进行下一层的连接。
+// 1. 连接当前节点的左右子节点；
+// 2. 开始连接当前节点的右子节点和下一个节点的左子节点；
+// 3. 进入下一个节点；
+// 4. 重复 1，2，3，直到该层最后一个节点；
+// 5. 进入下一层，并从第一个节点开始。
+
+// Submission Result: Accepted

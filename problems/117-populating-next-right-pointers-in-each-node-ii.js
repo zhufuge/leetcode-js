@@ -1,5 +1,5 @@
 // 117. Populating Next Right Pointers in Each Node II
-// Medium 33% locked:false
+// Medium   33%
 
 // Follow up for problem "Populating Next Right Pointers in Each Node".
 
@@ -36,16 +36,12 @@ function TreeLinkNode(val) {
   this.left = this.right = this.next = null
 }
 
-function fullBAToTree(array) {
-  const iter = (i) => {
-    if (array[i - 1] === null || array[i - 1] === void 0) return null
-    const root = new TreeLinkNode(array[i - 1])
-    root.left = iter(i * 2)
-    root.right = iter(i * 2 + 1)
-    return root
-  }
-
-  return iter(1)
+function toBTree(array, i=0) {
+  if (array[i] == null) return null
+  const root = new TreeLinkNode(array[i])
+  root.left = toBTree(array, i * 2 + 1)
+  root.right = toBTree(array, i * 2 + 2)
+  return root
 }
 
 
@@ -56,13 +52,18 @@ function fullBAToTree(array) {
 const connect = function(root) {
   let pre = root
   while (pre) {
-    while (pre && !pre.left && !pre.right) pre = pre.next
+    while (pre && !pre.left && !pre.right) {
+      pre = pre.next
+    }
     if (pre) {
       let cur = pre, tail = cur.left || cur.right
       while (cur) {
-        if (cur.left && cur.right) tail = tail.next = cur.right
-        if (cur.next && (cur.next.left || cur.next.right))
+        if (cur.left && cur.right) {
+          tail = tail.next = cur.right
+        }
+        if (cur.next && (cur.next.left || cur.next.right)) {
           tail = tail.next = cur.next.left || cur.next.right
+        }
         cur = cur.next
       }
       pre = pre.left || pre.right
@@ -70,5 +71,22 @@ const connect = function(root) {
   }
 }
 
-const tree = fullBAToTree([1,2,2,3,3,3,3,4,4,4,4,4,4,null,null,5,5])
-console.log(connect(tree))
+;[
+  [1,2,3,4,5,null,7],
+//  [1,2,2,3,3,3,3,4,4,4,4,4,4,null,null,5,5],
+].forEach(array => {
+  const tree = toBTree(array)
+  connect(tree)
+  console.log(tree)
+})
+
+// Solution:
+// 每一层中，都从左边第一个有子节点的节点开始，假设该层已经连接完毕，并开始进行下一层的连接。
+// 1. 从左边开始，找到第一个有子节点的节点作为当前节点；
+// 2. 若当前节点有左右子节点，则连接左右子节点；
+// 3. 若当前的下一个节点有子节点，且有左子节点，则连接其左子节点，若无左，则连右；
+// 4. 进入下一个节点；
+// 5. 重复 2，3，4，直到该层最后一个节点；
+// 6. 进入下一层，重复 1，2，3，4，5
+
+// Submission Result: Accepted
