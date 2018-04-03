@@ -1,5 +1,5 @@
 // 118. Pascal's Triangle
-// Easy 39% locked:false
+// Easy   39%
 
 // Given numRows, generate the first numRows of Pascal's triangle.
 
@@ -30,4 +30,15 @@ const generate = function(numRows) {
   return res
 }
 
-console.log(generate(-1))
+;[
+  -1,
+  5,
+].forEach(numRows => {
+  console.log(generate(numRows))
+})
+
+// Solution:
+// 初始化第一层为 1，
+// 其余的每层中的每个数都是其左右上角的两个数的和（没有数则用0表示）
+
+// Submission Result: Accepted
