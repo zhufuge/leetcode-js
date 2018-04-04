@@ -1,5 +1,5 @@
 // 120. Triangle
-// Medium 34% locked:false
+// Medium   34%
 
 // Given a triangle, find the minimum path sum from top to bottom. Each step you
 // may move to adjacent numbers on the row below.
@@ -23,9 +23,10 @@
  * @return {number}
  */
 const minimumTotal = function(triangle) {
-  if (triangle.length === 0) return 0
   const n = triangle.length
-  const sum = new Array(n)
+  if (n === 0) return 0
+
+  const sum = Array(n)
   sum[0] = triangle[0][0]
   for (let i = 1; i < n; i++) {
     sum[i] = triangle[i][i] + sum[i - 1]
@@ -35,14 +36,31 @@ const minimumTotal = function(triangle) {
     sum[0] += triangle[i][0]
   }
 
-  return sum.reduce((min, v) => Math.min(min, v))
+  return Math.min(...sum)
 }
 
-const triangle = [
-  [2],
-  [3,4],
-  [6,5,7],
-  [4,1,8,3]
-]
+;[
+  [
+    [2],
+    [3,4],
+    [6,5,7],
+    [4,1,8,3]
+  ]
+].forEach(triangle => {
+  console.log(minimumTotal(triangle))
+})
 
-console.log(minimumTotal(triangle));
+// Solution:
+// 使用一个数组记录从顶层到某层的中每个数的最小路径和。
+
+// 在迭代中，上一层每个数的最小路径和已经确定，现在来计算到该层的每个数的最小路
+// 径和，由于只能从上一层的两个相邻数选择，因此选最小的一个相加即可（边缘数只有
+// 一个，直接加）
+
+// 如上例子，每遍历一层后的结果：
+// 1          [2]
+// 2        [5, 6]
+// 3     [11, 10, 13]
+// 4   [15, 11, 18, 16]
+
+// Submission Result: Accepted
