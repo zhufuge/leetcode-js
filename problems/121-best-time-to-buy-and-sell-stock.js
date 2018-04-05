@@ -1,5 +1,5 @@
 // 121. Best Time to Buy and Sell Stock
-// Easy 41% locked:false
+// Easy   41%
 
 // Say you have an array for which the ith element is the price of a given stock
 // on day i.
@@ -37,5 +37,24 @@ const maxProfit = function(prices) {
   return max
 }
 
-//console.log(maxProfit([7, 1, 5, 3, 6, 4]))
-console.log(maxProfit([7, 6, 4, 3, 1]))
+
+;[
+  [7, 1, 5, 3, 6, 4],
+  [7, 6, 4, 3, 1],
+].forEach(prices => {
+  console.log(maxProfit(prices))
+})
+
+
+// Solution:
+// 设置两个变量
+// max 表示最大的收益
+// minPrice 表示从第一天开始时到当前天中的最小价格
+
+// 遍历数组
+// 若数比 minPrice 小，则更新 minPrice
+// 若数减去 minPrice 比 max 大，则更新 max
+
+// 最后返回 max 作为答案
+
+// Submission Result: Accepted
