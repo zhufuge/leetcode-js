@@ -46,7 +46,7 @@ const numJewelsInStones = function(J, S) {
 })
 
 // Solution:
-// 使用一个哈希表保存宝石种类，
-// 再判断 S 中是否有该宝石。
+// 使用一个哈希表保存宝石种类,
+// 再判断 S 中的每个字符代表的是否宝石。
 
 // Submission Result: Accepted
