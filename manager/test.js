@@ -1,10 +1,10 @@
 const process = require('process')
 const { exec } = require('child_process')
 const colors = require('colors')
-const { getProblemFromDB } = require('./helper.js')
+const { getProblem } = require('./request')
 
-async function test(number) {
-  const problem = await getProblemFromDB(number)
+function test(number) {
+  const problem = getProblem(number)
   console.log(problem.title.blue)
   exec('node ' + problem.filePath, (error, stdout, stderr) => {
     if (error) {

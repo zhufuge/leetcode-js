@@ -1,14 +1,3 @@
-
-
-```js
-const json = {
-  num_total: number,
-  stat_status_pairs: [
-    {...}, // problem
-  ]
-}
-```
-
 ```js
 const problem = {
   stat: {
@@ -31,5 +20,9 @@ const problem = {
   is_faor: boolean,
   frequency: number,
   progress: number,
+
+  // new
+  filename: string,
+  filePath: string,
 }
 ```

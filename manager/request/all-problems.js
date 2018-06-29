@@ -1,6 +1,8 @@
+// Request all problem by leetcode api.
+
 const request = require('request')
 const fs = require('fs')
-const { PROBLEMS_API, PROBLEMS_PATH } = require('./common')
+const { PROBLEMS_API, PROBLEMS_PATH } = require('../common')
 
 function callback(error, response, body) {
   if (error) {
