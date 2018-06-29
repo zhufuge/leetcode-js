@@ -1,3 +1,5 @@
+// Return all data in store.
+
 const { join, resolve } = require('path')
 const fs = require('fs')
 
