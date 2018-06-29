@@ -12,7 +12,7 @@ function getJSON(title) {
   return {
     operationName: 'getQuestionDetail',
     query: `query getQuestionDetail($titleSlug: String!)
-      { question(titleSlug: $titleSlug) { content codeDefinition sampleTestCase metaData } }`,
+      { question(titleSlug: $titleSlug) { content codeDefinition sampleTestCase } }`,
     variables: { titleSlug: title }
   }
 }
@@ -23,11 +23,11 @@ function main(title, callback) {
   // request top-url to get cookies
   request({ url, jar }, function(error, res) {
     if (error) {
-      console.log(error)
+      throw new Error(error)
     }
 
     if (res.statusCode !== 200) {
-      console.log('Status Code:', res.statusCode)
+      throw new Error('Status Code: ' + res.statusCode)
     }
 
     // real to request problem
