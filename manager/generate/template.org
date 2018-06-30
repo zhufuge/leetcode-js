@@ -1,0 +1,19 @@
+#+TITLE: LeetCode-JS
+#+AUTHOR: zhufuge
+#+DATE: <2017-11-01 周三 21:15>
+#+CATEGORIES: 算法
+
+*最近更新*
+{{latest}}
+
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
+
+#+BEGIN_HTML
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表({{accepted_num}})</h2>
+#+END_HTML
+
+|   # | Title |
+|-----+-------|
+{{table}}

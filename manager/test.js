@@ -5,7 +5,7 @@ const { getProblem } = require('./request')
 
 function test(number) {
   const problem = getProblem(number)
-  console.log(problem.title.blue)
+  console.log(problem.stat.question__title.blue)
   exec('node ' + problem.filePath, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`)

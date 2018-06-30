@@ -25,21 +25,35 @@ function writeJSONSync(path, json) {
   return fs.writeFileSync(path, JSON.stringify(json), 'utf8')
 }
 
-function getProblem(number) {
-  const problems = readJSONSync(PROBLEMS_STORE_PATH)
-  const problem = problems.find(v => v.stat.question_id === number)
-
-  if (!problem) throw new Error('Do not have this problem.')
-  if (problem.paid_only) throw new Error('This problem is LOCKED!')
-
-  // Add new properties
+// Add new properties
+function addProperties(problem) {
   problem.filename = getFilename(
     problem.stat.question_id,
     problem.stat.question__title_slug
   )
   problem.filePath = getFilePath(problem.filename)
-
   return problem
+}
+
+function getAllProblems() {
+  return readJSONSync(PROBLEMS_STORE_PATH)
+}
+
+function getProblem(number) {
+  const problems = getAllProblems()
+  const problem = problems.find(v => v.stat.question_id === number)
+
+  if (!problem) throw new Error('Do not have this problem.')
+  if (problem.paid_only) throw new Error('This problem is LOCKED!')
+
+  return addProperties(problem)
+}
+
+function getProblems(numbers) {
+  const problems = getAllProblems()
+  return problems
+    .filter(problem => numbers.includes(problem.stat.question_id))
+    .map(problem => addProperties(problem))
 }
 
 function getAccepted() {
@@ -71,6 +85,8 @@ function updateAccepted() {
 
 module.exports = {
   getProblem,
+  getProblems,
+  getAllProblems,
   getAccepted,
   updateAccepted,
 }
