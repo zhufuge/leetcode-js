@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "g": "node manager/index.js",
+    "try": "node manager/index.js",
     "gen": "node manager/find.js & node manager/generate-list.js",
     "test": "node manager/test.js",
     "update": "node manager/request/all-problems.js"

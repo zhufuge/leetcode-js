@@ -107,4 +107,6 @@ function generate(number) {
   })
 }
 
-generate(889)
+module.exports = {
+  generate,
+}
