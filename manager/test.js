@@ -1,7 +1,7 @@
 const process = require('process')
 const { exec } = require('child_process')
 const colors = require('colors')
-const { getProblem } = require('./request')
+const { getProblem } = require('./store')
 
 function test(number) {
   const problem = getProblem(number)

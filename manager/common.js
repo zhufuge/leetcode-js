@@ -13,5 +13,6 @@ module.exports = {
     'd:/blog/hexo/source/_posts/leetcode-js.org',
     resolve(join(__dirname, '..', 'README.org')),
   ],
-  LIST_TEMPLATE_PATH: resolve(join(__dirname, 'generate', 'template.org'))
+  LIST_TEMPLATE_PATH: resolve(join(__dirname, 'generate', 'template.org')),
+  LATEST_NUMBER: 7,
 }

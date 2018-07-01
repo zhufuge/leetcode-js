@@ -8,7 +8,7 @@ const { requestProblem } = require('../request')
 function getMeta(problem) {
   const { stat } = problem
   const meta = [
-    stat.question_id + '. ' + stat.question__title,
+    stat.frontend_question_id + '. ' + stat.question__title,
     DIFFICULTIES[problem.difficulty.level - 1] + '   ' +
       (stat.total_acs / stat.total_submitted * 100).toFixed() + '%'
   ]

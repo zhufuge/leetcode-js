@@ -6,6 +6,7 @@ const {
   REPOSITORY,
   LIST_PATHS,
   LIST_TEMPLATE_PATH,
+  LATEST_NUMBER,
 } = require('../common')
 const { getAccepted, getProblems } = require('../store')
 
@@ -16,12 +17,12 @@ function getLatestProblems(problems) {
   })
 
   latest.sort((a, b) => b.mtimeMs - a.mtimeMs)
-  return latest
+  return latest.slice(0, LATEST_NUMBER)
 }
 
 function toItemString(problem, type) {
   const { stat, filename } = problem
-  const id = stat.question_id
+  const id = stat.frontend_question_id
   const title = stat.question__title
 
   if (type === 'list') {
@@ -48,7 +49,7 @@ function generateListFile(content) {
   console.log('Generate leetcode-js.org successed.')
 }
 
-function main() {
+module.exports = function main() {
   const accepted = getAccepted()
   const problems = getProblems(accepted)
 
@@ -56,9 +57,7 @@ function main() {
   const content = template
     .replace('{{latest}}', toLatestList(getLatestProblems(problems)))
     .replace('{{accepted_num}}', accepted.length)
-    .replace('{{table}}', toTableString(problems))
+    .replace('{{table}}', toTableString(problems.reverse()))
 
   generateListFile(content)
 }
-
-main()

@@ -28,7 +28,7 @@ function writeJSONSync(path, json) {
 // Add new properties
 function addProperties(problem) {
   problem.filename = getFilename(
-    problem.stat.question_id,
+    problem.stat.frontend_question_id,
     problem.stat.question__title_slug
   )
   problem.filePath = getFilePath(problem.filename)
@@ -41,7 +41,7 @@ function getAllProblems() {
 
 function getProblem(number) {
   const problems = getAllProblems()
-  const problem = problems.find(v => v.stat.question_id === number)
+  const problem = problems.find(v => v.stat.frontend_question_id === number)
 
   if (!problem) throw new Error('Do not have this problem.')
   if (problem.paid_only) throw new Error('This problem is LOCKED!')
@@ -52,7 +52,7 @@ function getProblem(number) {
 function getProblems(numbers) {
   const problems = getAllProblems()
   return problems
-    .filter(problem => numbers.includes(problem.stat.question_id))
+    .filter(problem => numbers.includes(problem.stat.frontend_question_id))
     .map(problem => addProperties(problem))
 }
 
