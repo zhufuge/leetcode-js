@@ -1,8 +1,7 @@
 const fs = require('fs')
 
 const { DIFFICULTIES } = require('../common')
-const { getProblem } = require('../store')
-const { requestProblem } = require('../request')
+const { getProblem, getProblemDetail } = require('../store')
 
 // Generate file top information
 function getMeta(problem) {
@@ -91,11 +90,8 @@ module.exports = function generate(number) {
     throw new Error('File <' + problem.filename + '> already exists.')
   }
 
-  requestProblem(problem.stat.question__title_slug, function(error, res, body) {
-    if (error) {
-      throw new Error(error)
-    }
-    const { content, codeDefinition, sampleTestCase } = body.data.question
+  getProblemDetail(problem, function(detail) {
+    const { content, codeDefinition, sampleTestCase } = detail
     const meta = getMeta(problem)
     const description = getDescription(content)
     const defaultCode = getDefaultCode(codeDefinition)

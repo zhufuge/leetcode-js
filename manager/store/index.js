@@ -9,6 +9,8 @@ const {
   ACCEPTED_STORE_PATH,
 } = require('../common')
 
+const { requestProblem } = require('../request')
+
 function getFilename(id, slug) {
   return (id + '').padStart(3, '0') + '-' + slug + '.js'
 }
@@ -83,10 +85,21 @@ function updateAccepted() {
   console.log('Update accepted problems')
 }
 
+function getProblemDetail(problem, callback) {
+  requestProblem(problem.stat.question__title_slug, function(error, res, body) {
+    if (error) {
+      throw new Error(error)
+    }
+
+    callback(body.data.question)
+  })
+}
+
 module.exports = {
   getProblem,
   getProblems,
   getAllProblems,
   getAccepted,
   updateAccepted,
+  getProblemDetail,
 }
