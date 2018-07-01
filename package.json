@@ -7,10 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "try": "node manager/index.js",
-    "list": "node manager/generate/list.js",
-    "test": "node manager/test.js",
-    "update": "node manager/request/all-problems.js"
+    "try": "node manager/index.js try",
+    "gl": "node manager/index.js list",
+    "test": "node manager/index.js test",
+    "update": "node manager/index.js update"
   },
   "dependencies": {
     "colors": "^1.2.1",

@@ -1,16 +1,41 @@
 const process = require('process')
 
-const { generate } = require('./generate')
+const { update } = require('./request')
+const { generate, generateList } = require('./generate')
+const test = require('./test')
 
-function main() {
-  if (process.argv[2]) {
-    const number = parseInt(process.argv[2])
+function generateProblem() {
+  const input = process.argv[3]
+  if (input) {
+    const number = parseInt(input)
     if (Number.isInteger(number)) {
       generate(number)
       return
     }
   }
   console.log('Please input problem\'s number.')
+}
+
+function testProblem() {
+  const input = process.argv[3]
+  if (input) {
+    const number = parseInt(input)
+    if (Number.isInteger(number)) {
+      test(number)
+      return
+    }
+  }
+  console.log('Please input problem\'s number.')
+}
+
+function main() {
+  const scripts = {
+    'try': generateProblem,
+    'list': generateList,
+    'test': testProblem,
+    'update': update,
+  }
+  ;(scripts[process.argv[2]] || (() => {}))()
 }
 
 main()

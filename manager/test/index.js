@@ -1,9 +1,9 @@
 const process = require('process')
 const { exec } = require('child_process')
 const colors = require('colors')
-const { getProblem } = require('./store')
+const { getProblem } = require('../store')
 
-function test(number) {
+module.exports = function test(number) {
   const problem = getProblem(number)
   console.log(problem.stat.question__title.blue)
   exec('node ' + problem.filePath, (error, stdout, stderr) => {
@@ -15,13 +15,3 @@ function test(number) {
     if (stderr) console.log(`stderr: ${stderr}`)
   })
 }
-
-function main() {
-  if (process.argv[2]) {
-    test(parseInt(process.argv[2]))
-  } else {
-    console.log('Please input problem\'s number.')
-  }
-}
-
-main()
