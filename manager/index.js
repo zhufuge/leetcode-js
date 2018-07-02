@@ -6,14 +6,8 @@ const test = require('./test')
 
 function generateProblem() {
   const input = process.argv[3]
-  if (input) {
-    const number = parseInt(input)
-    if (Number.isInteger(number)) {
-      generate(number)
-      return
-    }
-  }
-  console.log('Please input problem\'s number.')
+  const number = parseInt(input) || 0
+  generate(number)
 }
 
 function testProblem() {
