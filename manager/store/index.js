@@ -45,10 +45,6 @@ function getAllProblems() {
   return readJSONSync(PROBLEMS_STORE_PATH).map(addProperties)
 }
 
-function getAccepted() {
-  return readJSONSync(ACCEPTED_STORE_PATH)
-}
-
 // get the problems of not exist file and no paid only
 function getAllFeasibleProblems() {
   const problems = getAllProblems()
@@ -90,7 +86,7 @@ function getProblemId(filename) {
 }
 
 function updateAccepted() {
-  const accepted = getAccepted()
+  const accepted = readJSONSync(ACCEPTED_STORE_PATH)
   const files = readdirSync(PROBLEMS_DIR_PATH)
     .filter(filename => extname(filename) === '.js')
     .filter(filename => !accepted.includes(getProblemId(filename)))
@@ -106,6 +102,11 @@ function updateAccepted() {
   accepted.sort((a, b) => a - b)
   writeJSONSync(ACCEPTED_STORE_PATH, accepted)
   console.log('Update accepted problems')
+}
+
+function getAccepted() {
+  updateAccepted()
+  return readJSONSync(ACCEPTED_STORE_PATH)
 }
 
 function getProblemDetail(problem, callback) {
