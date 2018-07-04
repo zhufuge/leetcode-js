@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/481-magical-string.js][481. Magical String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/686-repeated-string-match.js][686. Repeated String Match]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/771-jewels-and-stones.js][771. Jewels and Stones]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/001-two-sum.js][1. Two Sum]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/122-best-time-to-buy-and-sell-stock-ii.js][122. Best Time to Buy and Sell Stock II]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/121-best-time-to-buy-and-sell-stock.js][121. Best Time to Buy and Sell Stock]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/120-triangle.js][120. Triangle]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/119-pascals-triangle-ii.js][119. Pascal's Triangle II]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(262)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(263)</h2>
 #+END_HTML
 
 |   # | Title |
@@ -208,6 +208,7 @@
 | 475 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/475-heaters.js][Heaters]] |
 | 476 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/476-number-complement.js][Number Complement]] |
 | 479 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/479-largest-palindrome-product.js][Largest Palindrome Product]] |
+| 481 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/481-magical-string.js][Magical String]] |
 | 485 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/485-max-consecutive-ones.js][Max Consecutive Ones]] |
 | 492 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/492-construct-the-rectangle.js][Construct the Rectangle]] |
 | 495 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/495-teemo-attacking.js][Teemo Attacking]] |
