@@ -23,6 +23,7 @@ function unescape(str) {
     '&quot;': '"',
     '&#x27;': "'",
     '&#x60;': '`',
+    '&#39;': "'",
   }
   for (let escaper in unescapeMap) {
     str = str.replace(new RegExp(escaper, 'g'), unescapeMap[escaper])
@@ -72,8 +73,9 @@ function getDefaultCode(code) {
 }
 
 function getTestCode(str) {
-  str = str.replace(/"/g, "'").replace(/\n/g, ',')
-  return ';[\n  [' + str + '],\n].forEach(() => {\n\n})'
+  const argv = str.replace(/"/g, "'").split('\n')
+  const argvStr = argv.length > 1 ? argv.join(', ') : argv[0]
+  return `;[\n  [${ argvStr }],\n].forEach(() => {\n\n})`
 }
 
 function getSolutionString() {
