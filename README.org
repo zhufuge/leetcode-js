@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/852-peak-index-in-a-mountain-array.js][852. Peak Index in a Mountain Array]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/567-permutation-in-string.js][567. Permutation in String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/833-find-and-replace-in-string.js][833. Find And Replace in String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/863-all-nodes-distance-k-in-binary-tree.js][863. All Nodes Distance K in Binary Tree]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/467-unique-substrings-in-wraparound-string.js][467. Unique Substrings in Wraparound String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/481-magical-string.js][481. Magical String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/686-repeated-string-match.js][686. Repeated String Match]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/771-jewels-and-stones.js][771. Jewels and Stones]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(267)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(268)</h2>
 #+END_HTML
 
 |   # | Title |
@@ -288,4 +288,5 @@
 | 746 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/746-min-cost-climbing-stairs.js][Min Cost Climbing Stairs]] |
 | 771 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/771-jewels-and-stones.js][Jewels and Stones]] |
 | 833 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/833-find-and-replace-in-string.js][Find And Replace in String]] |
+| 852 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/852-peak-index-in-a-mountain-array.js][Peak Index in a Mountain Array]] |
 | 863 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/863-all-nodes-distance-k-in-binary-tree.js][All Nodes Distance K in Binary Tree]] |
