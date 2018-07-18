@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/299-bulls-and-cows.js][299. Bulls and Cows]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/852-peak-index-in-a-mountain-array.js][852. Peak Index in a Mountain Array]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/567-permutation-in-string.js][567. Permutation in String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/833-find-and-replace-in-string.js][833. Find And Replace in String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/863-all-nodes-distance-k-in-binary-tree.js][863. All Nodes Distance K in Binary Tree]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/467-unique-substrings-in-wraparound-string.js][467. Unique Substrings in Wraparound String]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/481-magical-string.js][481. Magical String]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/686-repeated-string-match.js][686. Repeated String Match]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(268)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(269)</h2>
 #+END_HTML
 
 |   # | Title |
@@ -165,6 +165,7 @@
 | 283 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/283-move-zeroes.js][Move Zeroes]] |
 | 290 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/290-word-pattern.js][Word Pattern]] |
 | 292 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/292-nim-game.js][Nim Game]] |
+| 299 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/299-bulls-and-cows.js][Bulls and Cows]] |
 | 303 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/303-range-sum-query-immutable.js][Range Sum Query - Immutable]] |
 | 326 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/326-power-of-three.js][Power of Three]] |
 | 338 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/338-counting-bits.js][Counting Bits]] |
