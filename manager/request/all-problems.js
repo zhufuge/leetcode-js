@@ -15,7 +15,7 @@ function main(callback) {
     console.log('Request OK!')
     const json = JSON.parse(body)
     const problems = json['stat_status_pairs']
-    fs.writeFileSync(PROBLEMS_STORE_PATH, JSON.stringify(problems), 'utf8')
+    fs.writeFileSync(PROBLEMS_STORE_PATH, JSON.stringify(problems, null, 2), 'utf8')
     console.log('Request problems total:', problems.length)
 
     if (callback) callback(error, response, body)

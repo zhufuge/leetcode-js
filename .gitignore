@@ -4,3 +4,4 @@ yarn-error.log
 
 cache/
 !cache/problems.all.json
+manager/store/problems.all.json
