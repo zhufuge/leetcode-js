@@ -10,7 +10,7 @@ module.exports = {
   DIFFICULTIES: ['Easy', 'Medium', 'Hard'],
   REPOSITORY: 'https://github.com/zhufuge/leetcode-js/blob/master/problems/',
   LIST_PATHS: [
-    'd:/blog/hexo/source/_posts/leetcode-js.org',
+    resolve('D:/blog/hexo/source/_posts/leetcode-js.org'),
     resolve(join(__dirname, '..', 'README.org')),
   ],
   LIST_TEMPLATE_PATH: resolve(join(__dirname, 'generate', 'template.org')),

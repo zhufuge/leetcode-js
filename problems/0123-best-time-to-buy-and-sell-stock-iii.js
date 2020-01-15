@@ -27,4 +27,12 @@ const maxProfit = function(prices) {
   return release2
 }
 
-console.log(maxProfit([1,2,4,2,5,7,2,4,9,0]))
+;[
+  [1,2,4,2,5,7,2,4,9,0],
+].forEach(prices => {
+  console.log(maxProfit(prices))
+})
+
+
+// 尝试：
+// 找出每一个连续递增的段，在从中找出提升最大的两个。

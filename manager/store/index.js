@@ -24,7 +24,7 @@ function writeJSONSync(path, json) {
 }
 
 function getFilename(id, slug) {
-  return (id + '').padStart(3, '0') + '-' + slug + '.js'
+  return (id + '').padStart(4, '0') + '-' + slug + '.js'
 }
 
 function getFilePath(filename) {

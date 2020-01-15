@@ -1,4 +1,5 @@
 const fs = require('fs')
+const colors = require('colors')
 
 const { DIFFICULTIES } = require('../common')
 const { getProblem, getProblemDetail } = require('../store')
@@ -106,6 +107,6 @@ module.exports = function generate(number) {
       [meta, description, defaultCode, testCode, solution, accept].join('\n\n'),
       'utf8'
     )
-    console.log(`Generate File: <${problem.filename}>.`)
+    console.log(`Generate File: <${colors.yellow(problem.filename)}>.`)
   })
 }

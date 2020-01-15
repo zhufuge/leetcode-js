@@ -1,5 +1,6 @@
 const { statSync, writeFileSync, readFileSync } = require('fs')
 const { join } = require('path')
+const colors = require('colors')
 
 const {
   PROBLEMS_DIR_PATH,
@@ -45,8 +46,8 @@ function toTableString(problems) {
 function generateListFile(content) {
   for (let path of LIST_PATHS) {
     writeFileSync(path, content, 'utf8')
+    console.log(`Generate <${colors.yellow(path)}> successed.`)
   }
-  console.log('Generate leetcode-js.org successed.')
 }
 
 module.exports = function main() {

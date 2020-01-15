@@ -1,4 +1,5 @@
 const request = require('request')
+const colors = require('colors')
 
 // enable cookies
 const jar = request.jar()
@@ -19,7 +20,7 @@ function getJSON(title) {
 
 function main(title, callback) {
   const url = getURL(title)
-  console.log('Request URL:', url)
+  console.log(`Request URL: ${colors.blue(url)}`)
   // request top-url to get cookies
   request({ url, jar }, function(error, res) {
     if (error) {
