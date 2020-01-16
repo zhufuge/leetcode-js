@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "try": "node manager/index.js try",
-    "gl": "node manager/index.js list",
+    "org": "node manager/index.js list",
     "test": "node manager/index.js test",
     "update": "node manager/index.js update"
   },

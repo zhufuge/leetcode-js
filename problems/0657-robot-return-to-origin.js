@@ -12,7 +12,7 @@
 // circle.
 
 // Example 1:
-
+  
 // Input: "UD"
 // Output: true
 

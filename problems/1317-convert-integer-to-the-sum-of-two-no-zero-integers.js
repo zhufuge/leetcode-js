@@ -63,4 +63,4 @@ const getNoZeroIntegers = function(n) {
 // 关键是如何判断一个数是否包含有零
 // 从 i = 1 开始判断，看 i 和 n - i 是否都为非含零的数，是则返回，否则继续。
 
-// Submission Result: Accept
+// Submission Result: Accepted
