@@ -76,7 +76,7 @@ function getDefaultCode(code) {
 function getTestCode(str) {
   const argv = str.replace(/"/g, "'").split('\n')
   const argvStr = argv.length > 1 ? argv.join(', ') : argv[0]
-  return `;[\n  [${ argvStr }],\n].forEach(() => {\n\n})`
+  return `;[\n  ${ argvStr },\n].forEach(() => {\n\n})`
 }
 
 function getSolutionString() {
