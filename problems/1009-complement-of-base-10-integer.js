@@ -39,13 +39,11 @@
  * @return {number}
  */
 const bitwiseComplement = function(N) {
-  if (N === 0) return 1
-  let result = 0
-  for (let i = 1; N > 0; i *= 2, N >>>= 1) {
-    result += ((N % 2) ^ 1) * i
-  }
-  return result
+  let X = 1
+  while (N > X) X = X * 2 + 1
+  return X - N
 }
+
 ;[
   0,      // 1
   5,      // 2
@@ -57,8 +55,13 @@ const bitwiseComplement = function(N) {
 })
 
 // Solution:
+// 1. 直接
 // 使用过 N % 2 和 N >>> 1 可从左到右依次获得 N 的二进制数
 // 再利用 ^ 异或运算符来完成 01 转换
 // 最后利用 result += (0|1) * 2**i 来完成倒序二进制的值计算
+
+// 2. 互补
+// input + output = 111...11
+// 111...11的位数与input相同
 
 // Submission Result: Accepted
