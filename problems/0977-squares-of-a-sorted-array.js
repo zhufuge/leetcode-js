@@ -53,4 +53,4 @@ const sortedSquares = function(A) {
 // 大的一边先排入结果数组末尾
 // TO(n)
 
-// Submission Result: Accept
+// Submission Result: Accepted
