@@ -114,28 +114,3 @@ const idea1 = function() {
 // 2. es6 中的 set
 
 // Submission Result: Accepted
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
