@@ -23,21 +23,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-
-
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -55,10 +45,11 @@ const sumRootToLeaf = function(root) {
   return dfs(root, 0)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
   [1,0,1,0,1,0,1], // 22
 ].forEach((array) => {
-  const root = toBTree(array)
+  const root = TreeNode.from(array)
   console.log(sumRootToLeaf(root))
 })
 

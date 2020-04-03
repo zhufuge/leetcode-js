@@ -46,12 +46,12 @@ const isUnivalTree = function(root) {
 }
 
 
-const BinaryTree = require('../structs/BinaryTree')
+const TreeNode = require('../structs/TreeNode')
 ;[
   [1,1,1,1,1,null,1], // true
   [2,2,2,5,2], // false
 ].forEach((array) => {
-  console.log(isUnivalTree(new BinaryTree(array)))
+  console.log(isUnivalTree(TreeNode.from(array)))
 })
 
 // Solution:

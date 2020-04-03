@@ -36,20 +36,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
 
 /**
  * @param {TreeNode} root
@@ -70,11 +61,12 @@ const isBalanced = function(root) {
   return diff(root) !== -1
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [3,9,20,null,null,15,7],
-  [1,2,2,3,3,null,null,4,4],
+  [3,9,20,null,null,15,7],   // true
+  [1,2,2,3,3,null,null,4,4], // false
 ].forEach(array => {
-  console.log(isBalanced(toBTree(array)))
+  console.log(isBalanced(TreeNode.from(array)))
 })
 
 // Solution:

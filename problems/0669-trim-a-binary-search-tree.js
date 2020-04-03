@@ -46,19 +46,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -76,14 +68,12 @@ const trimBST = function(root, L, R) {
   return root
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [toBTree([1, 0, 2]), 1, 2],
-  [toBTree([3, 0, 4, null, 2, null, null, null, null, 1]), 1, 3],
-].forEach((args) => {
-  console.log(args[0])
-  console.log('---------------------------------------')
-  console.log(trimBST(...args))
-  console.log('---------------------------------------')
+  [[1, 0, 2], 1, 2],
+  [[3, 0, 4, null, 2, null, null, 1], 1, 3],
+].forEach(([array, L, R]) => {
+  console.log(trimBST(TreeNode.from(array), L, R))
 })
 
 

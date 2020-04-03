@@ -34,29 +34,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
-function traverRight(root) {
-  let s = ''
-  while (root) {
-    s += (s ? '->' : s) + root.val
-    root = root.right
-  }
-  return s
-}
-
 
 /**
  * @param {TreeNode} root
@@ -82,13 +64,23 @@ const flatten = function(root) {
   iter(root)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
   [1,2,5,3,4,null,6],
 ].forEach(array => {
-  const tree = toBTree(array)
+  const tree = TreeNode.from(array)
   flatten(tree)
   console.log(traverRight(tree))
 })
+
+function traverRight(root) {
+  let s = ''
+  while (root) {
+    s += (s ? '->' : s) + root.val
+    root = root.right
+  }
+  return s
+}
 
 // Solution:
 // 采用前序递归遍历的方法。

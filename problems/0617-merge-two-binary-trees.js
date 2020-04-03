@@ -32,19 +32,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} t1
@@ -59,10 +51,11 @@ const mergeTrees = function(t1, t2) {
   return root
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [toBTree([1,3,2,5]),toBTree([2,1,3,null,4,null,7])],
-].forEach(args => {
-  console.log(mergeTrees(...args))
+  [[1,3,2,5],[2,1,3,null,4,null,7]], // [3, 4, 5, 5, 4, null, 7]
+].forEach(([a, b]) => {
+  console.log(mergeTrees(TreeNode.from(a), TreeNode.from(b)))
 })
 
 // Solution:

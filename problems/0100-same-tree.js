@@ -8,19 +8,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} p
@@ -33,10 +25,12 @@ const isSameTree = function(p, q) {
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 }
 
+
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [[1, 2, 2, 3, 4, 3, 4], [1, 2, 2, 3, 4, 3, 4]],
-].forEach(args => {
-  console.log(isSameTree(toBTree(args[0]), toBTree(args[1])))
+  [[1, 2, 2, 3, 4, 3, 4], [1, 2, 2, 3, 4, 3, 4]], // true
+].forEach(([p, q]) => {
+  console.log(isSameTree(TreeNode.from(p), TreeNode.from(q)))
 })
 
 // Solution:

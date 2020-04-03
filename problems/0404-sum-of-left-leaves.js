@@ -18,19 +18,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -45,10 +37,11 @@ const sumOfLeftLeaves = function(root) {
   return iter(root, false)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  toBTree([3,9,20,null,null,15,7]), // 24
-].forEach(root => {
-  console.log(sumOfLeftLeaves(root))
+  [3,9,20,null,null,15,7], // 24
+].forEach((array) => {
+  console.log(sumOfLeftLeaves(TreeNode.from(array)))
 })
 
 // Solution:

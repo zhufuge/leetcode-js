@@ -8,19 +8,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -35,12 +27,13 @@ const minDepth = function(root) {
   return  1 + Math.min(left, right)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [1, 2],
-  [3,9,20,null,null,15,7],
-  [1,2,2,3,3,null,null,4,4],
+  [1, 2],                       // 2
+  [3,9,20,null,null,15,7],      // 2
+  [1,2,2,3,3,null,null,4,4],    // 2
 ].forEach(array => {
-  console.log(minDepth(toBTree(array)))
+  console.log(minDepth(TreeNode.from(array)))
 })
 
 // Solution:

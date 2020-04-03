@@ -24,19 +24,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -54,11 +46,12 @@ const isSymmetric = function(root) {
   return iter(root.left, root.right)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
   [1, 2, 2, 3, 4, 4, 3],        // true
   [1,2,2,null,3,null,3],        // false
 ].forEach(array => {
-  console.log(isSymmetric(toBTree(array)))
+  console.log(isSymmetric(TreeNode.from(array)))
 })
 
 // Solution:

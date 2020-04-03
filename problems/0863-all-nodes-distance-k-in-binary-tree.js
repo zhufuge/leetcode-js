@@ -34,25 +34,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
-function findNode(root, value) {
-  if (root == null) return null
-  if (root.val === value) return root
-  return findNode(root.left, value) || findNode(root.right, value)
-}
 
 /**
  * @param {TreeNode} root
@@ -100,12 +86,13 @@ const distanceK = function(root, target, K) {
   return result
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [[3,5,1,6,2,0,8,null,null,7,4], 5, 2],
-].forEach((args) => {
-  const root = toBTree(args[0])
-  const target = findNode(root, args[1])
-  console.log(distanceK(root, target, args[2]))
+  [[3,5,1,6,2,0,8,null,null,7,4], 5, 2], // [7, 4, 1]
+].forEach(([array, a, b]) => {
+  const root = TreeNode.from(array)
+  const target = root.getNode(a)
+  console.log(distanceK(root, target, b))
 })
 
 // Solution:

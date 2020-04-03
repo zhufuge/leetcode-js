@@ -9,6 +9,7 @@
   "scripts": {
     "try": "node manager/index.js try",
     "org": "node manager/index.js list",
+    "md": "node manager/index.js md",
     "test": "node manager/index.js test",
     "update": "node manager/index.js update"
   },

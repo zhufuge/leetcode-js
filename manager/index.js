@@ -1,7 +1,7 @@
 const process = require('process')
 
 const { update } = require('./request')
-const { generate, generateList } = require('./generate')
+const { generate, generateList, generateMarkDown } = require('./generate')
 const test = require('./test')
 
 function generateProblem() {
@@ -26,6 +26,7 @@ function main() {
   const scripts = {
     'try': generateProblem,
     'list': generateList,
+    'md': generateMarkDown,    
     'test': testProblem,
     'update': update,
   }

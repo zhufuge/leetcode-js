@@ -28,19 +28,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -63,10 +55,11 @@ const getMinimumDifference = function(root) {
   return result
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  toBTree([1,null,3,null,null,2]), // 1
-].forEach(root => {
-  console.log(getMinimumDifference(root))
+  [1,null,3,2], // 1
+].forEach((array) => {
+  console.log(getMinimumDifference(TreeNode.from(array)))
 })
 
 // Solution:

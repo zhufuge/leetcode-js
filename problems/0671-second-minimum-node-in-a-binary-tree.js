@@ -35,19 +35,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -64,14 +56,15 @@ const findSecondMinimumValue = function(root) {
   return Math.min(left, right)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  toBTree([2, 2, 5, null, null, 5, 7]),
-  toBTree([2, 2, 2]),
-  toBTree([2, 2, 2, 2, 2, 2, 2, null, null, 5, 2]),
-  toBTree([]),
-  toBTree([1,1,3,1,1,3,4,3,1,1,1,3,8,4,8,3,3,1,6,2,1])
-].forEach(function(t) {
-  console.log(findSecondMinimumValue(t))
+  [2, 2, 5, null, null, 5, 7],                // 5
+  [2, 2, 2],                                  // -1
+  [2, 2, 2, 2, 2, 2, 2, null, null, 5, 2],    // 5
+  [],                                         // -1
+  [1,1,3,1,1,3,4,3,1,1,1,3,8,4,8,3,3,1,6,2,1],// 2
+].forEach((array) => {
+  console.log(findSecondMinimumValue(TreeNode.from(array)))
 })
 
 // Solution:

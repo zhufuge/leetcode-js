@@ -30,20 +30,11 @@
 
 /**
  * Definition for binary tree with next pointer.
+ * function TreeLinkNode(val) {
+ *   this.val = val
+ *   this.left = this.right = this.next = null
+ * }
  */
-function TreeLinkNode(val) {
-  this.val = val
-  this.left = this.right = this.next = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeLinkNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
 
 /**
  * @param {TreeLinkNode} root
@@ -71,11 +62,12 @@ const connect = function(root) {
   }
 }
 
+const TreeLinkNode = require('../structs/TreeLinkNode')
 ;[
   [1,2,3,4,5,null,7],
 //  [1,2,2,3,3,3,3,4,4,4,4,4,4,null,null,5,5],
 ].forEach(array => {
-  const tree = toBTree(array)
+  const tree = TreeLinkNode.from(array)
   connect(tree)
   console.log(tree)
 })

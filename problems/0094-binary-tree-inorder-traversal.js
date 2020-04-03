@@ -19,20 +19,11 @@
 
 /**
  * Definition for a binary tree tree.
+ * function TreeNode(val) {
+ *   this.val = val
+ *   this.left = this.right = null
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
 
 /**
  * @param {TreeNode} root
@@ -51,10 +42,11 @@ const inorderTraversal = function(root) {
   return res
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [1, null, 2, null, null, 3],
-].forEach(array => {
-  console.log(inorderTraversal(toBTree(array)))
+  [1, null, 2, 3],
+].forEach((array) => {
+  console.log(inorderTraversal(TreeNode.from(array)))
 })
 
 // Solution:

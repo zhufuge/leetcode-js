@@ -22,19 +22,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -52,11 +44,13 @@ const binaryTreePaths = function(root) {
   return array
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  toBTree([1,2,3,null,5]),      // ['1->2->5', '1->3']
-].forEach(root => {
-  console.log(binaryTreePaths(root))
+  [1,2,3,null,5],      // ['1->2->5', '1->3']
+].forEach((array) => {
+  console.log(binaryTreePaths(TreeNode.from(array)))
 })
+
 
 // Solution:
 // 递归一遍树，带上字符参数，每遍历一个节点，添加一个值。

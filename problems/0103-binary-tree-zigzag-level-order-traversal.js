@@ -25,19 +25,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 
 /**
@@ -62,10 +54,11 @@ const zigzagLevelOrder = function(root) {
   return res
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [3,9,20,null,null,15,7],
+  [3,9,20,null,null,15,7], // [ [ 3 ], [ 20, 9 ], [ 15, 7 ] ]
 ].forEach(array => {
-  console.log(zigzagLevelOrder(toBTree(array)))
+  console.log(zigzagLevelOrder(TreeNode.from(array)))
 })
 
 // Solution:

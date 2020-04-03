@@ -37,19 +37,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -83,10 +75,13 @@ const longestUnivaluePath = function(root) {
   return result
 }
 
-const tree1 = toBTree([5, 4, 5, 1, 1, 5])
-const tree2 = toBTree([1, 4, 5, 4, 4, 5])
-console.log(longestUnivaluePath(tree1))
-console.log(longestUnivaluePath(tree2))
+const TreeNode = require('../structs/TreeNode')
+;[
+  [5, 4, 5, 1, 1, 5], // 2
+  [1, 4, 5, 4, 4, 5], // 2
+].forEach((array) => {
+  console.log(longestUnivaluePath(TreeNode.from(array)))
+})
 
 
 // Solution:

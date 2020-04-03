@@ -47,20 +47,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
 
 /**
  * @param {TreeNode} s
@@ -80,16 +71,15 @@ const isSubtree = function(s, t) {
   return iter(s, t)
 }
 
-
-const twoTree = (a, b) => [toBTree(a), toBTree(b)]
+const TreeNode = require('../structs/TreeNode')
 ;[
-  twoTree([3,4,5,1,2],[4,1,2]),                       // true
-  twoTree([3,4,5,1,2,null,null,null,null,0],[4,1,2]), // false
-  twoTree([1,1],[1]),                                 // true
-  twoTree([3,4,5,1,null,2],[3,1,2]),                  // false
-  twoTree([3,4,5,1,2,null,null,0],[4,1,2])            // false
-].forEach(args => {
-  console.log(isSubtree(...args))
+  [[3,4,5,1,2],[4,1,2]],                       // true
+  [[3,4,5,1,2,null,null,null,null,0],[4,1,2]], // false
+  [[1,1],[1]],                                 // true
+  [[3,4,5,1,null,2],[3,1,2]],                  // false
+  [[3,4,5,1,2,null,null,0],[4,1,2]],           // false
+].forEach(([a, b]) => {
+  console.log(isSubtree(TreeNode.from(a), TreeNode.from(b)))
 })
 
 // Solution:

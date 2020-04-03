@@ -29,19 +29,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -67,14 +59,15 @@ const isCousins = function(root, x, y) {
   return count === 2
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
   [[1,2,3,4], 4, 3], // false
   [[1,2,3,null,4,null,5], 5, 4], // true
   [[1,2,3,null,4], 2, 3], // false
-  [[1,2,3,4,null,5,null,6,7,null,null,8,9], 6, 8], // true
+  [[1,2,3,4,null,5,null,6,7,8,9], 6, 8], // true
   [[1,2,5,3,null,null,6,4], 3, 6], //true
 ].forEach(([array, x, y]) => {
-  const root = toBTree(array)
+  const root = TreeNode.from(array)
   console.log(isCousins(root, x, y))
 })
 

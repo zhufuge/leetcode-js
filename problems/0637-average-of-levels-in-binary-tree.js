@@ -24,25 +24,35 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == void 0) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
  * @return {number[]}
  */
 const averageOfLevels = function(root) {
+  if (root == null) return []
+  const result = []
+  const queue = [root]
+  while (queue.length) {
+    let sum = 0, l = queue.length
+    for (let i = l; i > 0; i--) {
+      const node = queue.shift()
+      sum += node.val
+      if (node.left) queue.push(node.left)
+      if (node.right) queue.push(node.right)
+    }
+    result.push(sum / l)
+  }
+  return result
+}
+
+
+const old = function(root) {
   const result = []
   function iter(root, i) {
     if (root == null) return
@@ -55,15 +65,18 @@ const averageOfLevels = function(root) {
   return result.map(arr => arr.reduce((sum, i) => sum + i) / arr.length)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  toBTree([3,9,20,null,null,15,7]), // [3, 14.5, 11]
-].forEach(args => {
-  console.log(averageOfLevels(args))
+  [3,9,20,null,null,15,7], // [3, 14.5, 11]
+].forEach((array) => {
+  console.log(averageOfLevels(TreeNode.from(array)))
 })
 
 // Solution:
 // 层遍历？
 // 应该是吧，有个参数i，记录层数。
 // 代码看起来好像还不够优雅。
+
+// 使用 先进先出列表 完成层遍历
 
 // Submission Result: Accepted

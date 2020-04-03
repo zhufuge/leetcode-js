@@ -9,6 +9,7 @@
 // is defined between two nodes v and w as the lowest node in T that has both v
 // and w as descendants (where we allow a node to be a descendant of itself).”
 
+// Given binary search tree:  root = [6,2,8,0,4,7,9,null,null,3,5]
 //         _______6______
 //        /              \
 //     ___2__          ___8__
@@ -17,32 +18,30 @@
 //          /  \
 //          3   5
 
-// For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another
-// example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of
-// itself according to the LCA definition.
+// Example 1:
 
+// Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+// Output: 6
+// Explanation: The LCA of nodes 2 and 8 is 6.
+
+// Example 2:
+
+// Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+// Output: 2
+// Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant
+// of itself according to the LCA definition.
+
+// Note:
+//     All of the nodes' values will be unique.
+//     p and q are different and both values will exist in the BST.
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
-
-function getNode(root, n) {
-  if (root == null) return null
-  if (root.val === n) return root
-  return getNode(root.left, n) || getNode(root.right, n)
-}
 
 /**
  * @param {TreeNode} root
@@ -57,18 +56,15 @@ const lowestCommonAncestor = function(root, p, q) {
   return root
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [toBTree([6,2,8,0,4,7,9,null,null,3,5]), 2, 8], // 6
-  [toBTree([6,2,8,0,4,7,9,null,null,3,5]), 2, 4], // 2
-].forEach(args => {
-  console.log('------------------')
-  console.log(
-    lowestCommonAncestor(
-      args[0],
-      getNode(args[0], args[1]),
-      getNode(args[0], args[2])
-    )
-  )
+  [[6,2,8,0,4,7,9,null,null,3,5], 2, 8], // 6
+  [[6,2,8,0,4,7,9,null,null,3,5], 2, 4], // 2
+].forEach(([array, a, b]) => {
+  const root = TreeNode.from(array)
+  const p = root.getNode(a)
+  const q = root.getNode(b)
+  console.log(lowestCommonAncestor(root, p, q))
 })
 
 // Solution:

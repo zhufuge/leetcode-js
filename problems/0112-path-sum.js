@@ -19,19 +19,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 
 /**
@@ -46,10 +38,11 @@ const hasPathSum = function(root, sum) {
   return hasPathSum(root.left, sum) || hasPathSum(root.right, sum)
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [[5,4,8,11,null,13,4,7,2,null,null,null,null,null,1], 22],
+  [[5,4,8,11,null,13,4,7,2,null,null,null,1], 22], // true
 ].forEach(([array, sum]) => {
-  console.log(hasPathSum(toBTree(array), sum))
+  console.log(hasPathSum(TreeNode.from(array), sum))
 })
 
 // Solution:

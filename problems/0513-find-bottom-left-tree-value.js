@@ -36,19 +36,11 @@
 
 /**
  * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *   this.val = val;
+ *   this.left = this.right = null;
+ * }
  */
-function TreeNode(val) {
-  this.val = val
-  this.left = this.right = null
-}
-
-function toBTree(array, i=0) {
-  if (array[i] == null) return null
-  const root = new TreeNode(array[i])
-  root.left = toBTree(array, i * 2 + 1)
-  root.right = toBTree(array, i * 2 + 2)
-  return root
-}
 
 /**
  * @param {TreeNode} root
@@ -64,14 +56,15 @@ const findBottomLeftValue = function(root) {
   return root.val
 }
 
+const TreeNode = require('../structs/TreeNode')
 ;[
-  [2,1,3],                                       // 1
-  [1,2,3,4,null,5,6,null,null,null,null,7],      // 7
-  [1,null,1],                                    // 1
-  [0,null,-1],                                   // -1
-  [1,2,3,4,null,5,6,null,null,null,null,null,7], // 7
+  [2,1,3],                             // 1
+  [1,2,3,4,null,5,6,null,null,7],      // 7
+  [1,null,1],                          // 1
+  [0,null,-1],                         // -1
+  [1,2,3,4,null,5,6,null,null,null,7], // 7
 ].forEach(array => {
-  console.log(findBottomLeftValue(toBTree(array)))
+  console.log(findBottomLeftValue(TreeNode.from(array)))
 })
 
 // Solution:
