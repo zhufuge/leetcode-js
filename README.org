@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0994-rotting-oranges.js][994. Rotting Oranges]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0997-find-the-town-judge.js][997. Find the Town Judge]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0999-available-captures-for-rook.js][999. Available Captures for Rook]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1002-find-common-characters.js][1002. Find Common Characters]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1005-maximize-sum-of-array-after-k-negations.js][1005. Maximize Sum Of Array After K Negations]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1009-complement-of-base-10-integer.js][1009. Complement of Base 10 Integer]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1010-pairs-of-songs-with-total-durations-divisible-by-60.js][1010. Pairs of Songs With Total Durations Divisible by 60]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0949-largest-time-for-given-digits.js][949. Largest Time for Given Digits]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0953-verifying-an-alien-dictionary.js][953. Verifying an Alien Dictionary]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0669-trim-a-binary-search-tree.js][669. Trim a Binary Search Tree]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0655-print-binary-tree.js][655. Print Binary Tree]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0653-two-sum-iv-input-is-a-bst.js][653. Two Sum IV - Input is a BST]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0637-average-of-levels-in-binary-tree.js][637. Average of Levels in Binary Tree]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0617-merge-two-binary-trees.js][617. Merge Two Binary Trees]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(300)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(309)</h2>
 #+END_HTML
 
 |   # | Title |
@@ -291,6 +291,15 @@
 | 833 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0833-find-and-replace-in-string.js][Find And Replace in String]] |
 | 852 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0852-peak-index-in-a-mountain-array.js][Peak Index in a Mountain Array]] |
 | 863 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0863-all-nodes-distance-k-in-binary-tree.js][All Nodes Distance K in Binary Tree]] |
+| 949 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0949-largest-time-for-given-digits.js][Largest Time for Given Digits]] |
+| 953 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0953-verifying-an-alien-dictionary.js][Verifying an Alien Dictionary]] |
+| 965 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0965-univalued-binary-tree.js][Univalued Binary Tree]] |
+| 970 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0970-powerful-integers.js][Powerful Integers]] |
+| 976 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0976-largest-perimeter-triangle.js][Largest Perimeter Triangle]] |
+| 977 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0977-squares-of-a-sorted-array.js][Squares of a Sorted Array]] |
+| 985 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0985-sum-of-even-numbers-after-queries.js][Sum of Even Numbers After Queries]] |
+| 989 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0989-add-to-array-form-of-integer.js][Add to Array-Form of Integer]] |
+| 993 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0993-cousins-in-binary-tree.js][Cousins in Binary Tree]] |
 | 994 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0994-rotting-oranges.js][Rotting Oranges]] |
 | 997 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0997-find-the-town-judge.js][Find the Town Judge]] |
 | 999 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0999-available-captures-for-rook.js][Available Captures for Rook]] |

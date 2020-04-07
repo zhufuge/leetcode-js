@@ -47,6 +47,6 @@ const minMoves2 = function(nums) {
 // 先排序找到中位数（若长度为偶数，则可选两个数中的任意一个）
 // 将其他数全部移到与中位数相同的数即可。
 
-// TODO 为何选中位数为对齐数？
+// TODO: 为何选中位数为对齐数？
 
 // Submission Result: Accepted

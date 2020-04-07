@@ -8,18 +8,17 @@ author: zhufuge
 # LeetCode-JS
 
 **最近更新**
-- [994. Rotting Oranges](https://github.com/zhufuge/leetcode-js/blob/master/problems/0994-rotting-oranges.js)
-- [997. Find the Town Judge](https://github.com/zhufuge/leetcode-js/blob/master/problems/0997-find-the-town-judge.js)
-- [999. Available Captures for Rook](https://github.com/zhufuge/leetcode-js/blob/master/problems/0999-available-captures-for-rook.js)
-- [1002. Find Common Characters](https://github.com/zhufuge/leetcode-js/blob/master/problems/1002-find-common-characters.js)
-- [1005. Maximize Sum Of Array After K Negations](https://github.com/zhufuge/leetcode-js/blob/master/problems/1005-maximize-sum-of-array-after-k-negations.js)
-- [1009. Complement of Base 10 Integer](https://github.com/zhufuge/leetcode-js/blob/master/problems/1009-complement-of-base-10-integer.js)
-- [1010. Pairs of Songs With Total Durations Divisible by 60](https://github.com/zhufuge/leetcode-js/blob/master/problems/1010-pairs-of-songs-with-total-durations-divisible-by-60.js)
-- [2. Add Two Numbers](https://github.com/zhufuge/leetcode-js/blob/master/problems/0002-add-two-numbers.js)
+- [949. Largest Time for Given Digits](https://github.com/zhufuge/leetcode-js/blob/master/problems/0949-largest-time-for-given-digits.js)
+- [953. Verifying an Alien Dictionary](https://github.com/zhufuge/leetcode-js/blob/master/problems/0953-verifying-an-alien-dictionary.js)
+- [669. Trim a Binary Search Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0669-trim-a-binary-search-tree.js)
+- [655. Print Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0655-print-binary-tree.js)
+- [653. Two Sum IV - Input is a BST](https://github.com/zhufuge/leetcode-js/blob/master/problems/0653-two-sum-iv-input-is-a-bst.js)
+- [637. Average of Levels in Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0637-average-of-levels-in-binary-tree.js)
+- [617. Merge Two Binary Trees](https://github.com/zhufuge/leetcode-js/blob/master/problems/0617-merge-two-binary-trees.js)
 
 <!-- more -->
 
-<h3 style="text-align:center;border:none;">完成列表(300)</h3>
+<h3 style="text-align:center;border:none;">完成列表(309)</h3>
 
 |   # | Title | difficulty |
 |----:|-------|:----------:|
@@ -292,6 +291,15 @@ author: zhufuge
 | 833 | [Find And Replace in String](https://github.com/zhufuge/leetcode-js/blob/master/problems/0833-find-and-replace-in-string.js) | Medium |
 | 852 | [Peak Index in a Mountain Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0852-peak-index-in-a-mountain-array.js) | Easy |
 | 863 | [All Nodes Distance K in Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0863-all-nodes-distance-k-in-binary-tree.js) | Medium |
+| 949 | [Largest Time for Given Digits](https://github.com/zhufuge/leetcode-js/blob/master/problems/0949-largest-time-for-given-digits.js) | Easy |
+| 953 | [Verifying an Alien Dictionary](https://github.com/zhufuge/leetcode-js/blob/master/problems/0953-verifying-an-alien-dictionary.js) | Easy |
+| 965 | [Univalued Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0965-univalued-binary-tree.js) | Easy |
+| 970 | [Powerful Integers](https://github.com/zhufuge/leetcode-js/blob/master/problems/0970-powerful-integers.js) | Easy |
+| 976 | [Largest Perimeter Triangle](https://github.com/zhufuge/leetcode-js/blob/master/problems/0976-largest-perimeter-triangle.js) | Easy |
+| 977 | [Squares of a Sorted Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0977-squares-of-a-sorted-array.js) | Easy |
+| 985 | [Sum of Even Numbers After Queries](https://github.com/zhufuge/leetcode-js/blob/master/problems/0985-sum-of-even-numbers-after-queries.js) | Easy |
+| 989 | [Add to Array-Form of Integer](https://github.com/zhufuge/leetcode-js/blob/master/problems/0989-add-to-array-form-of-integer.js) | Easy |
+| 993 | [Cousins in Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0993-cousins-in-binary-tree.js) | Easy |
 | 994 | [Rotting Oranges](https://github.com/zhufuge/leetcode-js/blob/master/problems/0994-rotting-oranges.js) | Easy |
 | 997 | [Find the Town Judge](https://github.com/zhufuge/leetcode-js/blob/master/problems/0997-find-the-town-judge.js) | Easy |
 | 999 | [Available Captures for Rook](https://github.com/zhufuge/leetcode-js/blob/master/problems/0999-available-captures-for-rook.js) | Easy |

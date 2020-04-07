@@ -59,6 +59,6 @@ MapSum.prototype.sum = function(prefix) {
 // Solution:
 // 一个哈希表和一个子字符串查找函数解决。
 
-// TODO 官方解法中有性能更高的算法，以后在研究;p
+// TODO: 官方解法中有性能更高的算法，以后在研究;p
 
 // Submission Result: Accepted
