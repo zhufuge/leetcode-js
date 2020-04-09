@@ -40,17 +40,29 @@
  * @return {number}
  */
 const minDeletionSize = function(A) {
-
+  let result = 0, p = A.length, q = A[0].length
+  for (let i = 0; i < q; i++) {
+    for (let j = 1; j < p; j++) {
+      if (A[j - 1][i] > A[j][i]) {
+        result++
+        break
+      }
+    }
+  }
+  return result
 }
 
 ;[
   ['cba','daf','ghi'], // 1
   ['a','b'],           // 0
   ['zyx','wvu','tsr'], // 3
-].forEach(() => {
-
+].forEach((A) => {
+  console.log(minDeletionSize(A))
 })
 
 // Solution:
+// 一列一列遍历，
+// 若为上一个大于下一个，则 result + 1, 跳出循环，
+// 遍历下一列。
 
-// Submission Result: Accept
+// Submission Result: Accepted
