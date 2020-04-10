@@ -60,7 +60,3 @@ class TreeNode {
 }
 
 module.exports = TreeNode
-
-const a = [1,2,3,4,5,null,6,7,null,9,10]
-const t = TreeNode.from(a)
-console.log(t.print())
