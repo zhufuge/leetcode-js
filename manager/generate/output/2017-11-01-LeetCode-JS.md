@@ -8,17 +8,17 @@ author: zhufuge
 # LeetCode-JS
 
 **最近更新**
+- [892. Surface Area of 3D Shapes](https://github.com/zhufuge/leetcode-js/blob/master/problems/0892-surface-area-of-3d-shapes.js)
+- [893. Groups of Special-Equivalent Strings](https://github.com/zhufuge/leetcode-js/blob/master/problems/0893-groups-of-special-equivalent-strings.js)
 - [896. Monotonic Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0896-monotonic-array.js)
 - [922. Sort Array By Parity II](https://github.com/zhufuge/leetcode-js/blob/master/problems/0922-sort-array-by-parity-ii.js)
 - [897. Increasing Order Search Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0897-increasing-order-search-tree.js)
 - [905. Sort Array By Parity](https://github.com/zhufuge/leetcode-js/blob/master/problems/0905-sort-array-by-parity.js)
 - [908. Smallest Range I](https://github.com/zhufuge/leetcode-js/blob/master/problems/0908-smallest-range-i.js)
-- [914. X of a Kind in a Deck of Cards](https://github.com/zhufuge/leetcode-js/blob/master/problems/0914-x-of-a-kind-in-a-deck-of-cards.js)
-- [925. Long Pressed Name](https://github.com/zhufuge/leetcode-js/blob/master/problems/0925-long-pressed-name.js)
 
 <!-- more -->
 
-<h3 style="text-align:center;border:none;">完成列表(323)</h3>
+<h3 style="text-align:center;border:none;">完成列表(325)</h3>
 
 |   # | Title | difficulty |
 |----:|-------|:----------:|
@@ -291,6 +291,8 @@ author: zhufuge
 | 833 | [Find And Replace in String](https://github.com/zhufuge/leetcode-js/blob/master/problems/0833-find-and-replace-in-string.js) | Medium |
 | 852 | [Peak Index in a Mountain Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0852-peak-index-in-a-mountain-array.js) | Easy |
 | 863 | [All Nodes Distance K in Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0863-all-nodes-distance-k-in-binary-tree.js) | Medium |
+| 892 | [Surface Area of 3D Shapes](https://github.com/zhufuge/leetcode-js/blob/master/problems/0892-surface-area-of-3d-shapes.js) | Easy |
+| 893 | [Groups of Special-Equivalent Strings](https://github.com/zhufuge/leetcode-js/blob/master/problems/0893-groups-of-special-equivalent-strings.js) | Easy |
 | 896 | [Monotonic Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0896-monotonic-array.js) | Easy |
 | 897 | [Increasing Order Search Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0897-increasing-order-search-tree.js) | Easy |
 | 905 | [Sort Array By Parity](https://github.com/zhufuge/leetcode-js/blob/master/problems/0905-sort-array-by-parity.js) | Easy |
