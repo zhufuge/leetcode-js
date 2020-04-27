@@ -10,31 +10,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', t = this
-  while (t !== null) {
-    s += s === '' ? t.val : '->' + t.val
-    t = t.next
-  }
-  return s
-}
-
-const createList = function(array) {
-  const head = new ListNode()
-  let t = head
-  for (let v of array) {
-    t.next = new ListNode(v)
-    t = t.next
-  }
-  return head.next
-}
-
 
 /**
  * @param {ListNode} head
@@ -61,6 +41,16 @@ const deleteDuplicates = function(head) {
   return start.next
 }
 
-const list = createList([3, 3, 4, 4])
-console.log(list.toString())
-console.log(deleteDuplicates(list).toString())
+const ListNode = require('../structs/ListNode')
+;[
+  [3,3,4,4],       // []
+  [1,2,3,3,4,4,5], // [1,2,5]
+  [1,1,1,2,3],     // [2,3]
+].forEach((array) => {
+  console.log((deleteDuplicates(ListNode.from(array)) || '').toString())
+})
+
+// Solution:
+// TODO: #82 solution
+
+// Submission Result: Accepted

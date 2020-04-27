@@ -48,30 +48,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let node = this, s = ''
-  while (node) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} root
@@ -99,15 +80,13 @@ const splitListToParts = function(root, k) {
   return result
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[1,2,3], 5],
   [[1,2,3,4,5,6,7,8,9,10,11], 3],
 ].forEach(([array, k]) => {
-  const list = toList(array)
-  console.log(list.toString() + ', k=' + k)
-
-  const parts = splitListToParts(list, k)
-  parts.forEach(root => console.log(root ? root.toString() : null))
+  const list = ListNode.from(array)
+  splitListToParts(list, k).forEach(h => console.log((h || '').toString()))
 })
 
 // Solution:

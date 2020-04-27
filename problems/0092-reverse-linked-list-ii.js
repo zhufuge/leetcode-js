@@ -14,30 +14,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-const toList = function(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} head
@@ -65,12 +46,11 @@ const reverseBetween = function(head, m, n) {
   return start.next
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[1, 2, 3, 4, 5], 2, 4],      // 1->4->3->2->5
-].forEach(args => {
-  const list = toList(args[0])
-  console.log((list || '').toString())
-  console.log((reverseBetween(list, args[1], args[2]) || '').toString())
+].forEach(([array, m, n]) => {
+  console.log((reverseBetween(ListNode.from(array), m, n) || '').toString())
 })
 
 // Solution:

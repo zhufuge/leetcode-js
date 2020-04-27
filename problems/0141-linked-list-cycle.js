@@ -7,43 +7,13 @@
 // Follow up:
 // Can you solve it without using extra space?
 
-
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let node = this, s = ''
-  while (node) {
-    s += (s === '' ? '' : '->') + node.val
-    node = node.next
-  }
-  return s
-}
-
-ListNode.prototype.nth = function(n) {
-  let node = this
-  while (node) {
-    if (n === 0) return node
-    n--
-    node = node.next
-  }
-  return null
-}
 
 /**
  * @param {ListNode} head
@@ -61,20 +31,21 @@ const hasCycle = function(head) {
   return true
 }
 
+const ListNode = require('../structs/ListNode')
 
-const cycle0 = toList([0,1,2,3,4,5,6])
-const tail0 = cycle0.nth(6)
-tail0.next = cycle0
+const cycle_0 = ListNode.from([0,1,2,3,4,5,6])
+const tail_0 = cycle_0.nth(6)
+tail_0.next = cycle_0
 
-const cycle1 = toList([0,1,2,3,4,5,6])
-const tail1 = cycle1.nth(6)
-const nth3 = cycle1.nth(3)
-tail1.next = nth3
+const cycle_1 = ListNode.from([0,1,2,3,4,5,6])
+const tail_1 = cycle_1.nth(6)
+const nth_3 = cycle_1.nth(3)
+tail_1.next = nth_3
 
 ;[
-  toList([3,2,0,-4]),                   // false
-  cycle0,                               // true
-  cycle1,                               // true
+  ListNode.from([3,2,0,-4]),             // false
+  cycle_0,                               // true
+  cycle_1,                               // true
 ].forEach(head => {
   console.log(hasCycle(head))
 })

@@ -10,33 +10,13 @@
 // A linked list can be reversed either iteratively or recursively. Could you
 // implement both?
 
-
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let node = this, s = ''
-  while (node) {
-    s += (s === '' ? '' : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} head
@@ -72,12 +52,11 @@ const reverseList = function(head) {
   return recu(head)
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [0,1,2,3,4,5,6],
-].forEach(array => {
-  const head = toList(array)
-  console.log(head.toString())
-  console.log(reverseList(head).toString())
+].forEach((array) => {
+  console.log((reverseList(ListNode.from(array)) || '').toString())
 })
 
 // Solution:

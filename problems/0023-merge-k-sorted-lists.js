@@ -6,32 +6,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node !== null) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode[]} lists
@@ -57,10 +36,12 @@ const mergeKLists = function(lists) {
   return lists.shift()
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[1, 3], [0, 1], []],
-].forEach(arrays => {
-  console.log(mergeKLists(arrays.map(array => toList(array))).toString())
+].forEach((lists) => {
+  lists = lists.map(l => ListNode.from(l))
+  console.log((mergeKLists(lists) || '').toString())
 })
 
 // Solution:

@@ -9,35 +9,14 @@
 // Your algorithm should use only constant space. You may not modify the values
 // in the list, only nodes itself can be changed.
 
-
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node !== null) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} head
@@ -51,12 +30,13 @@ const swapPairs = function(head) {
   return second
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [1, 2],                       // [2, 1]
   [1],                          // [1]
   [1, 2, 3, 4],                 // [2, 1, 4, 3]
-].forEach(array => {
-  console.log(swapPairs(toList(array)).toString())
+].forEach((array) => {
+  console.log((swapPairs(ListNode.from(array)) || '').toString())
 })
 
 // Solution:

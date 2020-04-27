@@ -6,30 +6,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} l1
@@ -49,12 +30,13 @@ const mergeTwoLists = function(l1, l2) {
   }
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[1, 3], [0, 4]],
-].forEach(arrays => {
-  const a = toList(arrays[0]),
-        b = toList(arrays[1])
-  console.log(mergeTwoLists(a, b).toString())
+].forEach(([A, B]) => {
+  const l1 = ListNode.from(A),
+        l2 = ListNode.from(B)
+  console.log((mergeTwoLists(l1, l2) || '').toString())
 })
 
 // Solution:

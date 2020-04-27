@@ -21,25 +21,13 @@
 //   /   /
 // -10  5
 
-
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-
-  return head.next
-}
 
 /**
  * Definition for a binary tree node.
@@ -48,6 +36,9 @@ function toList(array) {
  *   this.left = this.right = null;
  * }
  */
+
+const ListNode = require('../structs/ListNode')
+const TreeNode = require('../structs/TreeNode')
 
 /**
  * @param {ListNode} head
@@ -77,12 +68,12 @@ const sortedListToBST = function(head) {
   // [0, 1],
   // [0, 1, 2],
   // [0, 1, 2, 3],
-  // [-10, -3, 0, 5, 9],
+  [-10, -3, 0, 5, 9],
   // [0, 1, 2, 3, 4, 5],
   // [0, 1, 2, 3, 4, 5, 6],
-  [0, 1, 2, 3, 4, 5, 6, 7],
-].forEach(array => {
-  console.log(sortedListToBST(toList(array)))
+  // [0, 1, 2, 3, 4, 5, 6, 7],
+].forEach((array) => {
+  console.log(sortedListToBST(ListNode.from(array)))
 })
 
 // Solution:

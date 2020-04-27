@@ -17,30 +17,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node) {
-    s += (s === '' ? '' : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} head
@@ -65,11 +46,12 @@ const removeNthFromEnd = function(head, n) {
   return start.next
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
-  [toList([1, 2]), 2],
-  [toList([1,2,3,4,5]), 2],
-].forEach(args => {
-  console.log(removeNthFromEnd(...args).toString())
+  [[1, 2], 2],      // [2]
+  [[1,2,3,4,5], 2], // [1,2,3,5]
+].forEach(([A, n]) => {
+  console.log((removeNthFromEnd(ListNode.from(A), n) || '').toString())
 })
 
 // Solution:

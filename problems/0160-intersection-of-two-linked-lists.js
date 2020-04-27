@@ -29,30 +29,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let node = this, s = ''
-  while (node) {
-    s += (s === '' ? '' : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} headA
@@ -82,18 +63,17 @@ const getIntersectionNode = function(headA, headB) {
   return head.next
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[3,4,1,2,5], [2,4,3]],       // [2,4,3]
-].forEach(args => {
-  const headA = toList(args[0]),
-        headB = toList(args[1])
-  console.log(headA.toString())
-  console.log(headB.toString())
-  const result = getIntersectionNode(headA, headB)
-  if (result) console.log(result.toString())
+].forEach(([A, B]) => {
+  const headA = ListNode.from(A),
+        headB = ListNode.from(B)
+  console.log((getIntersectionNode(headA, headB) || '').toString())
 })
 
 // Solution:
 // 用哈希来算交集。
+// TODO: #160 重做，题目理解错了
 
 // Submission Result: Accepted

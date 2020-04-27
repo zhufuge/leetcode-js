@@ -12,36 +12,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let i = 0, n = array.length; i < n; i++) {
-    node.next = new ListNode(array[i])
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let node = this, string = ''
-  while (node) {
-    string += (string === '' ? '' : '->') + node.val
-    node = node.next
-  }
-  return string
-}
-
-function getNthNode(n, list) {
-  let node = list
-  while (--n > 0) node = node.next
-  return node
-}
 
 /**
  * @param {ListNode} node
@@ -52,12 +27,14 @@ const deleteNode = function(node) {
   node.next = node.next.next
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
-  [toList([1,2,3,4]), 3],              // 1 -> 2 -> 4
-].forEach(args => {
-  console.log(args[0].toString())
-  deleteNode(getNthNode(args[1], args[0]))
-  console.log(args[0].toString())
+  [[1,2,3,4], 2],              // 1 -> 2 -> 4
+].forEach(([array, k]) => {
+  const node = ListNode.from(array)
+  console.log(node.toString())
+  deleteNode(node.nth(k))
+  console.log(node.toString())
 })
 
 // Solution:

@@ -11,30 +11,13 @@
 // Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 // Output: 7 -> 0 -> 8
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-ListNode.prototype.toString = function() {
-  let node = this
-  let string = ''
-  while (node) {
-    string += string === '' ? node.val : '->' + node.val
-    node = node.next
-  }
-  return string
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
 
 /**
  * @param {ListNode} l1
@@ -55,16 +38,14 @@ const addTwoNumbers = function(l1, l2) {
   return result.next
 }
 
-
+const ListNode = require('../structs/ListNode')
 ;[
-  [[9, 9], [1]],                // [1, 0, 0]
+  [[9, 9], [1]],                // [0, 0, 1]
   [[2, 4, 3], [5, 6, 4]],       // [7, 0, 8]
-].forEach(args => {
-  const l1 = toList(args[0]),
-        l2 = toList(args[1])
-  console.log(l1.toString())
-  console.log(l2.toString())
-  console.log(addTwoNumbers(l1, l2).toString())
+].forEach(([A, B]) => {
+  const l1 = ListNode.from(A),
+        l2 = ListNode.from(B)
+  console.log((addTwoNumbers(l1, l2) || '').toString())
 })
 
 

@@ -10,31 +10,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
 
 /**
  * @param {ListNode} head
@@ -90,14 +70,15 @@ const latest = function(head, k) {
   return head ? iter(head, 1) : head
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[1,2,3,4,5], 2],
   [[1,2], 101],
   [[1], 0],
   [[1], 1]
 ].forEach(([array, k]) => {
-  console.log(rotateRight(toList(array), k).toString())
-  console.log(latest(toList(array), k).toString())
+  console.log((rotateRight(ListNode.from(array), k) || '').toString())
+  console.log(latest(ListNode.from(array), k).toString())
 })
 
 // Solution:

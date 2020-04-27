@@ -8,17 +8,17 @@ author: zhufuge
 # LeetCode-JS
 
 **最近更新**
-- [888. Fair Candy Swap](https://github.com/zhufuge/leetcode-js/blob/master/problems/0888-fair-candy-swap.js)
-- [892. Surface Area of 3D Shapes](https://github.com/zhufuge/leetcode-js/blob/master/problems/0892-surface-area-of-3d-shapes.js)
-- [893. Groups of Special-Equivalent Strings](https://github.com/zhufuge/leetcode-js/blob/master/problems/0893-groups-of-special-equivalent-strings.js)
-- [896. Monotonic Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0896-monotonic-array.js)
-- [922. Sort Array By Parity II](https://github.com/zhufuge/leetcode-js/blob/master/problems/0922-sort-array-by-parity-ii.js)
-- [897. Increasing Order Search Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0897-increasing-order-search-tree.js)
-- [905. Sort Array By Parity](https://github.com/zhufuge/leetcode-js/blob/master/problems/0905-sort-array-by-parity.js)
+- [725. Split Linked List in Parts](https://github.com/zhufuge/leetcode-js/blob/master/problems/0725-split-linked-list-in-parts.js)
+- [462. Minimum Moves to Equal Array Elements II](https://github.com/zhufuge/leetcode-js/blob/master/problems/0462-minimum-moves-to-equal-array-elements-ii.js)
+- [677. Map Sum Pairs](https://github.com/zhufuge/leetcode-js/blob/master/problems/0677-map-sum-pairs.js)
+- [237. Delete Node in a Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0237-delete-node-in-a-linked-list.js)
+- [234. Palindrome Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0234-palindrome-linked-list.js)
+- [206. Reverse Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0206-reverse-linked-list.js)
+- [203. Remove Linked List Elements](https://github.com/zhufuge/leetcode-js/blob/master/problems/0203-remove-linked-list-elements.js)
 
 <!-- more -->
 
-<h3 style="text-align:center;border:none;">完成列表(326)</h3>
+<h3 style="text-align:center;border:none;">完成列表(330)</h3>
 
 |   # | Title | difficulty |
 |----:|-------|:----------:|
@@ -93,6 +93,7 @@ author: zhufuge
 | 77 | [Combinations](https://github.com/zhufuge/leetcode-js/blob/master/problems/0077-combinations.js) | Medium |
 | 78 | [Subsets](https://github.com/zhufuge/leetcode-js/blob/master/problems/0078-subsets.js) | Medium |
 | 79 | [Word Search](https://github.com/zhufuge/leetcode-js/blob/master/problems/0079-word-search.js) | Medium |
+| 82 | [Remove Duplicates from Sorted List II](https://github.com/zhufuge/leetcode-js/blob/master/problems/0082-remove-duplicates-from-sorted-list-ii.js) | Medium |
 | 83 | [Remove Duplicates from Sorted List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0083-remove-duplicates-from-sorted-list.js) | Easy |
 | 86 | [Partition List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0086-partition-list.js) | Medium |
 | 88 | [Merge Sorted Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0088-merge-sorted-array.js) | Easy |
@@ -291,6 +292,9 @@ author: zhufuge
 | 833 | [Find And Replace in String](https://github.com/zhufuge/leetcode-js/blob/master/problems/0833-find-and-replace-in-string.js) | Medium |
 | 852 | [Peak Index in a Mountain Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0852-peak-index-in-a-mountain-array.js) | Easy |
 | 863 | [All Nodes Distance K in Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0863-all-nodes-distance-k-in-binary-tree.js) | Medium |
+| 876 | [Middle of the Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0876-middle-of-the-linked-list.js) | Easy |
+| 883 | [Projection Area of 3D Shapes](https://github.com/zhufuge/leetcode-js/blob/master/problems/0883-projection-area-of-3d-shapes.js) | Easy |
+| 884 | [Uncommon Words from Two Sentences](https://github.com/zhufuge/leetcode-js/blob/master/problems/0884-uncommon-words-from-two-sentences.js) | Easy |
 | 888 | [Fair Candy Swap](https://github.com/zhufuge/leetcode-js/blob/master/problems/0888-fair-candy-swap.js) | Easy |
 | 892 | [Surface Area of 3D Shapes](https://github.com/zhufuge/leetcode-js/blob/master/problems/0892-surface-area-of-3d-shapes.js) | Easy |
 | 893 | [Groups of Special-Equivalent Strings](https://github.com/zhufuge/leetcode-js/blob/master/problems/0893-groups-of-special-equivalent-strings.js) | Easy |

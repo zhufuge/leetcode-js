@@ -10,31 +10,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-const toList = function(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
-
 
 /**
  * @param {ListNode} head
@@ -50,15 +30,14 @@ const deleteDuplicates = function(head) {
   return head
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [1, 1, 2],
   [1, 1, 2, 3, 3],
   [],
   [3, 3, 4, 4],
-].forEach(array => {
-  const list = toList(array)
-  console.log((list || '').toString())
-  console.log((deleteDuplicates(list) || '').toString())
+].forEach((array) => {
+  console.log((deleteDuplicates(ListNode.from(array)) || '').toString())
 })
 
 

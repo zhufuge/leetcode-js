@@ -6,24 +6,14 @@
 // Follow up:
 // Could you do it in O(n) time and O(1) space?
 
+
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let i = 0, n = array.length; i < n; i++) {
-    node.next = new ListNode(array[i])
-    node = node.next
-  }
-  return head.next
-}
-
 
 /**
  * @param {ListNode} head
@@ -40,12 +30,13 @@ const isPalindrome = function(head) {
   return head ? iter(head) : true
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
-  toList([1,2,3,4,5,4,3,2,1]),  // true
-  toList([1,2,3,3,2,1]),        // true
-  toList([1,2,3,4,3,2,0,1]),    // false
-].forEach(head => {
-  console.log(isPalindrome(head))
+  [1,2,3,4,5,4,3,2,1],  // true
+  [1,2,3,3,2,1],        // true
+  [1,2,3,4,3,2,0,1],    // false
+].forEach((array) => {
+  console.log(isPalindrome(ListNode.from(array)))
 })
 
 // Solution:

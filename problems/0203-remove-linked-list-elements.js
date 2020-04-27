@@ -14,30 +14,11 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let a of array) {
-    node.next = new ListNode(a)
-    node = node.next
-  }
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let node = this, s = ''
-  while (node) {
-    s += (s === '' ? '' : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} head
@@ -55,15 +36,13 @@ const removeElements = function(head, val) {
   return prev.next
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
   [[1, 2, 6, 3, 4, 5, 6], 6],        // [1,2,3,4,5]
   [[1], 1],                          // []
   [[1,1], 1],                        // []
-].forEach(args => {
-  const head = toList(args[0])
-  console.log(head.toString())
-  const result = removeElements(head, args[1])
-  console.log('result: ' + (result ? result.toString() : 'null' ))
+].forEach(([array, val]) => {
+  console.log((removeElements(ListNode.from(array), val) || '').toString())
 })
 
 // Solution:

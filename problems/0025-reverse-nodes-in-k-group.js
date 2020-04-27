@@ -19,32 +19,12 @@
 
 /**
  * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function toList(array) {
-  const head = new ListNode()
-  let node = head
-  for (let v of array) {
-    node.next = new ListNode(v)
-    node = node.next
-  }
-
-  return head.next
-}
-
-ListNode.prototype.toString = function() {
-  let s = '', node = this
-  while (node !== null) {
-    s += (s === '' ? s : '->') + node.val
-    node = node.next
-  }
-  return s
-}
 
 /**
  * @param {ListNode} head
@@ -69,13 +49,14 @@ const reverseKGroup = function(head, k) {
   return head
 }
 
+const ListNode = require('../structs/ListNode')
 ;[
-  [[1, 2, 3, 4, 5], 2],
-  [[1, 2, 3, 4, 5], 3],
-  [[1, 2, 3, 4], 2],
-  [[1, 2, 3, 4], 3],
-].forEach(args => {
-  console.log(reverseKGroup(toList(args[0]), args[1]).toString())
+  [[1, 2, 3, 4, 5], 2],  // [2,1,4,3,5]
+  [[1, 2, 3, 4, 5], 3],  // [3,2,1,4,5]
+  [[1, 2, 3, 4], 2],     // [2,1,4,3]
+  [[1, 2, 3, 4], 3],     // [3,2,1,4]
+].forEach(([array, k]) => {
+  console.log((reverseKGroup(ListNode.from(array), k) || '').toString())
 })
 
 // Solution:
