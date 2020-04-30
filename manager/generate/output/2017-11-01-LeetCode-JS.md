@@ -8,17 +8,17 @@ author: zhufuge
 # LeetCode-JS
 
 **最近更新**
+- [859. Buddy Strings](https://github.com/zhufuge/leetcode-js/blob/master/problems/0859-buddy-strings.js)
+- [860. Lemonade Change](https://github.com/zhufuge/leetcode-js/blob/master/problems/0860-lemonade-change.js)
+- [867. Transpose Matrix](https://github.com/zhufuge/leetcode-js/blob/master/problems/0867-transpose-matrix.js)
+- [868. Binary Gap](https://github.com/zhufuge/leetcode-js/blob/master/problems/0868-binary-gap.js)
 - [874. Walking Robot Simulation](https://github.com/zhufuge/leetcode-js/blob/master/problems/0874-walking-robot-simulation.js)
 - [872. Leaf-Similar Trees](https://github.com/zhufuge/leetcode-js/blob/master/problems/0872-leaf-similar-trees.js)
 - [725. Split Linked List in Parts](https://github.com/zhufuge/leetcode-js/blob/master/problems/0725-split-linked-list-in-parts.js)
-- [462. Minimum Moves to Equal Array Elements II](https://github.com/zhufuge/leetcode-js/blob/master/problems/0462-minimum-moves-to-equal-array-elements-ii.js)
-- [677. Map Sum Pairs](https://github.com/zhufuge/leetcode-js/blob/master/problems/0677-map-sum-pairs.js)
-- [237. Delete Node in a Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0237-delete-node-in-a-linked-list.js)
-- [234. Palindrome Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0234-palindrome-linked-list.js)
 
 <!-- more -->
 
-<h3 style="text-align:center;border:none;">完成列表(332)</h3>
+<h3 style="text-align:center;border:none;">完成列表(336)</h3>
 
 |   # | Title | difficulty |
 |----:|-------|:----------:|
@@ -291,7 +291,11 @@ author: zhufuge
 | 771 | [Jewels and Stones](https://github.com/zhufuge/leetcode-js/blob/master/problems/0771-jewels-and-stones.js) | Easy |
 | 833 | [Find And Replace in String](https://github.com/zhufuge/leetcode-js/blob/master/problems/0833-find-and-replace-in-string.js) | Medium |
 | 852 | [Peak Index in a Mountain Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/0852-peak-index-in-a-mountain-array.js) | Easy |
+| 859 | [Buddy Strings](https://github.com/zhufuge/leetcode-js/blob/master/problems/0859-buddy-strings.js) | Easy |
+| 860 | [Lemonade Change](https://github.com/zhufuge/leetcode-js/blob/master/problems/0860-lemonade-change.js) | Easy |
 | 863 | [All Nodes Distance K in Binary Tree](https://github.com/zhufuge/leetcode-js/blob/master/problems/0863-all-nodes-distance-k-in-binary-tree.js) | Medium |
+| 867 | [Transpose Matrix](https://github.com/zhufuge/leetcode-js/blob/master/problems/0867-transpose-matrix.js) | Easy |
+| 868 | [Binary Gap](https://github.com/zhufuge/leetcode-js/blob/master/problems/0868-binary-gap.js) | Easy |
 | 872 | [Leaf-Similar Trees](https://github.com/zhufuge/leetcode-js/blob/master/problems/0872-leaf-similar-trees.js) | Easy |
 | 874 | [Walking Robot Simulation](https://github.com/zhufuge/leetcode-js/blob/master/problems/0874-walking-robot-simulation.js) | Easy |
 | 876 | [Middle of the Linked List](https://github.com/zhufuge/leetcode-js/blob/master/problems/0876-middle-of-the-linked-list.js) | Easy |

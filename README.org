@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0949-largest-time-for-given-digits.js][949. Largest Time for Given Digits]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0953-verifying-an-alien-dictionary.js][953. Verifying an Alien Dictionary]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0669-trim-a-binary-search-tree.js][669. Trim a Binary Search Tree]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0655-print-binary-tree.js][655. Print Binary Tree]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0653-two-sum-iv-input-is-a-bst.js][653. Two Sum IV - Input is a BST]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0637-average-of-levels-in-binary-tree.js][637. Average of Levels in Binary Tree]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0617-merge-two-binary-trees.js][617. Merge Two Binary Trees]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0859-buddy-strings.js][859. Buddy Strings]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0860-lemonade-change.js][860. Lemonade Change]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0867-transpose-matrix.js][867. Transpose Matrix]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0868-binary-gap.js][868. Binary Gap]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0874-walking-robot-simulation.js][874. Walking Robot Simulation]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0872-leaf-similar-trees.js][872. Leaf-Similar Trees]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0725-split-linked-list-in-parts.js][725. Split Linked List in Parts]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(309)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(336)</h2>
 #+END_HTML
 
 |   # | Title |
@@ -93,6 +93,7 @@
 | 77 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0077-combinations.js][Combinations]] |
 | 78 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0078-subsets.js][Subsets]] |
 | 79 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0079-word-search.js][Word Search]] |
+| 82 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0082-remove-duplicates-from-sorted-list-ii.js][Remove Duplicates from Sorted List II]] |
 | 83 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0083-remove-duplicates-from-sorted-list.js][Remove Duplicates from Sorted List]] |
 | 86 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0086-partition-list.js][Partition List]] |
 | 88 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0088-merge-sorted-array.js][Merge Sorted Array]] |
@@ -290,7 +291,33 @@
 | 771 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0771-jewels-and-stones.js][Jewels and Stones]] |
 | 833 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0833-find-and-replace-in-string.js][Find And Replace in String]] |
 | 852 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0852-peak-index-in-a-mountain-array.js][Peak Index in a Mountain Array]] |
+| 859 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0859-buddy-strings.js][Buddy Strings]] |
+| 860 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0860-lemonade-change.js][Lemonade Change]] |
 | 863 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0863-all-nodes-distance-k-in-binary-tree.js][All Nodes Distance K in Binary Tree]] |
+| 867 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0867-transpose-matrix.js][Transpose Matrix]] |
+| 868 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0868-binary-gap.js][Binary Gap]] |
+| 872 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0872-leaf-similar-trees.js][Leaf-Similar Trees]] |
+| 874 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0874-walking-robot-simulation.js][Walking Robot Simulation]] |
+| 876 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0876-middle-of-the-linked-list.js][Middle of the Linked List]] |
+| 883 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0883-projection-area-of-3d-shapes.js][Projection Area of 3D Shapes]] |
+| 884 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0884-uncommon-words-from-two-sentences.js][Uncommon Words from Two Sentences]] |
+| 888 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0888-fair-candy-swap.js][Fair Candy Swap]] |
+| 892 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0892-surface-area-of-3d-shapes.js][Surface Area of 3D Shapes]] |
+| 893 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0893-groups-of-special-equivalent-strings.js][Groups of Special-Equivalent Strings]] |
+| 896 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0896-monotonic-array.js][Monotonic Array]] |
+| 897 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0897-increasing-order-search-tree.js][Increasing Order Search Tree]] |
+| 905 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0905-sort-array-by-parity.js][Sort Array By Parity]] |
+| 908 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0908-smallest-range-i.js][Smallest Range I]] |
+| 914 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0914-x-of-a-kind-in-a-deck-of-cards.js][X of a Kind in a Deck of Cards]] |
+| 922 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0922-sort-array-by-parity-ii.js][Sort Array By Parity II]] |
+| 925 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0925-long-pressed-name.js][Long Pressed Name]] |
+| 929 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0929-unique-email-addresses.js][Unique Email Addresses]] |
+| 933 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0933-number-of-recent-calls.js][Number of Recent Calls]] |
+| 937 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0937-reorder-data-in-log-files.js][Reorder Data in Log Files]] |
+| 938 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0938-range-sum-of-bst.js][Range Sum of BST]] |
+| 941 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0941-valid-mountain-array.js][Valid Mountain Array]] |
+| 942 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0942-di-string-match.js][DI String Match]] |
+| 944 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0944-delete-columns-to-make-sorted.js][Delete Columns to Make Sorted]] |
 | 949 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0949-largest-time-for-given-digits.js][Largest Time for Given Digits]] |
 | 953 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0953-verifying-an-alien-dictionary.js][Verifying an Alien Dictionary]] |
 | 965 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0965-univalued-binary-tree.js][Univalued Binary Tree]] |
