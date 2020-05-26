@@ -14,6 +14,6 @@
 <h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表({{accepted_num}})</h2>
 #+END_HTML
 
-|   # | Title |
-|-----+-------|
+|   # | Title | difficulty |
+|-----+-------+------------|
 {{table}}

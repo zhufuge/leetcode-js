@@ -7,15 +7,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "try": "node manager/index.js try",
-    "org": "node manager/index.js list",
-    "md": "node manager/index.js md",
-    "test": "node manager/index.js test",
-    "update": "node manager/index.js update"
+    "try": "node manager/bin/index.js try",
+    "post": "node manager/bin/index.js",
+    "test": "node manager/bin/index.js test",
+    "ul": "node manager/bin/index.js ul"
   },
   "dependencies": {
-    "colors": "^1.2.1",
-    "lodash": "^4.17.13",
-    "request": "^2.83.0"
+    "@types/form-data": "^2.5.0",
+    "@types/node": "^14.0.5",
+    "@types/node-fetch": "^2.5.7",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0"
   }
 }
