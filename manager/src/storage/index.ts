@@ -47,7 +47,6 @@ export default class Storage {
     const getFilePath = (filename: string) =>
       resolve(join(__dirname, '..', '..', '..', 'problems', filename))
 
-    // TODO #M01 Don't do it, change way
     this.problems = this.readJSONSync(this.PROBLEM_LIST_FILE).map(
       (problem: any) => {
         problem.filename = getFilename(
@@ -79,7 +78,6 @@ export default class Storage {
 
     accepted.sort((a: number, b: number) => a - b)
     this.writeJSONSync(this.ACCEPTED_FILE, accepted)
-    console.log('Update accepted problems')
   }
 
   getProblem(id: number, fromNoExist = false) {
