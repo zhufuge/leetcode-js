@@ -4,16 +4,19 @@
 #+CATEGORIES: 算法
 
 *最近更新*
-{{latest}}
-
+#+BEGIN_LIST_LATEST
+- [[{{url}}][{{id}}. {{title}}]]
+#+END_LIST_LATEST
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表({{accepted_num}})</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表({{accepted_len}})</h2>
 #+END_HTML
 
 |   # | Title | difficulty |
 |-----+-------+------------|
-{{table}}
+#+BEGIN_LIST_TABLE
+| {{id}} | [[{{url}}][{{title}}]] | {{difficulty}} |
+#+END_LIST_TABLE

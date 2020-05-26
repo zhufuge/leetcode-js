@@ -8,12 +8,16 @@ author: zhufuge
 # LeetCode-JS
 
 **最近更新**
-{{latest}}
+#+BEGIN_LIST_LATEST
+- [{{id}}. {{title}}]({{url}})
+#+END_LIST_LATEST
 
 <!-- more -->
 
-<h3 style="text-align:center;border:none;">完成列表({{accepted_num}})</h3>
+<h3 style="text-align:center;border:none;">完成列表({{accepted_len}})</h3>
 
 |   # | Title | difficulty |
 |----:|-------|:----------:|
-{{table}}
+#+BEGIN_LIST_TABLE
+| {{id}} | [{{title}}]({{url}}) | {{difficulty}} |
+#+END_LIST_TABLE

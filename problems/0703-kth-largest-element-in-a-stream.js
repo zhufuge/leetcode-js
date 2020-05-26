@@ -90,6 +90,6 @@ KthLargest.prototype.add = function(val) {
 // - 大于时，将该数替换最小值，并重新寻找数组中的最小值返回
 // ! 注意，原数组的长度小于 k 时，每添加一个数，都添加到数组中，并寻找返回最小值。
 
-// TODO: 使用堆来解决
+// TODO: #703 使用堆来解决
 
 // Submission Result: Accepted

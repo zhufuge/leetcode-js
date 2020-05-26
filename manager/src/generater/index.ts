@@ -1,5 +1,6 @@
 import Request from '../request/index'
 import Storage from '../storage/index'
+import TemplateProcessor from './TemplateProcessor'
 
 // problem difficulty type
 const DIFFICULTY_TYPES = ['Easy', 'Medium', 'Hard']
@@ -9,9 +10,6 @@ import { join, resolve } from 'path'
 // Github repository url
 const REPOSITORY =
   'https://github.com/zhufuge/leetcode-js/blob/master/problems/'
-
-// the length of problem that latest accepted
-const TEMPLATE_LATEST_LEN = 7
 
 // Generate file top information
 function getMeta(problem: any) {
@@ -105,72 +103,25 @@ function getAcceptString() {
   return '// Submission Result: Accept'
 }
 
-function toItemString(problem: any, type: string) {
-  const { stat, filename, difficulty } = problem
-  const id = stat.frontend_question_id
-  const title = stat.question__title
-  const diff = DIFFICULTY_TYPES[difficulty.level - 1]
-
-  if (type === 'list') {
-    return `- [[${REPOSITORY + filename}][${id}. ${title}]]`
-  } else if (type === 'table') {
-    return `| ${id} | [[${REPOSITORY + filename}][${title}]] | ${diff} |`
-  } else {
-    return ''
-  }
-  // TODO func for md
-  // if (type === 'list') {
-  //   return `- [${id}. ${title}](${REPOSITORY + filename})`
-  // } else if (type === 'table') {
-  //   return `| ${id} | [${title}](${REPOSITORY + filename}) | ${
-  //     DIFFICULTIES[level - 1]
-  //   } |`
-  // } else {
-  //   return ''
-  // }
-}
-
-function toLatestList(problems: string[]) {
-  return problems.map((problem) => toItemString(problem, 'list')).join('\n')
-}
-import { statSync } from 'fs'
-function getLatestProblems(problems: any[]) {
-  const latest = problems.map((problem) => {
-    problem.mtimeMs = statSync(
-      join(
-        resolve(join(__dirname, '..', '..', '..', 'problems')),
-        problem.filename
-      )
-    ).mtimeMs
-    return problem
-  })
-
-  latest.sort((a, b) => b.mtimeMs - a.mtimeMs)
-  return latest.slice(0, TEMPLATE_LATEST_LEN)
-}
-
-function toTableString(problems: any[]) {
-  return problems.map((problem) => toItemString(problem, 'table')).join('\n')
-}
-
 export default class Generator {
-  argv: string[]
-  request: Request
-  store: Storage
+  private readonly LATEST_LEN = 7
+  private argv: string[]
+  private request: Request
+  private store: Storage
   constructor(argv: string[]) {
     this.argv = argv
     this.request = new Request()
     this.store = new Storage()
   }
 
-  async updateProblemList() {
+  private async updateProblemList() {
     const json = await this.request.fetchProblemList()
     const problems = json['stat_status_pairs']
     this.store.saveList(JSON.stringify(problems, null, 2))
     console.log('Request problems total:', problems.length)
   }
 
-  async generateProblem(id: number) {
+  private async generateProblem(id: number) {
     const problem = this.store.getProblem(id, true)
 
     const res: any = await this.request.fetchProblem(
@@ -193,17 +144,23 @@ export default class Generator {
     console.log(`Generate File: <${problem.filename}>.`)
   }
 
-  generatePost() {
+  private generatePost() {
     const accepted = this.store.getAccepted()
-    const problems = this.store.getProblems(accepted)
-
+    const problems = this.store.getProblems(accepted).reverse()
+    const latestProblems = this.store.getLatestProblems(this.LATEST_LEN)
     const templates = this.store.getPostTemplates()
-    for (let template of templates) {
-      template.content = template.content
-        .replace('{{latest}}', toLatestList(getLatestProblems(problems)))
-        .replace('{{accepted_num}}', accepted.length)
-        .replace('{{table}}', toTableString(problems.reverse()))
 
+    const processor = new TemplateProcessor()
+    for (let template of templates) {
+      let { content } = template
+      content = processor.processLatest(content, latestProblems)
+      content = processor.process(
+        content,
+        'accepted_len',
+        String(accepted.length)
+      )
+      content = processor.processTable(content, problems)
+      template.content = content
       this.store.savePost(template)
     }
   }

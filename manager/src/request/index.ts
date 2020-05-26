@@ -11,7 +11,6 @@ export default class Request {
   }
 
   // Request all-problem list by leetcode api.
-  // and store it to file system.
   async fetchProblemList() {
     console.log(`Request ${this.PROBLEM_LIST_API}`)
     return await fetch(this.PROBLEM_LIST_API)

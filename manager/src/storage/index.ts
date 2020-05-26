@@ -16,15 +16,15 @@ export default class Storage {
       entry: resolve(join(__dirname, '..', '..', 'database', 'template.org')),
       output: [resolve(join(__dirname, '..', '..', '..', 'README.org'))],
     },
-    // {
-    //   entry: resolve(join(__dirname, '..', '..', 'database', 'template.md')),
-    //   output: [
-    //     resolve(
-    //       join(__dirname, '..', '..', 'output', '2017-11-01-LeetCode-JS.md')
-    //     ),
-    //     resolve(join(__dirname, '..', '..', '..', 'README.md')),
-    //   ],
-    // },
+    {
+      entry: resolve(join(__dirname, '..', '..', 'database', 'template.md')),
+      output: [
+        resolve(
+          join(__dirname, '..', '..', 'output', '2017-11-01-LeetCode-JS.md')
+        ),
+        resolve(join(__dirname, '..', '..', '..', 'README.md')),
+      ],
+    },
   ]
 
   private problems: Array<any> = []
@@ -47,7 +47,7 @@ export default class Storage {
     const getFilePath = (filename: string) =>
       resolve(join(__dirname, '..', '..', '..', 'problems', filename))
 
-    // TODO Don't do it, change way
+    // TODO #M01 Don't do it, change way
     this.problems = this.readJSONSync(this.PROBLEM_LIST_FILE).map(
       (problem: any) => {
         problem.filename = getFilename(
@@ -121,10 +121,26 @@ export default class Storage {
     return this.POST_TEMPLATES.map((t) => {
       return {
         ...t,
-        content: fs.readFileSync(t.entry, 'utf-8'),
+        content: fs.readFileSync(t.entry, 'utf8'),
       }
     })
   }
+  getLatestProblems(length: number) {
+    const problems = this.getProblems(this.getAccepted())
+    const latest = problems.map((problem) => {
+      problem.mtimeMs = fs.statSync(
+        join(
+          resolve(join(__dirname, '..', '..', '..', 'problems')),
+          problem.filename
+        )
+      ).mtimeMs
+      return problem
+    })
+
+    latest.sort((a, b) => b.mtimeMs - a.mtimeMs)
+    return latest.slice(0, length)
+  }
+
 
   saveProblemFile(path: string, data: string) {
     fs.writeFileSync(path, data, 'utf8')
