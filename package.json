@@ -13,10 +13,8 @@
     "ul": "node manager/bin/index.js ul"
   },
   "dependencies": {
-    "@types/form-data": "^2.5.0",
     "@types/node": "^14.0.5",
     "@types/node-fetch": "^2.5.7",
-    "form-data": "^3.0.0",
     "node-fetch": "^2.6.0"
   }
 }

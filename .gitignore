@@ -5,3 +5,4 @@ yarn-error.log
 
 manager/bin/
 manager/database/problem-list.json
+manager/output/

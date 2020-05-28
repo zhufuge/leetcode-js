@@ -4,20 +4,20 @@
 #+CATEGORIES: 算法
 
 *最近更新*
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1431-kids-with-the-greatest-number-of-candies.js][1431. Kids With the Greatest Number of Candies]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1436-destination-city.js][1436. Destination City]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1441-build-an-array-with-stack-operations.js][1441. Build an Array With Stack Operations]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1446-consecutive-characters.js][1446. Consecutive Characters]]
+- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.js][1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0703-kth-largest-element-in-a-stream.js][703. Kth Largest Element in a Stream]]
 - [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1450-number-of-students-doing-homework-at-a-given-time.js][1450. Number of Students Doing Homework at a Given Time]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1154-day-of-the-year.js][1154. Day of the Year]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0690-employee-importance.js][690. Employee Importance]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0589-n-ary-tree-preorder-traversal.js][589. N-ary Tree Preorder Traversal]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0590-n-ary-tree-postorder-traversal.js][590. N-ary Tree Postorder Traversal]]
-- [[https://github.com/zhufuge/leetcode-js/blob/master/problems/0559-maximum-depth-of-n-ary-tree.js][559. Maximum Depth of N-ary Tree]]
 
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
 #+BEGIN_HTML
-<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(373)</h2>
+<h2 style="text-align:center;border:none;margin:36px auto 6px;">完成列表(378)</h2>
 #+END_HTML
 
 |   # | Title | difficulty |
@@ -394,4 +394,9 @@
 | 1313 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1313-decompress-run-length-encoded-list.js][Decompress Run-Length Encoded List]] | Easy |
 | 1154 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1154-day-of-the-year.js][Day of the Year]] | Easy |
 | 1317 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1317-convert-integer-to-the-sum-of-two-no-zero-integers.js][Convert Integer to the Sum of Two No-Zero Integers]] | Easy |
+| 1431 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1431-kids-with-the-greatest-number-of-candies.js][Kids With the Greatest Number of Candies]] | Easy |
+| 1446 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1446-consecutive-characters.js][Consecutive Characters]] | Easy |
+| 1436 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1436-destination-city.js][Destination City]] | Easy |
+| 1441 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1441-build-an-array-with-stack-operations.js][Build an Array With Stack Operations]] | Easy |
 | 1450 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1450-number-of-students-doing-homework-at-a-given-time.js][Number of Students Doing Homework at a Given Time]] | Easy |
+| 1455 | [[https://github.com/zhufuge/leetcode-js/blob/master/problems/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.js][Check If a Word Occurs As a Prefix of Any Word in a Sentence]] | Easy |

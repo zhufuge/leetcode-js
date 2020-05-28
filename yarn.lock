@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/form-data@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.npm.taobao.org/@types/form-data/download/@types/form-data-2.5.0.tgz#5025f7433016f923348434c40006d9a797c1b0e8"
-  integrity sha1-UCX3QzAW+SM0hDTEAAbZp5fBsOg=
-  dependencies:
-    form-data "*"
-
 "@types/node-fetch@^2.5.7":
   version "2.5.7"
   resolved "https://registry.npm.taobao.org/@types/node-fetch/download/@types/node-fetch-2.5.7.tgz?cache=0&sync_timestamp=1588202874723&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode-fetch%2Fdownload%2F%40types%2Fnode-fetch-2.5.7.tgz#20a2afffa882ab04d44ca786449a276f9f6bbf3c"
@@ -39,7 +32,7 @@ delayed-stream@~1.0.0:
   resolved "https://registry.npm.taobao.org/delayed-stream/download/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
-form-data@*, form-data@^3.0.0:
+form-data@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/form-data/download/form-data-3.0.0.tgz#31b7e39c85f1355b7139ee0c647cf0de7f83c682"
   integrity sha1-MbfjnIXxNVtxOe4MZHzw3n+DxoI=
