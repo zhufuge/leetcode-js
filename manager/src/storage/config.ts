@@ -19,8 +19,8 @@ export const POST_TEMPLATES = [
     entry: join(DATABASE_PATH, 'template.md'),
     output: [join(ROOT_PATH, 'README.md')],
   },
-  // {
-  //   entry: join(DATABASE_PATH, 'article.md'),
-  //   output: [join(OUTPUT_PATH, '2017-11-01-LeetCode-JS.md')],
-  // },
+  {
+    entry: join(DATABASE_PATH, 'article.md'),
+    output: [join(OUTPUT_PATH, '2017-11-01-LeetCode-JS.md')],
+  },
 ]
