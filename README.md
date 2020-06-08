@@ -1,18 +1,18 @@
 # LeetCode-JS
 
 **最近更新**
-- [1431. Kids With the Greatest Number of Candies](https://github.com/zhufuge/leetcode-js/blob/master/problems/1431-kids-with-the-greatest-number-of-candies.js)
-- [1436. Destination City](https://github.com/zhufuge/leetcode-js/blob/master/problems/1436-destination-city.js)
-- [1441. Build an Array With Stack Operations](https://github.com/zhufuge/leetcode-js/blob/master/problems/1441-build-an-array-with-stack-operations.js)
-- [1446. Consecutive Characters](https://github.com/zhufuge/leetcode-js/blob/master/problems/1446-consecutive-characters.js)
-- [1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://github.com/zhufuge/leetcode-js/blob/master/problems/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.js)
-- [703. Kth Largest Element in a Stream](https://github.com/zhufuge/leetcode-js/blob/master/problems/0703-kth-largest-element-in-a-stream.js)
-- [1450. Number of Students Doing Homework at a Given Time](https://github.com/zhufuge/leetcode-js/blob/master/problems/1450-number-of-students-doing-homework-at-a-given-time.js)
+- [1304. Find N Unique Integers Sum up to Zero](https://github.com/zhufuge/leetcode-js/blob/master/problems/1304-find-n-unique-integers-sum-up-to-zero.js)
+- [1309. Decrypt String from Alphabet to Integer Mapping](https://github.com/zhufuge/leetcode-js/blob/master/problems/1309-decrypt-string-from-alphabet-to-integer-mapping.js)
+- [1331. Rank Transform of an Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/1331-rank-transform-of-an-array.js)
+- [1323. Maximum 69 Number](https://github.com/zhufuge/leetcode-js/blob/master/problems/1323-maximum-69-number.js)
+- [1360. Number of Days Between Two Dates](https://github.com/zhufuge/leetcode-js/blob/master/problems/1360-number-of-days-between-two-dates.js)
+- [1337. The K Weakest Rows in a Matrix](https://github.com/zhufuge/leetcode-js/blob/master/problems/1337-the-k-weakest-rows-in-a-matrix.js)
+- [1342. Number of Steps to Reduce a Number to Zero](https://github.com/zhufuge/leetcode-js/blob/master/problems/1342-number-of-steps-to-reduce-a-number-to-zero.js)
 
 
 <!-- more -->
 
-<h3 style="text-align:center;border:none;">完成列表(378)</h3>
+<h3 style="text-align:center;border:none;">完成列表(401)</h3>
 
 |   # | Title | difficulty |
 |----:|-------|:-----------|
@@ -386,9 +386,32 @@
 | 1299 | [Replace Elements with Greatest Element on Right Side](https://github.com/zhufuge/leetcode-js/blob/master/problems/1299-replace-elements-with-greatest-element-on-right-side.js) | Easy |
 | 1137 | [N-th Tribonacci Number](https://github.com/zhufuge/leetcode-js/blob/master/problems/1137-n-th-tribonacci-number.js) | Easy |
 | 1313 | [Decompress Run-Length Encoded List](https://github.com/zhufuge/leetcode-js/blob/master/problems/1313-decompress-run-length-encoded-list.js) | Easy |
+| 1331 | [Rank Transform of an Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/1331-rank-transform-of-an-array.js) | Easy |
 | 1154 | [Day of the Year](https://github.com/zhufuge/leetcode-js/blob/master/problems/1154-day-of-the-year.js) | Easy |
+| 1360 | [Number of Days Between Two Dates](https://github.com/zhufuge/leetcode-js/blob/master/problems/1360-number-of-days-between-two-dates.js) | Easy |
+| 1304 | [Find N Unique Integers Sum up to Zero](https://github.com/zhufuge/leetcode-js/blob/master/problems/1304-find-n-unique-integers-sum-up-to-zero.js) | Easy |
+| 1309 | [Decrypt String from Alphabet to Integer Mapping](https://github.com/zhufuge/leetcode-js/blob/master/problems/1309-decrypt-string-from-alphabet-to-integer-mapping.js) | Easy |
 | 1317 | [Convert Integer to the Sum of Two No-Zero Integers](https://github.com/zhufuge/leetcode-js/blob/master/problems/1317-convert-integer-to-the-sum-of-two-no-zero-integers.js) | Easy |
+| 1342 | [Number of Steps to Reduce a Number to Zero](https://github.com/zhufuge/leetcode-js/blob/master/problems/1342-number-of-steps-to-reduce-a-number-to-zero.js) | Easy |
+| 1323 | [Maximum 69 Number](https://github.com/zhufuge/leetcode-js/blob/master/problems/1323-maximum-69-number.js) | Easy |
+| 1356 | [Sort Integers by The Number of 1 Bits](https://github.com/zhufuge/leetcode-js/blob/master/problems/1356-sort-integers-by-the-number-of-1-bits.js) | Easy |
+| 1337 | [The K Weakest Rows in a Matrix](https://github.com/zhufuge/leetcode-js/blob/master/problems/1337-the-k-weakest-rows-in-a-matrix.js) | Easy |
+| 1346 | [Check If N and Its Double Exist](https://github.com/zhufuge/leetcode-js/blob/master/problems/1346-check-if-n-and-its-double-exist.js) | Easy |
+| 1370 | [Increasing Decreasing String](https://github.com/zhufuge/leetcode-js/blob/master/problems/1370-increasing-decreasing-string.js) | Easy |
+| 1351 | [Count Negative Numbers in a Sorted Matrix](https://github.com/zhufuge/leetcode-js/blob/master/problems/1351-count-negative-numbers-in-a-sorted-matrix.js) | Easy |
+| 1365 | [How Many Numbers Are Smaller Than the Current Number](https://github.com/zhufuge/leetcode-js/blob/master/problems/1365-how-many-numbers-are-smaller-than-the-current-number.js) | Easy |
+| 1385 | [Find the Distance Value Between Two Arrays](https://github.com/zhufuge/leetcode-js/blob/master/problems/1385-find-the-distance-value-between-two-arrays.js) | Easy |
+| 1374 | [Generate a String With Characters That Have Odd Counts](https://github.com/zhufuge/leetcode-js/blob/master/problems/1374-generate-a-string-with-characters-that-have-odd-counts.js) | Easy |
+| 1380 | [Lucky Numbers in a Matrix](https://github.com/zhufuge/leetcode-js/blob/master/problems/1380-lucky-numbers-in-a-matrix.js) | Easy |
+| 1399 | [Count Largest Group](https://github.com/zhufuge/leetcode-js/blob/master/problems/1399-count-largest-group.js) | Easy |
+| 1389 | [Create Target Array in the Given Order](https://github.com/zhufuge/leetcode-js/blob/master/problems/1389-create-target-array-in-the-given-order.js) | Easy |
+| 1394 | [Find Lucky Integer in an Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/1394-find-lucky-integer-in-an-array.js) | Easy |
+| 1413 | [Minimum Value to Get Positive Step by Step Sum](https://github.com/zhufuge/leetcode-js/blob/master/problems/1413-minimum-value-to-get-positive-step-by-step-sum.js) | Easy |
+| 1403 | [Minimum Subsequence in Non-Increasing Order](https://github.com/zhufuge/leetcode-js/blob/master/problems/1403-minimum-subsequence-in-non-increasing-order.js) | Easy |
+| 1408 | [String Matching in an Array](https://github.com/zhufuge/leetcode-js/blob/master/problems/1408-string-matching-in-an-array.js) | Easy |
 | 1431 | [Kids With the Greatest Number of Candies](https://github.com/zhufuge/leetcode-js/blob/master/problems/1431-kids-with-the-greatest-number-of-candies.js) | Easy |
+| 1417 | [Reformat The String](https://github.com/zhufuge/leetcode-js/blob/master/problems/1417-reformat-the-string.js) | Easy |
+| 1422 | [Maximum Score After Splitting a String](https://github.com/zhufuge/leetcode-js/blob/master/problems/1422-maximum-score-after-splitting-a-string.js) | Easy |
 | 1446 | [Consecutive Characters](https://github.com/zhufuge/leetcode-js/blob/master/problems/1446-consecutive-characters.js) | Easy |
 | 1436 | [Destination City](https://github.com/zhufuge/leetcode-js/blob/master/problems/1436-destination-city.js) | Easy |
 | 1441 | [Build an Array With Stack Operations](https://github.com/zhufuge/leetcode-js/blob/master/problems/1441-build-an-array-with-stack-operations.js) | Easy |

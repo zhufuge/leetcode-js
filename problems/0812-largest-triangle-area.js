@@ -42,5 +42,6 @@ const largestTriangleArea = function(points) {
 // Solution:
 
 // 计算三个点形成的三角形的面积
+// TODO #812
 
 // Submission Result: Accept

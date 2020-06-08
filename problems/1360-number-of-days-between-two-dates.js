@@ -35,6 +35,6 @@ const daysBetweenDates = function(date1, date2) {
 
 // Solution:
 // 使用 Date API 解决（作弊）
-// TODO 1360 不使用 API
+// TODO #1360 不使用 API
 
 // Submission Result: Accepted
