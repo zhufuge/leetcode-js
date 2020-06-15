@@ -30,7 +30,14 @@
  * @return {number}
  */
 const largestTriangleArea = function(points) {
+  const n = points.length
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      for (let k = j + 1; k < n; k++) {
 
+      }
+    }
+  }
 }
 
 ;[
@@ -41,7 +48,6 @@ const largestTriangleArea = function(points) {
 
 // Solution:
 
-// 计算三个点形成的三角形的面积
-// TODO #812
+// TODO #812 计算三个点形成的三角形的面积
 
 // Submission Result: Accept
