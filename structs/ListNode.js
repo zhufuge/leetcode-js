@@ -1,7 +1,7 @@
 class ListNode {
-  constructor(val) {
+  constructor(val = 0, next = null) {
     this.val = val
-    this.next = null
+    this.next = next
   }
 
   static from(array) {
