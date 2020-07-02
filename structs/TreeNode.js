@@ -1,7 +1,8 @@
 class TreeNode {
-  constructor(val) {
+  constructor(val = 0, left = null, right = null) {
     this.val = val
-    this.left = this.right = null
+    this.left = left
+    this.right = right
   }
   getNode(val) {
     function find(root, val) {

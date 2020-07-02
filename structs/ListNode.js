@@ -21,11 +21,15 @@ class ListNode {
   }
 
   toString() {
+    const array = []
     let str = ''
     let head = this
     while (head) {
+      array.push(head)
       str += head.val + '->'
       head = head.next
+      const k = array.indexOf(head)
+      if (k > -1) return str + `[${k}]`
     }
     return str + 'null'
   }
