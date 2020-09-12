@@ -15,6 +15,6 @@
   "dependencies": {
     "@types/node": "^14.0.5",
     "@types/node-fetch": "^2.5.7",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
