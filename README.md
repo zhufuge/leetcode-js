@@ -9,7 +9,8 @@
 - [20. Valid Parentheses](https://github.com/zhufuge/leetcode-js/blob/master/problems/0020-valid-parentheses.js)
 - [921. Minimum Add to Make Parentheses Valid](https://github.com/zhufuge/leetcode-js/blob/master/problems/0921-minimum-add-to-make-parentheses-valid.js)
 
-
+#### For Getting info about every Question { How many times the particular question asked in which company }
+- [install this extension](https://chrome.google.com/webstore/detail/big-%CF%89-enhance-leetcode-ex/hfjfkofmpdgbfpkgnknikojbpljnkfkf)
 <!-- more -->
 
 <h3 style="text-align:center;border:none;">完成列表(444)</h3>
